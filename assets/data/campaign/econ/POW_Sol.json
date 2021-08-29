@@ -1,0 +1,21 @@
+{
+	"starSystem":"POW_Sol",
+	"markets":[
+		{
+			"entities":["pow_patheon_planet"],
+			"faction":"independent",
+			"size":6,
+			"startingConditions":[
+                "hot",
+				"volatiles_abundant",
+				"population_6",
+			],
+			"industries":[
+				["population"],
+				["spaceport"],
+				["grounddefenses"],
+				["patrolhq"],
+			],
+		},
+	],
+}

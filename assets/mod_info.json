@@ -1,1 +1,8 @@
-{}
+{
+    "id":"pantheonorbitalworks",
+    "name":"Pantheon Orbital Works",
+    "author":"Some Loser",	
+    "version":"1.00",
+    "description":"Adds Pantheon Orbital Works",
+    "gameVersion": "0.95a-RC15"
+}

@@ -4,5 +4,7 @@
     "author":"Some Loser",	
     "version":"1.00",
     "description":"Adds Pantheon Orbital Works",
-    "gameVersion": "0.95a-RC15"
+    "gameVersion": "0.95a-RC15",
+    "jars":["pantheonorbitalworks.jar"],
+    "modPlugin":"pantheonorbitalworks.POW_modPlugin"
 }

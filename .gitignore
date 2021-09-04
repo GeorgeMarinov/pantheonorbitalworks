@@ -3,6 +3,6 @@
 .project
 .settings/
 /*.jar
-
+/*.zip
 bin/
 build/

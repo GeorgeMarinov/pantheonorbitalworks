@@ -1,0 +1,25 @@
+id,trigger,conditions,script,text,options,notes
+,,,,,,
+# Refit dialog,,,,,,
+RefitOption,PopulateOptions,Refit isRefitRepresentative,,"""hey""",RefitMenu:Refit,"""notetest"""
+RefitRefitMenuSel,DialogOptionSelected,$option == RefitMenu,FireAll RefitMenu,"""refit ?""",,
+RefitRefitMenuReturnSel,DialogOptionSelected,$option == RefitMenuReturn,FireAll RefitMenu,,,
+RefitRefitMenu,RefitMenu,,"AddTextSmall ""You have $mrTorgueVar1 points.""
+SetTextHighlights $mrTorgueVar2
+SetShortcut RefitExit ""ESCAPE""",,"RefitMenuBuy:Ship refit
+RefitMenuSell:Weapon refit
+RefitMenuExit:Go back",
+# End Torgue dialog,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

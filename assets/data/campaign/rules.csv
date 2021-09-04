@@ -6,6 +6,8 @@ CEO_Menu_Return,DialogOptionSelected,$option == CEO_Menu_Return,FireAll CEO_Menu
 CEO_Menu,CEO_Menu,,"SetShortcut CEO_Menu_Exit ""ESCAPE""",,"CEO_Menu_Refit_Frigades:Refit frigades
 CEO_Menu_Refit_Destroyers:Refit destroyers
 CEO_Menu_Exit:Go back",
-CEO_Menu_Refit_Frigate,DialogOptionSelected,"$option == CEO_Menu_Refit_Frigades",CEO refitFrigades,,,
+CEO_Menu_Refit_Frigate,DialogOptionSelected,$option == CEO_Menu_Refit_Frigades,CEO refitFrigades,,,
+CEO_Menu_Refit_Frigate_Option,DialogOptionSelected,"CEO isRefitOptionSelected "" refiting""",,,,
+CEO_Menu_Refit_Frigate_Package_Option,DialogOptionSelected,CEO isRefitPackageOptionSelected,,,,
 CEO_Menu_Exit,DialogOptionSelected,$option == CEO_Menu_Exit,FireAll PopulateOptions,,,
 #CEO dialog,,,,,,

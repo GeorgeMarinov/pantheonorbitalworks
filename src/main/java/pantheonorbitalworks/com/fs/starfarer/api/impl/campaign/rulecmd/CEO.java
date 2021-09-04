@@ -43,9 +43,6 @@ import org.apache.log4j.Logger;
 import org.lwjgl.input.Keyboard;
 
 public class CEO extends PaginatedOptions {
-	public static enum Options {
-		BRAWLER
-	}	
 
 	public static final List<String> refitRepresentative = Arrays.asList(new String[]{
 		"Torgue", "Andreyevna", "Katagawa", "Jacobs", "Rhys", "Jack"
@@ -58,6 +55,9 @@ public class CEO extends PaginatedOptions {
 	});
 	public static final List<String> refitableCruiserList = Arrays.asList(new String[]{
 		"eagle"
+	});
+	public static final List<String> packageList = Arrays.asList(new String[]{
+		" basic package", " advanced package", " expert package"
 	});
 	protected Logger logger = Global.getLogger(this.getClass());
 	protected CampaignFleetAPI playerFleet;
@@ -74,7 +74,7 @@ public class CEO extends PaginatedOptions {
 	protected FactionAPI faction;
 	protected float points;
 	protected List<String> disabledOpts = new ArrayList<>();
-	protected OptionPanelAPI options;
+	protected OptionPanelAPI optionPanel;
 
     @Override
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) 
@@ -93,6 +93,7 @@ public class CEO extends PaginatedOptions {
 		playerFaction = Global.getSector().getPlayerFaction();
 		entityFaction = entity.getFaction();
 		person = dialog.getInteractionTarget().getActivePerson();
+		optionPanel = dialog.getOptionPanel();
 
 		for (FleetMemberAPI ship : fleetList) {
 			fleetHullIds.add(ship.getHullId());
@@ -121,27 +122,47 @@ public class CEO extends PaginatedOptions {
 				dialog.setPlugin(this);  
 				init(dialog);
 
-				OptionPanelAPI optionPanel = dialog.getOptionPanel();
 				optionPanel.clearOptions();
 				
 				//List<String> refitableFrigades = Arrays.asList();
 				int index = 0;
 				for (String refitableShip : refitableFrigateList)
 				{
-					if (fleetHullIds.contains(refitableShip))  {
-						optionPanel.addOption(capitalize(refitableShip) + " refit", index);
-					} else {
-						String optionId = capitalize(refitableShip) + " refit";
-						optionPanel.addOption(optionId, index);
-						optionPanel.setEnabled(index, false); 
+					String optionName = capitalize(refitableShip) + " refiting";
+					String optionId = optionName + "_" + index;
+					optionPanel.addOption(optionName, optionId);
+					if (!fleetHullIds.contains(refitableShip)) {
+						optionPanel.setEnabled(optionId, false); 
 					}
 					index++;
 				}
 				optionPanel.addOption("Back", "CEO_Menu_Exit");
 				break;
-			case "confirmPurchase":
-
-				break;
+			case "isRefitOptionSelected":
+				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (selectedOption.contains(" refiting")) {
+					String shipName = selectedOption.substring(0, selectedOption.indexOf(" refiting"));
+					optionPanel.clearOptions();
+					int index = 0;
+					for (String package : packageList) {
+						String optionName = shipName + package;
+						String optionId = optionName + "_" + index;
+						optionPanel.addOption(optionName, optionId);
+						index++;
+					}
+					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					return true;
+				}
+				return false;
+			case "isRefitPackageOptionSelected":
+				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (selectedOption.contains(" basic package")) {
+					// koi paket se polzwa
+					// stroeneto na koraba
+					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					return true;
+				}
+				return false;
 		}
 		
 		return false;

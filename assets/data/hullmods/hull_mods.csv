@@ -1,0 +1,128 @@
+name,id,tier,rarity,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,tech/manufacturer,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+Torgue Basic Refit,normal_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.NormalTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Basic Refit,superb_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.SuperbTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Basic Refit,legendary_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.LegendaryTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Basic Refit,masterwork_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.MasterworkTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Advanced Refit,normal_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.NormalTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Advanced Refit,superb_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.SuperbTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Advanced Refit,legendary_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.LegendaryTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Advanced Refit,masterwork_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.MasterworkTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Expert Refit,normal_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.NormalTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation\
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Expert Refit,superb_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.SuperbTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Expert Refit,legendary_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.LegendaryTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Expert Refit,masterwork_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.MasterworkTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull  increased by: %s
+ Armor  increased by: %s
+ Acceleration  increased by: %s
+ Deceleration  increased by: %s
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of %s higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png

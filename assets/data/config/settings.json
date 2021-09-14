@@ -1,7 +1,8 @@
 {
   "graphics": {
     "characters": {
-      "mrTorgue": "graphics/POW/portraits/POW_mrTorgue.png"
+      "mrTorgue": "graphics/POW/portraits/POW_mrTorgue.png",
+      "handsomeJack": "graphics/POW/portraits/POW_handsomeJack.png"
     }
   }
 }

@@ -4,68 +4,45 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.campaign.CargoAPI;
-import com.fs.starfarer.api.campaign.CargoPickerListener;
-import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.SpecialItemData;
-import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
-import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.Status;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Items;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.impl.campaign.rulecmd.PaginatedOptions;
-import com.fs.starfarer.api.loading.Description;
-import com.fs.starfarer.api.loading.FighterWingSpecAPI;
-import com.fs.starfarer.api.loading.WeaponSpecAPI;
-import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
-import org.apache.log4j.Logger;
-import org.lwjgl.input.Keyboard;
 
 import pantheonorbitalworks.RefitPackage;
+import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
 import pantheonorbitalworks.RefitableShip;
 
 public class CEO extends PaginatedOptions {
 
-	public static final List<String> refitRepresentative = Arrays.asList(new String[]{
-		"Torgue", "Andreyevna", "Katagawa", "Jacobs", "Rhys", "Jack"
-	});
-	public static final List<RefitableShip> refitableFrigateList = 
+	public final RefitRepresentative[] refitRepresentative = new RefitRepresentative[]{
+		new RefitRepresentative("Mr. Torgue", "Torgue"), new RefitRepresentative("Andreyevna", "Vladof"), new RefitRepresentative("Katagawa", "Maliwan"), new RefitRepresentative("Jacobs", "Jacobs"), new RefitRepresentative("Rhys", "Atlas"), new RefitRepresentative("Handsome Jack", "Hyperion")
+	};
+	public final List<RefitableShip> refitableFrigateList = 
 	Arrays.asList(new RefitableShip[]{
 		new RefitableShip("brawler", 12000), new RefitableShip("scarab", 30000), new RefitableShip("lasher", 9000), 
 	});
-	public static final List<String> refitableDestroyerList = Arrays.asList(new String[]{
+	public final List<String> refitableDestroyerList = Arrays.asList(new String[]{
 		"sunder"
 	});
-	public static final List<String> refitableCruiserList = Arrays.asList(new String[]{
+	public final List<String> refitableCruiserList = Arrays.asList(new String[]{
 		"eagle"
 	});
-	public static final List<RefitPackage> packageList = Arrays.asList(new RefitPackage[]{
+	public final List<RefitPackage> packageList = Arrays.asList(new RefitPackage[]{
 		new RefitPackage("Basic package", " basic package", 20), new RefitPackage("Advanced package", " advanced package", 50), new RefitPackage("Expert package", " expert package", 100)
 	});
 	protected CampaignFleetAPI playerFleet;
@@ -74,15 +51,14 @@ public class CEO extends PaginatedOptions {
 	protected List<String> fleetHullIds = new ArrayList<>();
 	protected SectorEntityToken entity;
 	protected MarketAPI market;
-	protected FactionAPI playerFaction;
-	protected FactionAPI entityFaction;
-	protected TextPanelAPI text;
-	protected CargoAPI playerCargo;
+	//protected TextPanelAPI text;
+	//protected CargoAPI playerCargo;
 	protected PersonAPI person;
 	protected FactionAPI faction;
 	protected float points;
 	protected List<String> disabledOpts = new ArrayList<>();
 	protected OptionPanelAPI optionPanel;
+	protected VisualPanelAPI visual;
 
     @Override
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) 
@@ -93,15 +69,14 @@ public class CEO extends PaginatedOptions {
 		
 		entity = dialog.getInteractionTarget();
 		market = entity.getMarket();
-		text = dialog.getTextPanel();
+		//text = dialog.getTextPanel();
 		playerFleet = Global.getSector().getPlayerFleet();
 		fleetData = playerFleet.getFleetData();
 		fleetList = fleetData.getMembersListCopy();
-		playerCargo = playerFleet.getCargo();
-		playerFaction = Global.getSector().getPlayerFaction();
-		entityFaction = entity.getFaction();
+		//playerCargo = playerFleet.getCargo();
 		person = dialog.getInteractionTarget().getActivePerson();
 		optionPanel = dialog.getOptionPanel();
+		visual = dialog.getVisualPanel();
 
 		for (FleetMemberAPI ship : fleetList) {
 			fleetHullIds.add(ship.getHullId());
@@ -117,8 +92,12 @@ public class CEO extends PaginatedOptions {
 				SectorEntityToken sectorEntity = dialog.getInteractionTarget();
 				if (sectorEntity != null) {
 					PersonAPI person = sectorEntity.getActivePerson();
-					if (person != null && refitRepresentative.contains(person.getName().getLast())) {
-						return true;
+					if (person != null) {
+						for (int i = 0; i < refitRepresentative.length; i++) {
+							if (person.getName().getFirst().equals(refitRepresentative[i].Name)) {
+								return true;
+							}
+						}
 					}
 				} else {
 					return false;
@@ -130,9 +109,9 @@ public class CEO extends PaginatedOptions {
 				dialog.setPlugin(this);  
 				init(dialog);
 
+				visual.fadeVisualOut();
 				optionPanel.clearOptions();
 				
-				//List<String> refitableFrigades = Arrays.asList();
 				int index = 0;
 				for (RefitableShip refitableShip : refitableFrigateList)
 				{
@@ -150,6 +129,7 @@ public class CEO extends PaginatedOptions {
 				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (selectedOption.contains(" refiting")) {
 					String shipName = selectedOption.substring(0, selectedOption.indexOf(" refiting"));
+					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					int ind = 0;
 					for (RefitPackage refitPackage : packageList) {
@@ -169,10 +149,27 @@ public class CEO extends PaginatedOptions {
 			case "isRefitPackageOptionSelected":
 				String selectedPackageOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (selectedPackageOption.contains(" basic package") || selectedPackageOption.contains(" advanced package") || selectedPackageOption.contains(" expert package")) {
-					String shipName = "";
-					String creditsCost = selectedPackageOption.substring(selectedPackageOption.indexOf("-") + 1, selectedPackageOption.indexOf(" credits"));
-					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
 					String hullName = selectedPackageOption.substring(0, selectedPackageOption.indexOf(" "));
+					String chosenPackage = selectedPackageOption.substring(selectedPackageOption.indexOf(" ") + 1, selectedPackageOption.indexOf("package") - 1);
+					Global.getSector().getCampaignUI().addMessage("normal_" + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull");
+					FleetMemberAPI shipPreview = fleetData.addFleetMember("normal_" + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull");
+					visual.showFleetMemberInfo(shipPreview);
+					fleetData.removeFleetMember(shipPreview);
+					 
+					optionPanel.clearOptions();
+					optionPanel.addOption("Yes", selectedPackageOption + "!yes");	
+					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					return true;
+				}
+				return false;
+			case "isRefitPackageOptionConfirmed":
+				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (confirmation.contains("!yes")) {
+					String shipName = "";
+					String chosenPackage = confirmation.substring(confirmation.indexOf(" ") + 1, confirmation.indexOf("package") - 1);
+					String creditsCost = confirmation.substring(confirmation.indexOf("-") + 1, confirmation.indexOf(" credits"));
+					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
+					String hullName = confirmation.substring(0, confirmation.indexOf(" "));
 					for (FleetMemberAPI fleetShip : fleetList) {
 						if (fleetShip.getHullId().equals(hullName.toLowerCase())) {
 							shipName = fleetShip.getShipName();
@@ -186,12 +183,26 @@ public class CEO extends PaginatedOptions {
 					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 					for (SubmarketAPI submarketAPI : submarkets) {
 						if (submarketAPI.getName().equals("Storage")) {
+							Random randomNumberGenerator = new Random();
+							float random = randomNumberGenerator.nextInt(101);
+							String shipQuality = "";
+							if (random <= 30) {
+								shipQuality = "normal_";
+							} else if (random <= 50) {
+								shipQuality = "superb_";
+							} else if (random <= 70) {
+								shipQuality = "legendary_";
+							} else if (random <= 90) {
+								shipQuality = "masterwork_";
+							}
 							CargoAPI storageCargo = submarketAPI.getCargo();
-							String newHull = "brawler_Hull";
+							String newHull = shipQuality + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull";
 							Global.getSector().addScript(new RefitShip(storageCargo, newHull, shipName, hullName, refitDuration));
+							
 						}
 					}
-					
+
+					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					optionPanel.addOption("Back", "CEO_Menu_Exit");	
 					return true;
@@ -223,5 +234,16 @@ public class CEO extends PaginatedOptions {
 		int credits = (int)addShipToGetCost.getBaseValue() / 100 * percentCost;
 		fleetData.removeFleetMember(addShipToGetCost);
 		return credits;
+	}
+
+	private String getMake() {
+		if (person != null) {
+			for (int i = 0; i < refitRepresentative.length; i++) {
+				if (person.getName().getFirst().equals(refitRepresentative[i].Name)) {
+					return refitRepresentative[i].Make.toLowerCase();
+				}
+			}
+		}
+		return "";
 	}
 }

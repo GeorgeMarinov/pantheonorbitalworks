@@ -15,7 +15,7 @@
   "builtInMods": [
     "normal_torgue_expert_refit"
   ],
-    "builtInWeapons": {
+  "builtInWeapons": {
     "WS0003": "torgue_lasher_back_annihilator",
     "WS0004": "torgue_lasher_mouth_annihilator",
   },

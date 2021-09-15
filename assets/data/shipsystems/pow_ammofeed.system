@@ -1,0 +1,13 @@
+{
+	"id":"pow_ammofeed",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"pantheonorbitalworks.shipsystems.POW_AmmoFeedStats",
+	
+	"weaponGlowColor":[255,200,0,155],
+	"weaponTypes":[BALLISTIC,MISSILE,ENERGY],
+	
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

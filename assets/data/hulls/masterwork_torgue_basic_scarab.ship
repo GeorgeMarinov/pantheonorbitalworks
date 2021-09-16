@@ -1,0 +1,123 @@
+{
+  "hullName": "Torgue Basic Scarab",
+  "hullId": "masterwork_torgue_basic_scarab",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_basic_scarab.png",
+  "style": "HIGH_TECH",
+  "height": 96,
+  "width": 96,
+  "center": [48, 42],
+  "collisionRadius": 90,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 75,
+  "viewOffset": 0,
+  "builtInMods": [
+    "masterwork_torgue_basic_refit"
+  ],
+  "builtInWeapons": {
+    "WS0003": "torgue_annihilator_tube",
+    "WS0004": "torgue_annihilator_tube",
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [45, 20]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [45, -20]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [26, 35]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [26, -35]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-39, 21],
+      "length": 36,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-39, -21],
+      "length": 36,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, 9],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, -8],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, 3],
+      "length": 28,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, -2],
+      "length": 28,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    47, 25,
+    21, 43,
+    -2, 33,
+    -29, 38,
+    -37, 1,
+    -28, -37,
+    -5, -33,
+    20, -45,
+    47, -23,
+    33, -14,
+    42, 0,
+    35, 12
+  ]
+}

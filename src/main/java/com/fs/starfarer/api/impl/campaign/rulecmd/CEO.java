@@ -16,8 +16,11 @@ import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.util.Misc.Token;
+
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -25,26 +28,18 @@ import java.util.Random;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
-import pantheonorbitalworks.RefitableShip;
+import pantheonorbitalworks.RefitableFrigade;
 
 public class CEO extends PaginatedOptions {
 
 	public final RefitRepresentative[] refitRepresentative = new RefitRepresentative[]{
 		new RefitRepresentative("Mr. Torgue", "Torgue"), new RefitRepresentative("Andreyevna", "Vladof"), new RefitRepresentative("Katagawa", "Maliwan"), new RefitRepresentative("Jacobs", "Jacobs"), new RefitRepresentative("Rhys", "Atlas"), new RefitRepresentative("Handsome Jack", "Hyperion")
 	};
-	public final List<RefitableShip> refitableFrigateList = 
-	Arrays.asList(new RefitableShip[]{
-		new RefitableShip("brawler", 12000), new RefitableShip("scarab", 30000), new RefitableShip("lasher", 9000), 
-	});
-	public final List<String> refitableDestroyerList = Arrays.asList(new String[]{
-		"sunder"
-	});
-	public final List<String> refitableCruiserList = Arrays.asList(new String[]{
-		"eagle"
-	});
-	public final List<RefitPackage> packageList = Arrays.asList(new RefitPackage[]{
-		new RefitPackage("Basic package", " basic package", 20), new RefitPackage("Advanced package", " advanced package", 50), new RefitPackage("Expert package", " expert package", 100)
-	});
+
+	public enum DialogIdKeys {
+		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId
+	}
+    
 	protected CampaignFleetAPI playerFleet;
 	protected FleetDataAPI fleetData;
 	protected List<FleetMemberAPI> fleetList;
@@ -59,6 +54,7 @@ public class CEO extends PaginatedOptions {
 	protected List<String> disabledOpts = new ArrayList<>();
 	protected OptionPanelAPI optionPanel;
 	protected VisualPanelAPI visual;
+	private Logger log = Global.getLogger(this.getClass());
 
     @Override
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) 
@@ -81,8 +77,6 @@ public class CEO extends PaginatedOptions {
 		for (FleetMemberAPI ship : fleetList) {
 			fleetHullIds.add(ship.getHullId());
 		}
-		
-		//updatePointsInMemory(getPoints()); //store blueprint points
 
 		switch (arg)
 		{
@@ -111,74 +105,114 @@ public class CEO extends PaginatedOptions {
 
 				visual.fadeVisualOut();
 				optionPanel.clearOptions();
-				
-				int index = 0;
-				for (RefitableShip refitableShip : refitableFrigateList)
+
+				for (RefitableFrigade refitableShip : RefitableFrigade.values())
 				{
-					String optionName = capitalize(refitableShip.HullId) + " refiting";
-					String optionId = optionName + "_" + index;
-					optionPanel.addOption(optionName, optionId);
-					if (!fleetHullIds.contains(refitableShip.HullId)) {
-						optionPanel.setEnabled(optionId, false); 
+					String optionName = capitalize(refitableShip.toString()) + " refiting";
+					String optionId = DialogIdKeys.chosenHullId.toString() + ":" + refitableShip.toString() + ";";
+					optionPanel.addOption(optionName, optionId, "No refitable ship of this hulltype found in your fleet");
+					optionPanel.setEnabled(optionId, false);
+					for (String fleetHullId : fleetHullIds) {
+						if (fleetHullId.equalsIgnoreCase(refitableShip.toString())) {
+							optionPanel.setEnabled(optionId, true);
+							optionPanel.setTooltip(optionId, "");
+							break;
+						}
+						if ((fleetHullId.contains(RefitPackage.basic.toString()) || fleetHullId.contains(RefitPackage.advanced.toString())) && fleetHullId.substring(fleetHullId.toString().lastIndexOf("_") + 1).equalsIgnoreCase(refitableShip.toString())) {
+							optionPanel.setEnabled(optionId, true);
+							optionPanel.setTooltip(optionId, "");
+							break;
+						}
 					}
-					index++;
 				}
 				optionPanel.addOption("Back", "CEO_Menu_Exit");
+				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
+				break;
+			case "chooseFrigadeToRefit":
+				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					HashMap<String, String> dialogData = parseDialogOptionId(chosenHull);
+					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
+					for (FleetMemberAPI fleetShip : fleetList) {
+						String fleetHullId = fleetShip.getHullId();
+						String optionName = "Refit " + fleetShip.getShipName() + ", " + capitalize(fleetHullId.replaceAll("_", " "));
+						String optionId = chosenHull;
+						if ((fleetHullId.contains(RefitPackage.basic.toString()) || fleetHullId.contains(RefitPackage.advanced.toString())) && fleetHullId.substring(fleetHullId.lastIndexOf("_") + 1).equalsIgnoreCase(chosenHullId)) {
+							RefitPackage originalHullPackage = getPackageFromHullId(fleetHullId);
+							optionId = optionId + DialogIdKeys.isUpgrade.toString() + ":true;" + DialogIdKeys.originalHullPackage.toString() + ":" + originalHullPackage.toString() + ";" + DialogIdKeys.chosenShipName.toString() + ":" + fleetShip.getShipName() + ";" + DialogIdKeys.originalHullId.toString() + ":" + fleetShip.getHullId() +  ";";
+							optionPanel.addOption(optionName, optionId);
+						}
+						if (fleetHullId.equals(chosenHullId)) {
+							optionId = optionId + DialogIdKeys.chosenShipName.toString() + ":" + fleetShip.getShipName() + ";" + DialogIdKeys.originalHullId.toString() + ":" + fleetShip.getHullId() +  ";";
+							optionPanel.addOption(optionName, optionId);
+						}
+					}
+					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
+				}
 				break;
 			case "isRefitOptionSelected":
 				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (selectedOption.contains(" refiting")) {
-					String shipName = selectedOption.substring(0, selectedOption.indexOf(" refiting"));
+				if (selectedOption.contains(DialogIdKeys.chosenShipName.toString())) {
+					HashMap<String, String> dialogData = parseDialogOptionId(selectedOption);
+					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
+					String originalHullId = dialogData.get(DialogIdKeys.originalHullId.toString());
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
-					int ind = 0;
-					for (RefitPackage refitPackage : packageList) {
-						int creditsCost = getCreditsCost(shipName, refitPackage.PercentCost);
-						String optionName = shipName + refitPackage.DialogAppend + " - " + creditsCost + " credits";
-						String optionId = optionName + "_" + ind;
+					for (RefitPackage refitPackage : RefitPackage.values()) {
+						int creditsCost = getCreditsCost(originalHullId, chosenHullId, refitPackage);
+						String optionName = capitalize(chosenHullId) + " " + refitPackage.toString() + " package - " + creditsCost + " credits";
+						String optionId = selectedOption + DialogIdKeys.creditsCost.toString() + ":" + creditsCost + ";" + DialogIdKeys.newPackage.toString() + ":" + refitPackage.toString() + ";";
 						optionPanel.addOption(optionName, optionId);
 						if (creditsCost == 0 || playerFleet.getCargo().getCredits().get() < creditsCost) {
-							optionPanel.setEnabled(optionId, false); 
+							optionPanel.setEnabled(optionId, false);
 						}
-						ind++;
 					}
-					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}
 				return false;
 			case "isRefitPackageOptionSelected":
 				String selectedPackageOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (selectedPackageOption.contains(" basic package") || selectedPackageOption.contains(" advanced package") || selectedPackageOption.contains(" expert package")) {
-					String hullName = selectedPackageOption.substring(0, selectedPackageOption.indexOf(" "));
-					String chosenPackage = selectedPackageOption.substring(selectedPackageOption.indexOf(" ") + 1, selectedPackageOption.indexOf("package") - 1);
-					Global.getSector().getCampaignUI().addMessage("normal_" + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull");
-					FleetMemberAPI shipPreview = fleetData.addFleetMember("normal_" + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull");
+				if (selectedPackageOption.contains(DialogIdKeys.creditsCost.toString())) {
+					HashMap<String, String> dialogData = parseDialogOptionId(selectedPackageOption);
+					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
+					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
+					String chosenShipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
+					String previewHullId =  "normal_" + getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+					FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
+					shipPreview.setShipName(chosenShipName);
 					visual.showFleetMemberInfo(shipPreview);
 					fleetData.removeFleetMember(shipPreview);
 					 
 					optionPanel.clearOptions();
-					optionPanel.addOption("Yes", selectedPackageOption + "!yes");	
-					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					optionPanel.addOption("Yes", selectedPackageOption + DialogIdKeys.newHullConfirmed.toString() + ":true;");	
+					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}
 				return false;
 			case "isRefitPackageOptionConfirmed":
 				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (confirmation.contains("!yes")) {
-					String shipName = "";
-					String chosenPackage = confirmation.substring(confirmation.indexOf(" ") + 1, confirmation.indexOf("package") - 1);
-					String creditsCost = confirmation.substring(confirmation.indexOf("-") + 1, confirmation.indexOf(" credits"));
+				if (confirmation.contains(DialogIdKeys.newHullConfirmed.toString())) {
+					HashMap<String, String> dialogData = parseDialogOptionId(confirmation);
+					String shipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
+					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
+					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
+					String creditsCost = dialogData.get(DialogIdKeys.creditsCost.toString());
 					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
-					String hullName = confirmation.substring(0, confirmation.indexOf(" "));
+					String originalHullId = dialogData.get(DialogIdKeys.originalHullId.toString());
 					for (FleetMemberAPI fleetShip : fleetList) {
-						if (fleetShip.getHullId().equals(hullName.toLowerCase())) {
-							shipName = fleetShip.getShipName();
+						if (fleetShip.getHullId().equals(originalHullId.toLowerCase())) {
 							fleetData.scuttle(fleetShip);
 							break;
 						}
 					}
-					int refitDuration = Math.round(Float.parseFloat(creditsCost) / 1000);
-					Global.getSector().getCampaignUI().addMessage(shipName + " " + hullName + " refiting will be complete in " + refitDuration + " days.");
+					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					Global.getSector().getCampaignUI().addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " ")) + " refiting will be complete in " + refitDuration + " days.");
 
 					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 					for (SubmarketAPI submarketAPI : submarkets) {
@@ -196,15 +230,16 @@ public class CEO extends PaginatedOptions {
 								shipQuality = "masterwork_";
 							}
 							CargoAPI storageCargo = submarketAPI.getCargo();
-							String newHull = shipQuality + getMake() + "_" + chosenPackage + "_" + hullName.toLowerCase() + "_Hull";
-							Global.getSector().addScript(new RefitShip(storageCargo, newHull, shipName, hullName, refitDuration));
+							String newHull = shipQuality + getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+							Global.getSector().addScript(new RefitShip(storageCargo, newHull, shipName, capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
 							
 						}
 					}
 
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
-					optionPanel.addOption("Back", "CEO_Menu_Exit");	
+					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}
 				return false;
@@ -221,19 +256,14 @@ public class CEO extends PaginatedOptions {
     	return str.substring(0, 1).toUpperCase() + str.substring(1);
 	}
 
-	private int getCreditsCost(String shipName, int percentCost){
-		// for (RefitableShip refitableShip : refitableFrigateList) {
-		// 	if (capitalize(refitableShip.HullId).equals(shipName)) {
-		// 		return refitableShip.BaseValue / 100 * percentCost;
-		// 	}
-		// }
-		
-		FleetMemberAPI addShipToGetCost = fleetData.addFleetMember(shipName.toLowerCase() + "_Hull");
-		// ShipVariantAPI vt = addShipToGetCost.getVariant();
-		// vt.clear();
-		int credits = (int)addShipToGetCost.getBaseValue() / 100 * percentCost;
+	private int getCreditsCost(String originalHullId, String chosenHull, RefitPackage refitPackage){
+		float credits = 0;
+		FleetMemberAPI addShipToGetCost = fleetData.addFleetMember(originalHullId  + "_Hull");
+		FleetMemberAPI addResultShipToGetCost = fleetData.addFleetMember("normal_" + getMake() + "_"  + refitPackage.toString() + "_"  + chosenHull.toLowerCase() + "_Hull");
+		credits = addResultShipToGetCost.getBaseValue() - addShipToGetCost.getBaseValue();
 		fleetData.removeFleetMember(addShipToGetCost);
-		return credits;
+		fleetData.removeFleetMember(addResultShipToGetCost);
+		return credits > 0 ? Math.round(credits) : 0;
 	}
 
 	private String getMake() {
@@ -245,5 +275,36 @@ public class CEO extends PaginatedOptions {
 			}
 		}
 		return "";
+	}
+
+	private HashMap<String, String> parseDialogOptionId(String optionId) {
+		HashMap<String, String> result = new HashMap<String, String>();
+		String[] pairs = optionId.split(";");
+		for (String pair : pairs) {
+			result.put(pair.substring(0, pair.indexOf(":")), pair.substring(pair.indexOf(":") + 1));
+		}
+		return result;
+	}
+
+	private RefitPackage getNextPackage(RefitPackage input) {
+		RefitPackage[] values = RefitPackage.values();
+		if (input.ordinal() + 1 == values.length) {
+			return input;
+		}
+		int index = (input.ordinal() + 1) % values.length;
+		return values[index];
+	}
+
+	private RefitPackage getPackageFromHullId(String hullId){
+		if (hullId.contains(RefitPackage.basic.toString())) {
+			return RefitPackage.basic;
+		}
+		if (hullId.contains(RefitPackage.advanced.toString())) {
+			return RefitPackage.advanced;
+		}
+		if (hullId.contains(RefitPackage.expert.toString())) {
+			return RefitPackage.expert;
+		}
+		return null;
 	}
 }

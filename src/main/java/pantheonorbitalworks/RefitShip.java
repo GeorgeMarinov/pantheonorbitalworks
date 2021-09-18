@@ -3,6 +3,9 @@ package pantheonorbitalworks;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.FleetDataAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 
 public class RefitShip implements EveryFrameScript {
@@ -39,6 +42,11 @@ public class RefitShip implements EveryFrameScript {
                 if (elapsedTime >= _refitDuration)
                 {
                     _storageCargo.addMothballedShip(FleetMemberType.SHIP, _newHull, _shipName);
+                    //_storageCargo.initMothballedShips("player");
+                    // FleetDataAPI shipsInStorage = _storageCargo.getMothballedShips();
+                    // for (FleetMemberAPI shipInStorage : shipsInStorage.getMembersListCopy()) {
+                    //     shipInStorage.getVariant().addPermaMod("reinforcedhull");
+                    // }
                     Global.getSector().getCampaignUI().addMessage(_shipName + " " + _hullName + " refit complete, it is waiting inside Storage");
                 }
             }

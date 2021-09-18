@@ -4,11 +4,11 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 
 public class RefitShip implements EveryFrameScript {
+    private final String _hullModId;
     private final CargoAPI _storageCargo;
     private final String _newHull;
     private final String _shipName;
@@ -16,7 +16,8 @@ public class RefitShip implements EveryFrameScript {
     private final int _refitDuration;
     private float elapsedTime = 0;
 
-    public RefitShip(CargoAPI storageCargo, String newHull, String shipName, String hullName, int refitDuration) {
+    public RefitShip(String hullModId, CargoAPI storageCargo, String newHull, String shipName, String hullName, int refitDuration) {
+        _hullModId = hullModId;
         _storageCargo = storageCargo;
         _newHull = newHull;
         _shipName = shipName;
@@ -42,11 +43,11 @@ public class RefitShip implements EveryFrameScript {
                 if (elapsedTime >= _refitDuration)
                 {
                     _storageCargo.addMothballedShip(FleetMemberType.SHIP, _newHull, _shipName);
-                    //_storageCargo.initMothballedShips("player");
-                    // FleetDataAPI shipsInStorage = _storageCargo.getMothballedShips();
-                    // for (FleetMemberAPI shipInStorage : shipsInStorage.getMembersListCopy()) {
-                    //     shipInStorage.getVariant().addPermaMod("reinforcedhull");
-                    // }
+                    _storageCargo.initMothballedShips("player");
+                    FleetDataAPI shipsInStorage = _storageCargo.getMothballedShips();
+                    for (FleetMemberAPI shipInStorage : shipsInStorage.getMembersListCopy()) {
+                        shipInStorage.getVariant().addPermaMod(_hullModId);
+                    }
                     Global.getSector().getCampaignUI().addMessage(_shipName + " " + _hullName + " refit complete, it is waiting inside Storage");
                 }
             }

@@ -1,8 +1,8 @@
 {
-  "hullName": "Torgue Advanced Lasher",
-  "hullId": "masterwork_torgue_advanced_lasher",
+  "hullName": "Torgue Basic Lasher",
+  "hullId": "torgue_basic_lasher",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/lasher/torgue/torgue_advanced_lasher.png",
+  "spriteName": "graphics/POW/ships/lasher/torgue/torgue_basic_lasher.png",
   "style": "LOW_TECH",
   "coversColor": "255,188,175,255",
   "height": 96,
@@ -12,9 +12,6 @@
   "shieldCenter": [8.5, -0],
   "shieldRadius": 64,
   "viewOffset": 0,
-  "builtInMods": [
-    "masterwork_torgue_advanced_refit"
-  ],
   "weaponSlots": [
     {
       "id": "WS 001",
@@ -81,7 +78,7 @@
       "style": "LOW_TECH"
     },
     {
-      "location": [-34.5, 11.5],
+      "location": [-26, 13],
       "length": 32,
       "width": 8,
       "angle": 180,
@@ -89,7 +86,7 @@
       "style": "LOW_TECH"
     },
     {
-      "location": [-36, 17.5],
+      "location": [-24, 18],
       "length": 32,
       "width": 8,
       "angle": 180,
@@ -97,7 +94,7 @@
       "style": "LOW_TECH"
     },
     {
-      "location": [-34.5, -13.5],
+      "location": [-26, -14],
       "length": 32,
       "width": 8,
       "angle": 180,
@@ -105,7 +102,7 @@
       "style": "LOW_TECH"
     },
     {
-      "location": [-37, -19.5],
+      "location": [-24, -19],
       "length": 32,
       "width": 8,
       "angle": 180,

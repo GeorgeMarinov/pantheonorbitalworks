@@ -1,8 +1,8 @@
 {
-  "hullName": "Torgue Expert Brawler",
-  "hullId": "masterwork_torgue_expert_brawler",
+  "hullName": "Torgue Advanced Brawler",
+  "hullId": "torgue_advanced_brawler",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_expert_brawler.png",
+  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_advanced_brawler.png",
   "style": "MIDLINE",
   "height": 70,
   "width": 110,
@@ -11,34 +11,27 @@
   "shieldCenter": [0, -0],
   "shieldRadius": 59,
   "viewOffset": 0,
-  "builtInMods": [
-    "masterwork_torgue_expert_refit"
-  ],
-  "builtInWeapons": {
-    "WS0005": "torgue_medium_annihilator",
-    "WS0006": "torgue_medium_annihilator",
-  },
   "weaponSlots": [
     {
-      "id": "WS0005",
+      "id": "WS 001",
       "size": "MEDIUM",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -0,
       "locations": [18, 22]
     },
     {
-      "id": "WS0006",
+      "id": "WS 002",
       "size": "MEDIUM",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
       "locations": [18, -22]
     },
     {
-      "id": "WS0003",
+      "id": "WS 003",
       "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
@@ -47,7 +40,7 @@
       "locations": [8, 46]
     },
     {
-      "id": "WS0004",
+      "id": "WS 004",
       "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",

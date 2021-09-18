@@ -1,6 +1,6 @@
 {
   "hullName": "Torgue Advanced Scarab",
-  "hullId": "masterwork_torgue_advanced_scarab",
+  "hullId": "torgue_advanced_scarab",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/POW/ships/scarab/torgue/torgue_advanced_scarab.png",
   "style": "HIGH_TECH",
@@ -11,9 +11,6 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 75,
   "viewOffset": 0,
-  "builtInMods": [
-    "masterwork_torgue_advanced_refit"
-  ],
   "builtInWeapons": {
     "WS0003": "torgue_annihilator_tube",
     "WS0004": "torgue_annihilator_tube",

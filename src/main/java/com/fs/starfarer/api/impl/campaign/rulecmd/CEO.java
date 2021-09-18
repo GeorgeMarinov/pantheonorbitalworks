@@ -182,7 +182,7 @@ public class CEO extends PaginatedOptions {
 					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
 					String chosenShipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
-					String previewHullId =  "normal_" + getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+					String previewHullId =  getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
 					FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
 					shipPreview.setShipName(chosenShipName);
 					visual.showFleetMemberInfo(shipPreview);
@@ -219,19 +219,19 @@ public class CEO extends PaginatedOptions {
 						if (submarketAPI.getName().equals("Storage")) {
 							Random randomNumberGenerator = new Random();
 							float random = randomNumberGenerator.nextInt(101);
-							String shipQuality = "";
+							String refitHullModId = "";
 							if (random <= 30) {
-								shipQuality = "normal_";
+								refitHullModId = "normal_torgue_" + chosenPackage + "_refit";
 							} else if (random <= 50) {
-								shipQuality = "superb_";
+								refitHullModId = "superb_torgue_" + chosenPackage + "_refit";
 							} else if (random <= 70) {
-								shipQuality = "legendary_";
+								refitHullModId = "legendary_torgue_" + chosenPackage + "_refit";
 							} else if (random <= 90) {
-								shipQuality = "masterwork_";
+								refitHullModId = "masterwork_torgue_" + chosenPackage + "_refit";
 							}
 							CargoAPI storageCargo = submarketAPI.getCargo();
-							String newHull = shipQuality + getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
-							Global.getSector().addScript(new RefitShip(storageCargo, newHull, shipName, capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
+							String newHull =  getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+							Global.getSector().addScript(new RefitShip(refitHullModId, storageCargo, newHull, shipName, capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
 							
 						}
 					}
@@ -259,7 +259,7 @@ public class CEO extends PaginatedOptions {
 	private int getCreditsCost(String originalHullId, String chosenHull, RefitPackage refitPackage){
 		float credits = 0;
 		FleetMemberAPI addShipToGetCost = fleetData.addFleetMember(originalHullId  + "_Hull");
-		FleetMemberAPI addResultShipToGetCost = fleetData.addFleetMember("normal_" + getMake() + "_"  + refitPackage.toString() + "_"  + chosenHull.toLowerCase() + "_Hull");
+		FleetMemberAPI addResultShipToGetCost = fleetData.addFleetMember(getMake() + "_"  + refitPackage.toString() + "_"  + chosenHull.toLowerCase() + "_Hull");
 		credits = addResultShipToGetCost.getBaseValue() - addShipToGetCost.getBaseValue();
 		fleetData.removeFleetMember(addShipToGetCost);
 		fleetData.removeFleetMember(addResultShipToGetCost);

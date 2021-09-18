@@ -1,6 +1,6 @@
 {
   "hullName": "Torgue Expert Lasher",
-  "hullId": "legendary_torgue_expert_lasher",
+  "hullId": "torgue_expert_lasher",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/POW/ships/lasher/torgue/torgue_expert_lasher.png",
   "style": "LOW_TECH",
@@ -12,9 +12,6 @@
   "shieldCenter": [2, -0],
   "shieldRadius": 64,
   "viewOffset": 0,
-  "builtInMods": [
-    "legendary_torgue_expert_refit"
-  ],
   "builtInWeapons": {
     "WS0003": "torgue_lasher_back_annihilator",
     "WS0004": "torgue_lasher_mouth_annihilator",

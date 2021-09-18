@@ -1,6 +1,6 @@
 {
   "hullName": "Torgue Basic Brawler",
-  "hullId": "superb_torgue_basic_brawler",
+  "hullId": "torgue_basic_brawler",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/POW/ships/brawler/torgue/torgue_basic_brawler.png",
   "style": "MIDLINE",
@@ -11,9 +11,6 @@
   "shieldCenter": [0, -0],
   "shieldRadius": 59,
   "viewOffset": 0,
-  "builtInMods": [
-    "superb_torgue_basic_refit"
-  ],
   "weaponSlots": [
     {
       "id": "WS 001",

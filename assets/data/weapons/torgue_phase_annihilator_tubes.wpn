@@ -1,0 +1,60 @@
+{
+  "id": "torgue_phase_annihilator_tubes",
+  "specClass": "projectile",
+  "projectileSpecId":"pow_torgue_annihilator_rocket_tip",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/POW/weapons/blank.png",
+	"hardpointSprite":"graphics/POW/weapons/blank.png",
+  "renderAboveAllWeapons": 0,
+  "interruptibleBurst":false,
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    25,
+    -6,
+    25,
+    0,
+    25,
+    6
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    25,
+    -6,
+    25,
+    0,
+    25,
+    6
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 14,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1.5,
+    "cloudRadius": 12,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 0.45,
+    "blowbackLength": 20,
+    "blowbackSpread": 6,
+    "particleColor": [
+      160,
+      160,
+      200,
+      95
+    ]
+  },
+  "fireSoundTwo": "annihilator_fire"
+}

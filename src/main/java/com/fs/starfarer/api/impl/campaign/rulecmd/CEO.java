@@ -29,6 +29,7 @@ import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
 import pantheonorbitalworks.RefitableFrigade;
+import pantheonorbitalworks.RefitablePhase;
 
 public class CEO extends PaginatedOptions {
 
@@ -37,7 +38,7 @@ public class CEO extends PaginatedOptions {
 	};
 
 	public enum DialogIdKeys {
-		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId
+		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase
 	}
     
 	protected CampaignFleetAPI playerFleet;
@@ -110,6 +111,11 @@ public class CEO extends PaginatedOptions {
 				{
 					String optionName = capitalize(refitableShip.toString()) + " refiting";
 					String optionId = DialogIdKeys.chosenHullId.toString() + ":" + refitableShip.toString() + ";";
+					for (RefitablePhase phaseShip : RefitablePhase.values()) {
+						if (phaseShip.toString().equals(refitableShip.toString())) {
+							optionId = optionId + DialogIdKeys.isPhase + ":true;";
+						}
+					}
 					optionPanel.addOption(optionName, optionId, "No refitable ship of this hulltype found in your fleet");
 					optionPanel.setEnabled(optionId, false);
 					for (String fleetHullId : fleetHullIds) {
@@ -162,7 +168,8 @@ public class CEO extends PaginatedOptions {
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					for (RefitPackage refitPackage : RefitPackage.values()) {
-						int creditsCost = getCreditsCost(originalHullId, chosenHullId, refitPackage);
+						Global.getSector().getCampaignUI().addMessage(dialogData.get(DialogIdKeys.isPhase.toString()));
+						int creditsCost = getCreditsCost(originalHullId, Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString())) ? "phase_" + chosenHullId : chosenHullId, refitPackage);
 						String optionName = capitalize(chosenHullId) + " " + refitPackage.toString() + " package - " + creditsCost + " credits";
 						String optionId = selectedOption + DialogIdKeys.creditsCost.toString() + ":" + creditsCost + ";" + DialogIdKeys.newPackage.toString() + ":" + refitPackage.toString() + ";";
 						optionPanel.addOption(optionName, optionId);
@@ -183,8 +190,12 @@ public class CEO extends PaginatedOptions {
 					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
 					String chosenShipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
 					String previewHullId =  getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+					if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString()))) {
+						previewHullId =  getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
+					}
 					FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
 					shipPreview.setShipName(chosenShipName);
+					shipPreview.getVariant().addPermaMod("normal_torgue_" + chosenPackage + "_refit");
 					visual.showFleetMemberInfo(shipPreview);
 					fleetData.removeFleetMember(shipPreview);
 					 
@@ -231,6 +242,9 @@ public class CEO extends PaginatedOptions {
 							}
 							CargoAPI storageCargo = submarketAPI.getCargo();
 							String newHull =  getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+							if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString()))) {
+								newHull =  getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
+							}
 							Global.getSector().addScript(new RefitShip(refitHullModId, storageCargo, newHull, shipName, capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
 							
 						}

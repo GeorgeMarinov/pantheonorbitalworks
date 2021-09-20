@@ -36,6 +36,7 @@ public class LegendaryTorgueAdvancedRefit extends BaseHullMod {
 		stats.getSuppliesPerMonth().modifyPercent(id, Supplies);
 		stats.getSuppliesToRecover().modifyPercent(id, Supplies);
 		stats.getTimeMult().modifyMult(id, (ShipSpeed / 100) + 1);
+		stats.getMissileWeaponRangeBonus().modifyPercent(id, -20);
 		stats.getMissileMaxSpeedBonus().modifyPercent(id, MissileSpeed);
 		stats.getMissileAccelerationBonus().modifyPercent(id, MissileSpeed);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -MissileTurn);

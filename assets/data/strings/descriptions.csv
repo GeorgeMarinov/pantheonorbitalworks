@@ -39,6 +39,13 @@ torgue_advanced_scarab,SHIP,"This ship has been refitted by the Torgue smiths an
 torgue_expert_scarab,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. The Scarab is a rare, experimental hull developed by the Tri-Tachyon corporation. Only a limited run of prototypes has been produced.",,,
 ,,,,,
 ,,,,,
+torgue_basic_phase_afflictor,SHIP,This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. A dangerous and swift phase frigate with a weapons loadout that is powerful enough to bring down much heavier ships. The Afflictor possesses a device which exploits a unique modification of its integrated phase coil array to project a field of anomalously amplified entropy. This effects a devastating increase in destructive instability in delicate or finely tuned systems when the targeted vessel experiences chaotic high-energy events ie. combat damage. Everything that can possibly go wrong does.,,,
+,,,,,
+torgue_advanced_phase_afflictor,SHIP,This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. A dangerous and swift phase frigate with a weapons loadout that is powerful enough to bring down much heavier ships. The Afflictor possesses a device which exploits a unique modification of its integrated phase coil array to project a field of anomalously amplified entropy. This effects a devastating increase in destructive instability in delicate or finely tuned systems when the targeted vessel experiences chaotic high-energy events ie. combat damage. Everything that can possibly go wrong does.,,,
+,,,,,
+torgue_expert_phase_afflictor,SHIP,This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. A dangerous and swift phase frigate with a weapons loadout that is powerful enough to bring down much heavier ships. The Afflictor possesses a device which exploits a unique modification of its integrated phase coil array to project a field of anomalously amplified entropy. This effects a devastating increase in destructive instability in delicate or finely tuned systems when the targeted vessel experiences chaotic high-energy events ie. combat damage. Everything that can possibly go wrong does.,,,
+,,,,,
+,,,,,
 # FIGHTERS FIGHTERS FIGHTERS
 ,,,,,
 # FRIGATES FRIGATES FRIGATES

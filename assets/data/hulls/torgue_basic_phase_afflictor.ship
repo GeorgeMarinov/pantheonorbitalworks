@@ -1,0 +1,117 @@
+{
+  "hullName": "Torgue Basic Afflictor",
+  "hullId": "torgue_basic_phase_afflictor",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_basic_phase_afflictor.png",
+  "style": "HIGH_TECH",
+  "height": 140,
+  "width": 72,
+  "center": [36, 63],
+  "collisionRadius": 97,
+  "shieldCenter": [-6, 0],
+  "shieldRadius": 90,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield",
+    "delicate"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [33, 28]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, 17]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, -17]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [33, -28]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 160,
+      "locations": [10, 27]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 200,
+      "locations": [10, -26]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [65, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-63, 18],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63, -17],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -33, 27,
+    -26, 16,
+    8, 22,
+    28.5, 37.5,
+    46.5, 12.5,
+    75, 8,
+    75, -8.5,
+    45, -12.5,
+    28, -38,
+    5, -18,
+    -27, -17,
+    -32, -26,
+    -61, -22,
+    -61, 23
+  ]
+}

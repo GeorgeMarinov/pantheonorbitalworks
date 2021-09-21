@@ -38,7 +38,11 @@ public class CEO extends PaginatedOptions {
 	};
 
 	public enum DialogIdKeys {
-		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase
+		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase, replacePhaseCoils
+	}
+
+	public enum PhaseCoilReplacemnts {
+		extra_cargo, extra_flux_capacity_and_dissipation, low_tech_shield_emmiter, mid_tech_shield_emmiter, high_tech_shield_emmiter, built_in_weapons
 	}
     
 	protected CampaignFleetAPI playerFleet;
@@ -136,7 +140,7 @@ public class CEO extends PaginatedOptions {
 				break;
 			case "chooseFrigadeToRefit":
 				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString())) {
+				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString()) && !chosenHull.contains(DialogIdKeys.chosenShipName.toString())) {
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					HashMap<String, String> dialogData = parseDialogOptionId(chosenHull);
@@ -161,14 +165,13 @@ public class CEO extends PaginatedOptions {
 				break;
 			case "isRefitOptionSelected":
 				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (selectedOption.contains(DialogIdKeys.chosenShipName.toString())) {
+				if (selectedOption.contains(DialogIdKeys.chosenShipName.toString()) && !selectedOption.contains(DialogIdKeys.creditsCost.toString())) {
 					HashMap<String, String> dialogData = parseDialogOptionId(selectedOption);
 					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 					String originalHullId = dialogData.get(DialogIdKeys.originalHullId.toString());
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					for (RefitPackage refitPackage : RefitPackage.values()) {
-						Global.getSector().getCampaignUI().addMessage(dialogData.get(DialogIdKeys.isPhase.toString()));
 						int creditsCost = getCreditsCost(originalHullId, Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString())) ? "phase_" + chosenHullId : chosenHullId, refitPackage);
 						String optionName = capitalize(chosenHullId) + " " + refitPackage.toString() + " package - " + creditsCost + " credits";
 						String optionId = selectedOption + DialogIdKeys.creditsCost.toString() + ":" + creditsCost + ";" + DialogIdKeys.newPackage.toString() + ":" + refitPackage.toString() + ";";
@@ -184,7 +187,19 @@ public class CEO extends PaginatedOptions {
 				return false;
 			case "isRefitPackageOptionSelected":
 				String selectedPackageOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (selectedPackageOption.contains(DialogIdKeys.creditsCost.toString())) {
+				if (selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;")) {
+					String optionId = selectedPackageOption;
+					optionPanel.clearOptions();
+					for (PhaseCoilReplacemnts phaseCoilReplacemnt : PhaseCoilReplacemnts.values()) {
+						optionPanel.addOption(capitalize(phaseCoilReplacemnt.toString().replaceAll("_", " ")), optionId.replace(DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;", DialogIdKeys.replacePhaseCoils.toString() + ":" + phaseCoilReplacemnt.toString() + ";"));
+					}
+					
+					optionPanel.addOption("Yes", optionId + DialogIdKeys.newHullConfirmed.toString() + ":true;");
+					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
+					return true;
+				}
+				if (selectedPackageOption.contains(DialogIdKeys.creditsCost.toString()) && !selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;")) {
 					HashMap<String, String> dialogData = parseDialogOptionId(selectedPackageOption);
 					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
@@ -194,22 +209,27 @@ public class CEO extends PaginatedOptions {
 						previewHullId =  getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
 					}
 					FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
-					shipPreview.setShipName(chosenShipName);
+					shipPreview.setShipName(chosenShipName + "PREVIEW");
 					shipPreview.getVariant().addPermaMod("normal_torgue_" + chosenPackage + "_refit");
 					visual.showFleetMemberInfo(shipPreview);
-					fleetData.removeFleetMember(shipPreview);
 					 
 					optionPanel.clearOptions();
-					optionPanel.addOption("Yes", selectedPackageOption + DialogIdKeys.newHullConfirmed.toString() + ":true;");	
+					optionPanel.addOption("Replace phase coils", selectedPackageOption + DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;");
+					if (selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString()) &&!selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;")) {
+						optionPanel.setEnabled(selectedPackageOption + DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;", false);
+						optionPanel.setTooltip(selectedPackageOption + DialogIdKeys.replacePhaseCoils.toString() + ":noSelection;", "Replace phase coil option already selected");
+					}
+					optionPanel.addOption("Yes", selectedPackageOption + DialogIdKeys.newHullConfirmed.toString() + ":true;");
 					optionPanel.addOption("Back", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}
+				
 				return false;
 			case "isRefitPackageOptionConfirmed":
 				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (confirmation.contains(DialogIdKeys.newHullConfirmed.toString())) {
-					HashMap<String, String> dialogData = parseDialogOptionId(confirmation);
+				HashMap<String, String> dialogData = parseDialogOptionId(confirmation);
+				if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.newHullConfirmed.toString()))) {
 					String shipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
 					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 					String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
@@ -217,9 +237,11 @@ public class CEO extends PaginatedOptions {
 					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
 					String originalHullId = dialogData.get(DialogIdKeys.originalHullId.toString());
 					for (FleetMemberAPI fleetShip : fleetList) {
-						if (fleetShip.getHullId().equals(originalHullId.toLowerCase())) {
+						if (fleetShip.getShipName().equals(shipName) && fleetShip.getHullId().equals(originalHullId.toLowerCase())) {
 							fleetData.scuttle(fleetShip);
-							break;
+						}
+						if (fleetShip.getShipName().equals(shipName + "PREVIEW")) {
+							fleetData.removeFleetMember(fleetShip);
 						}
 					}
 					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
@@ -293,6 +315,9 @@ public class CEO extends PaginatedOptions {
 
 	private HashMap<String, String> parseDialogOptionId(String optionId) {
 		HashMap<String, String> result = new HashMap<String, String>();
+		if (!optionId.contains(";")) {
+			return result;
+		}
 		String[] pairs = optionId.split(";");
 		for (String pair : pairs) {
 			result.put(pair.substring(0, pair.indexOf(":")), pair.substring(pair.indexOf(":") + 1));

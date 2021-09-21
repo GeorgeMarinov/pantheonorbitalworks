@@ -24,4 +24,4 @@ Torgue Advanced Afflictor,torgue_advanced_phase_afflictor,Phase Frigate,Torgue,e
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Torgue Expert Afflictor,torgue_expert_phase_afflictor,Phase Frigate,Torgue,entropyamplifier,11,1000,350,3000,5000,400,45,,165,120,100,60,120,200,PHASE,phasecloak,90,,,0.03,0.04,5,10,25,50,1,50,10,84000,10,20,180,0.25,8,8,,,,,,,SHIP_WITH_MODULES,,,0.5,2,2,,210,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,torgue_expert_phase_afflictor_turret,Multiplatform,,,1,500000,50000,5000,,400,25,,0,0,0,10,10,150,NONE,,0,0,0,,,0,0,0,0,1,0,,50000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,503.001,
+,torgue_expert_phase_afflictor_turret,Phase Turret,,,1,500000,50000,5000,,400,25,,0,0,0,10,10,150,NONE,,0,0,0,,,0,0,0,0,1,0,,50000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,503.001,

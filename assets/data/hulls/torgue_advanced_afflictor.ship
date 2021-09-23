@@ -1,0 +1,133 @@
+{
+  "hullName": "Torgue Advanced Afflictor",
+  "hullId": "torgue_advanced_afflictor",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_advanced_afflictor.png",
+  "style": "HIGH_TECH",
+  "height": 140,
+  "width": 92,
+  "center": [46, 63],
+  "collisionRadius": 97,
+  "shieldCenter": [-6, -0],
+  "shieldRadius": 90,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [42.5, 34]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, 17]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, -17]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [42, -34]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 160,
+      "locations": [15.5, 36.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -158.5,
+      "locations": [15, -37]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [65, 0]
+    },
+    {
+      "id": "WS0098",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-18, 9]
+    },
+    {
+      "id": "WS0099",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-18, -9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-63.5, 18],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63.5, -17],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -34.5, 26.5,
+    -27.5, 15.5,
+    6.5, 21.5,
+    28.5, 44.5,
+    51, 43.5,
+    46, 16,
+    73.5, 7.5,
+    73.5, -9,
+    45.5, -16,
+    51.5, -43.5,
+    26.5, -43,
+    3.5, -18.5,
+    -28.5, -17.5,
+    -33.5, -26.5,
+    -62.5, -22.5,
+    -62.5, 22.5
+  ]
+}

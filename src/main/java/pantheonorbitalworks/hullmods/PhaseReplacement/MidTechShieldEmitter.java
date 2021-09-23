@@ -10,15 +10,12 @@ public class MidTechShieldEmitter extends BaseHullMod {
 
 	public static final float ShieldArc = 210f;
 	public static final float Efficiency = 1f;
-	public static final int Supplies = 20;
 
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		ShieldAPI shield = ship.getShield();
 		if (shield == null) {
 			ship.setShield(ShieldType.FRONT, ((ship.getHullSize().ordinal() - 1) * 65) / ship.getMutableStats().getFluxDissipation().base, Efficiency, ShieldArc);
-			ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -Supplies);
-			ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -Supplies);
 		}
 	}
 
@@ -39,7 +36,6 @@ public class MidTechShieldEmitter extends BaseHullMod {
 			}
 		}
 		if (index == 2) return Efficiency + "";
-		if (index == 3) return Supplies + "%";
         return null;
     }
 }

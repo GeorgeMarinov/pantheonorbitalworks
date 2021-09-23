@@ -9,21 +9,37 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class HighTechShieldEmitter extends BaseHullMod {
 
 	public static final float ShieldArc = 180f;
-	public static final float Upkeep = 0.4f;
-	public static final float Efficiency = 0.8f;
+	public static final float Efficiency = 0.9f;
+	public static final int Supplies = 30;
 
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		ShieldAPI shield = ship.getShield();
 		if (shield == null) {
-			ship.setShield(ShieldType.OMNI, Upkeep, Efficiency, ShieldArc);
+			ship.setShield(ShieldType.OMNI, ((ship.getHullSize().ordinal() - 1) * 100) / ship.getMutableStats().getFluxDissipation().base, Efficiency, ShieldArc);
+			ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -Supplies);
+			ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -Supplies);
 		}
 	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return ShieldArc + "";
-		if (index == 1) return Upkeep * 100 + "%";
+		if (index == 1) {
+			switch (hullSize) {
+				case FRIGATE:
+					return "~100 flux/s";
+				case DESTROYER:
+					return "~200 flux/s";
+				case CRUISER:
+					return "~300 flux/s";
+				case CAPITAL_SHIP:
+					return "~400 flux/s";
+				default:
+				return null;
+			}
+		}
 		if (index == 2) return Efficiency + "";
+		if (index == 3) return Supplies + "%";
         return null;
     }
 }

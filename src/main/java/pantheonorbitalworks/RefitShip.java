@@ -48,8 +48,10 @@ public class RefitShip implements EveryFrameScript {
                     _storageCargo.initMothballedShips("player");
                     FleetDataAPI shipsInStorage = _storageCargo.getMothballedShips();
                     for (FleetMemberAPI shipInStorage : shipsInStorage.getMembersListCopy()) {
-                        for (String mod : _hullModIds) {
-                            shipInStorage.getVariant().addPermaMod(mod); 
+                        if (shipInStorage.getShipName().equals(_shipName)) {
+                            for (String mod : _hullModIds) {
+                                shipInStorage.getVariant().addPermaMod(mod); 
+                            } 
                         }
                     }
                     Global.getSector().getCampaignUI().addMessage(_shipName + " " + _hullName + " refit complete, it is waiting inside Storage");

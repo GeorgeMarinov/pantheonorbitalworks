@@ -184,18 +184,21 @@ Phase coils replacement - cargo,phase_extra_cargo,0,,,,0,false,true,false,,4,8,1
 Phase coils replacement - low tech shield emitter,phase_low_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.LowTechShieldEmitter,"The phase coils from this ship have been replaced with a low tech shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
- Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
+ Shield Efficiency: %s
+ Supplies increase: %s",,graphics/hullmods/front_shield_generator.png
 
 Phase coils replacement - mid tech shield emitter,phase_mid_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.MidTechShieldEmitter,"The phase coils from this ship have been replaced with a mid tech shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
- Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
+ Shield Efficiency: %s
+ Supplies increase: %s",,graphics/hullmods/front_shield_generator.png
 
 Phase coils replacement - flux capacitors and vents,phase_extra_flux_capacity_and_dissipation,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.Flux,"The phase coils from this ship have been replaced with extra flux capacitors and vents increasing capacity and dissipation speed by %s.",,graphics/hullmods/shared_flux_sink.png
 
 Phase coils replacement - high tech shield emitter,phase_high_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.HighTechShieldEmitter,"The phase coils from this ship have been replaced with a high tech omni shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
- Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
+ Shield Efficiency: %s
+ Supplies increase: %s",,graphics/hullmods/front_shield_generator.png
 
 Phase coils replacement - extra weapons,phase_extra_weapons,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.ExtraWeapons,"The phase coils from this ship have been replaced with extra weapons",,graphics/hullmods/ballistics_integration.png

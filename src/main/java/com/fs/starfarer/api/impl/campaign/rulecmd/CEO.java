@@ -287,7 +287,6 @@ public class CEO extends PaginatedOptions {
 					String chosenHullId = dialogDataf.get(DialogIdKeys.chosenHullId.toString());
 					String chosenPackage = dialogDataf.get(DialogIdKeys.newPackage.toString());
 					String creditsCost = dialogDataf.get(DialogIdKeys.creditsCost.toString());
-					Global.getSector().getCampaignUI().addMessage(creditsCost);
 					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
 					String originalHullId = dialogDataf.get(DialogIdKeys.originalHullId.toString());
 					for (FleetMemberAPI fleetShip : fleetList) {
@@ -325,7 +324,6 @@ public class CEO extends PaginatedOptions {
 								newHull =  getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
 							}
 							Global.getSector().addScript(new RefitShip(newHullMods, storageCargo, newHull, shipName, capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
-							
 						}
 					}
 

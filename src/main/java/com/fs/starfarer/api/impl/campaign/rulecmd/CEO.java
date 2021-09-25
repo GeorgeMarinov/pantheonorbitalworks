@@ -38,15 +38,19 @@ public class CEO extends PaginatedOptions {
 	};
 
 	public enum DialogIdKeys {
-		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase, replacePhaseCoils, finalMenuState
+		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield
 	}
 
 	public enum FinalMenuStates {
-		preview, phase_coils
+		preview, phase_coils, shield_swap
 	}
 
 	public enum PhaseCoilReplacemnts {
 		extra_cargo, extra_flux_capacity_and_dissipation, low_tech_shield_emitter, mid_tech_shield_emitter, high_tech_shield_emitter, extra_weapons
+	}
+
+	public enum Shields {
+		low_tech_shield, mid_tech_shield, high_tech_shield
 	}
     
 	protected CampaignFleetAPI playerFleet;
@@ -139,7 +143,7 @@ public class CEO extends PaginatedOptions {
 						}
 					}
 				}
-				optionPanel.addOption("Back", "CEO_Menu_Exit");
+				optionPanel.addOption("Exit", "CEO_Menu_Exit");
 				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 				break;
 			case "chooseFrigadeToRefit":
@@ -163,7 +167,7 @@ public class CEO extends PaginatedOptions {
 							optionPanel.addOption(optionName, optionId);
 						}
 					}
-					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 				}
 				break;
@@ -184,7 +188,7 @@ public class CEO extends PaginatedOptions {
 							optionPanel.setEnabled(optionId, false);
 						}
 					}
-					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}
@@ -202,6 +206,7 @@ public class CEO extends PaginatedOptions {
 						String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
 						String chosenShipName = dialogData.get(DialogIdKeys.chosenShipName.toString());
 						String previewHullId =  getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+
 						if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString())) && !selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 							previewHullId =  getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
 						}
@@ -238,8 +243,17 @@ public class CEO extends PaginatedOptions {
 							// 	}
 							// }
 						}
+
+						if (selectedPackageOption.contains(DialogIdKeys.newShield.toString())) {
+							String newShield = dialogData.get(DialogIdKeys.newShield.toString());
+							Global.getSector().getCampaignUI().addMessage("pow_" + newShield);
+							shipPreview.getVariant().addPermaMod("pow_" + newShield);
+						}
+
 						visual.showFleetMemberInfo(shipPreview);
 						fleetData.removeFleetMember(shipPreview);
+
+						optionPanel.addOption("Yes", selectedPackageOption + DialogIdKeys.newHullConfirmed + ":true;");
 
 						String phaseCoilMenuId = selectedPackageOption.replace(DialogIdKeys.finalMenuState + ":" + FinalMenuStates.preview + ";", DialogIdKeys.finalMenuState + ":" + FinalMenuStates.phase_coils + ";");
 						if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString()))) {
@@ -250,8 +264,18 @@ public class CEO extends PaginatedOptions {
 							optionPanel.setEnabled(phaseCoilMenuId, false);
 							optionPanel.setTooltip(phaseCoilMenuId, "Replace phase coil option already selected");
 						}
-						optionPanel.addOption("Yes", selectedPackageOption + DialogIdKeys.newHullConfirmed + ":true;");
-						optionPanel.addOption("Back", "CEO_Menu_Exit");
+
+						String shieldSwapMenuId = selectedPackageOption.replace(DialogIdKeys.finalMenuState + ":" + FinalMenuStates.preview + ";", DialogIdKeys.finalMenuState + ":" + FinalMenuStates.shield_swap + ";");
+						if (!Boolean.parseBoolean(dialogData.get(DialogIdKeys.isPhase.toString()))) {
+							optionPanel.addOption("Install new shield", shieldSwapMenuId);
+						}
+						
+						if (selectedPackageOption.contains(DialogIdKeys.newShield.toString())) {
+							optionPanel.setEnabled(shieldSwapMenuId, false);
+							optionPanel.setTooltip(shieldSwapMenuId, "A new shield has already been selected");
+						}
+						
+						optionPanel.addOption("Exit", "CEO_Menu_Exit");
 						optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, 	false);
 						return true;
 					case phase_coils:
@@ -269,8 +293,23 @@ public class CEO extends PaginatedOptions {
 								DialogIdKeys.creditsCost + ":" + totalCost + ";")
 								+ DialogIdKeys.replacePhaseCoils +":" + 	phaseCoilReplacemnt + ";");
 						}
+					case shield_swap:
+						optionPanel.clearOptions();
+						for (Shields newShield : Shields.values()) {
+							int originalCreditsCost = Integer.parseInt(dialogData.get(DialogIdKeys.creditsCost.toString()));
+							int creditsCost = ((originalCreditsCost  / 100) * newShield.ordinal()) + (newShield.ordinal() + 1) * 1000;
+							int totalCost = originalCreditsCost + creditsCost;
+							optionPanel.addOption(capitalize(newShield.toString().replaceAll("_", " ") + " - " + creditsCost + " credits"), selectedPackageOption.
+								replace(
+								DialogIdKeys.finalMenuState + ":" + FinalMenuStates.shield_swap + ";",
+								DialogIdKeys.finalMenuState + ":" + FinalMenuStates.preview + ";")
+								.replace(
+								DialogIdKeys.creditsCost + ":" + originalCreditsCost + ";",
+								DialogIdKeys.creditsCost + ":" + totalCost + ";")
+								+ DialogIdKeys.newShield +":" + newShield + ";");
+						}
 
-						optionPanel.addOption("Back", "CEO_Menu_Exit");
+						optionPanel.addOption("Exit", "CEO_Menu_Exit");
 						optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, 	false);
 						return true;
 					default:
@@ -302,6 +341,10 @@ public class CEO extends PaginatedOptions {
 					if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 						newHullMods.add("phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
 					}
+					if (confirmation.contains(DialogIdKeys.newShield.toString())) {
+						Global.getSector().getCampaignUI().addMessage("pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
+						newHullMods.add("pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
+					}
 
 					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 					for (SubmarketAPI submarketAPI : submarkets) {
@@ -329,7 +372,7 @@ public class CEO extends PaginatedOptions {
 
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
-					optionPanel.addOption("Back", "CEO_Menu_Exit");
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 					return true;
 				}

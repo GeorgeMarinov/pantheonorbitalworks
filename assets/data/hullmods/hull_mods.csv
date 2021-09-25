@@ -1,5 +1,5 @@
 name,id,tier,rarity,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,tech/manufacturer,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
-Torgue Basic Refit,normal_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.NormalTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Basic Refit,normal_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Basic.NormalTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -14,7 +14,7 @@ Torgue Basic Refit,normal_torgue_basic_refit,0,,"special, offensive",Weapons,0,f
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s",,graphics/POW/hullmods/torgue.png
 
-Torgue Basic Refit,superb_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.SuperbTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Basic Refit,superb_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Basic.SuperbTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -29,7 +29,7 @@ Torgue Basic Refit,superb_torgue_basic_refit,0,,"special, offensive",Weapons,0,f
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Basic Refit,legendary_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.LegendaryTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Basic Refit,legendary_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Basic.LegendaryTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -44,7 +44,7 @@ Torgue Basic Refit,legendary_torgue_basic_refit,0,,"special, offensive",Weapons,
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Basic Refit,masterwork_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Basic.MasterworkTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Basic Refit,masterwork_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Basic.MasterworkTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -59,7 +59,7 @@ Torgue Basic Refit,masterwork_torgue_basic_refit,0,,"special, offensive",Weapons
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Advanced Refit,normal_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.NormalTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Advanced Refit,normal_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.NormalTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -74,7 +74,7 @@ Torgue Advanced Refit,normal_torgue_advanced_refit,0,,"special, offensive",Weapo
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Advanced Refit,superb_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.SuperbTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Advanced Refit,superb_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.SuperbTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -89,7 +89,7 @@ Torgue Advanced Refit,superb_torgue_advanced_refit,0,,"special, offensive",Weapo
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Advanced Refit,legendary_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.LegendaryTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Advanced Refit,legendary_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.LegendaryTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -104,7 +104,7 @@ Torgue Advanced Refit,legendary_torgue_advanced_refit,0,,"special, offensive",We
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Advanced Refit,masterwork_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Advanced.MasterworkTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Advanced Refit,masterwork_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.MasterworkTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -119,7 +119,7 @@ Torgue Advanced Refit,masterwork_torgue_advanced_refit,0,,"special, offensive",W
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Expert Refit,normal_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.NormalTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Expert Refit,normal_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Expert.NormalTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -134,7 +134,7 @@ Torgue Expert Refit,normal_torgue_expert_refit,0,,"special, offensive",Weapons,0
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Expert Refit,superb_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.SuperbTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Expert Refit,superb_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Expert.SuperbTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -149,7 +149,7 @@ Torgue Expert Refit,superb_torgue_expert_refit,0,,"special, offensive",Weapons,0
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Expert Refit,legendary_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.LegendaryTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Expert Refit,legendary_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Expert.LegendaryTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -164,7 +164,7 @@ Torgue Expert Refit,legendary_torgue_expert_refit,0,,"special, offensive",Weapon
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Torgue Expert Refit,masterwork_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,4,8,12,20,pantheonorbitalworks.hullmods.Torgue.Expert.MasterworkTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+Torgue Expert Refit,masterwork_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Expert.MasterworkTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -179,23 +179,41 @@ Torgue Expert Refit,masterwork_torgue_expert_refit,0,,"special, offensive",Weapo
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
-Phase coils replacement - cargo,phase_extra_cargo,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.Cargo,"The phase coils from this ship have been ripped out freeing %s extra space for cargo.",,graphics/hullmods/converted_fighter_bay.png
+Phase coils replacement - cargo,phase_extra_cargo,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.Cargo,"The phase coils from this ship have been ripped out freeing %s extra space for cargo.",,graphics/hullmods/converted_fighter_bay.png
 
-Phase coils replacement - low tech shield emitter,phase_low_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.LowTechShieldEmitter,"The phase coils from this ship have been replaced with a low tech shield emitter:
+Phase coils replacement - low tech shield emitter,phase_low_tech_shield_emitter,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.LowTechShieldEmitter,"The phase coils from this ship have been replaced with a low tech shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
  Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
 
-Phase coils replacement - mid tech shield emitter,phase_mid_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.MidTechShieldEmitter,"The phase coils from this ship have been replaced with a mid tech shield emitter:
+Phase coils replacement - mid tech shield emitter,phase_mid_tech_shield_emitter,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.MidTechShieldEmitter,"The phase coils from this ship have been replaced with a mid tech shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
  Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
 
-Phase coils replacement - flux capacitors and vents,phase_extra_flux_capacity_and_dissipation,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.Flux,"The phase coils from this ship have been replaced with extra flux capacitors and vents increasing capacity and dissipation speed by %s.",,graphics/hullmods/shared_flux_sink.png
+Phase coils replacement - flux capacitors and vents,phase_extra_flux_capacity_and_dissipation,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.Flux,"The phase coils from this ship have been replaced with extra flux capacitors and vents increasing capacity and dissipation speed by %s.",,graphics/hullmods/shared_flux_sink.png
 
-Phase coils replacement - high tech shield emitter,phase_high_tech_shield_emitter,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.HighTechShieldEmitter,"The phase coils from this ship have been replaced with a high tech omni shield emitter:
+Phase coils replacement - high tech shield emitter,phase_high_tech_shield_emitter,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.HighTechShieldEmitter,"The phase coils from this ship have been replaced with a high tech omni shield emitter:
  Shield Arc: %s
  Shield Upkeep: %s
  Shield Efficiency: %s",,graphics/hullmods/front_shield_generator.png
 
-Phase coils replacement - extra weapons,phase_extra_weapons,0,,,,0,false,true,false,,4,8,12,20,pantheonorbitalworks.hullmods.PhaseReplacement.ExtraWeapons,"The phase coils from this ship have been replaced with extra weapons",,graphics/hullmods/ballistics_integration.png
+Phase coils replacement - extra weapons,phase_extra_weapons,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.ExtraWeapons,"The phase coils from this ship have been replaced with extra weapons",,graphics/hullmods/ballistics_integration.png
+
+Low tech shield,pow_low_tech_shield,0,,,,0,false,true,false,,2,4,6,8,pantheonorbitalworks.hullmods.Shields.LowTechShield,"A low tech shield with:
+ Shield Arc: %s
+ Shield Upkeep: %s
+ Shield Efficiency: %s
+ Supply cost increase: %s",,graphics/hullmods/front_shield_generator.png
+
+Mid tech shield,pow_mid_tech_shield,0,,,,0,false,true,false,,3,6,9,12,pantheonorbitalworks.hullmods.Shields.MidTechShield,"A mid tech shield with:
+ Shield Arc: %s
+ Shield Upkeep: %s
+ Shield Efficiency: %s
+ Supply cost increase: %s",,graphics/hullmods/front_shield_generator.png
+
+High tech shield,pow_high_tech_shield,0,,,,0,false,true,false,,5,10,15,20,pantheonorbitalworks.hullmods.Shields.HighTechShield,"A high tech omni shield with:
+ Shield Arc: %s
+ Shield Upkeep: %s
+ Shield Efficiency: %s
+ Supply cost increase: %s",,graphics/hullmods/front_shield_generator.png

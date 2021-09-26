@@ -1,0 +1,103 @@
+{
+  "hullName": "Torgue Advanced Cerberus",
+  "hullId": "torgue_advanced_cerberus",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/cerberus/torgue/torgue_advanced_cerberus.png",
+  "style": "LOW_TECH",
+  "height": 100,
+  "width": 80,
+  "center": [40, 40],
+  "collisionRadius": 80,
+  "shieldCenter": [2, 0],
+  "shieldRadius": 75,
+  "viewOffset": 0,
+  "builtInMods": [
+    "shielded_holds"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [47, 19]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [47, -19]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [0, 33]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [0, -33]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-41, 31],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, 24],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, -24],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-41, -31],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    53.5, 27.5,
+    31, 31,
+    4.5, 21,
+    4.5, 38.5,
+    -39, 38.5,
+    -32, -0,
+    -39, -38.5,
+    4.5, -38.5,
+    4.5, -21,
+    31, -30,
+    53, -27.5,
+    57, -0
+  ]
+}

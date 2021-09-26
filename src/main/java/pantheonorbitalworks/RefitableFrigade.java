@@ -5,4 +5,5 @@ public enum RefitableFrigade {
     lasher,
     scarab,
     afflictor,
+    monitor,
 }

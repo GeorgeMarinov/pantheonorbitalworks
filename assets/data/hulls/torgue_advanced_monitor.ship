@@ -1,0 +1,207 @@
+{
+  "hullName": "Torgue Advanced Monitor",
+  "hullId": "torgue_advanced_monitor",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/monitor/torgue/torgue_advanced_monitor.png",
+  "style": "MIDLINE",
+  "height": 70,
+  "width": 110,
+  "center": [55, 30],
+  "collisionRadius": 85,
+  "shieldCenter": [-1, 0],
+  "shieldRadius": 80,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fluxshunt"
+  ],
+  "builtInWeapons": {
+    "WS0001": "pow_torgue_flak",
+    "WS0002": "pow_torgue_flak"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": -0,
+      "locations": [21.5, 43.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [21.5, -43.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [26, 23]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [26, -23]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 160,
+      "locations": [-27, 17]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 200,
+      "locations": [-27, -16]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-27, 45],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29, 39],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29, 33],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-28, 28],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-28, -27],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29, -32],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29, -38],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-27, -44],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-27, -0],
+      "length": 8,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31, 23.5],
+      "length": 6,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31, -23.5],
+      "length": 6,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31, 19.5],
+      "length": 6,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31, -19.5],
+      "length": 6,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-17, 10],
+      "length": 3.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-17, -10],
+      "length": 3.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "COBRA_BOMBER"
+    }
+  ],
+  "bounds": [
+    31, 53.5,
+    31, -53.5,
+    -15, -53.5,
+    -27, -47,
+    -27, 45,
+    -10.5, 53.5
+  ]
+}

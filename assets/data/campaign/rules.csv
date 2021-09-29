@@ -3,13 +3,13 @@ id,trigger,conditions,script,text,options,notes
 CEO_Menu_Option,PopulateOptions,CEO isRefitRepresentative,,,CEO_Menu:Conduct buisness,
 CEO_Menu_Selected,DialogOptionSelected,$option == CEO_Menu,FireAll CEO_Menu,,,
 CEO_Menu_Return,DialogOptionSelected,$option == CEO_Menu_Return,FireAll CEO_Menu,,,
-CEO_Menu,CEO_Menu,,"SetShortcut CEO_Menu_Exit ""ESCAPE""",,"CEO_Menu_Refit_Frigades:Refit frigades
-CEO_Menu_Refit_Destroyers:Refit destroyers
+CEO_Menu,CEO_Menu,,"SetShortcut CEO_Menu_Exit ""ESCAPE""",,"CEO_Menu_Refit_Ships:Refit ships
 CEO_Menu_Exit:Go back",
-CEO_Menu_Refit_Frigate,DialogOptionSelected,$option == CEO_Menu_Refit_Frigades,CEO refitFrigades,,,
-CEO_Menu_Choose_Refit_Frigate,DialogOptionSelected,CEO chooseFrigadeToRefit,,,,
-CEO_Menu_Refit_Frigate_Option,DialogOptionSelected,CEO isRefitOptionSelected,,,,
-CEO_Menu_Refit_Frigate_Package_Option,DialogOptionSelected,CEO isRefitPackageOptionSelected,,,,
-CEO_Menu_Refit_Frigate_Package_Option_Confirm,DialogOptionSelected,CEO isRefitPackageOptionConfirmed,,,,
+CEO_Menu_Choose_Hull_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Ships,CEO chooseHullSize,,,
+CEO_Menu_Choose_Hull_Type,DialogOptionSelected,CEO chooseHullType,,,,
+CEO_Menu_Choose_Refit_Ship,DialogOptionSelected,CEO chooseShipToRefit,,,,
+CEO_Menu_Refit_Option,DialogOptionSelected,CEO isRefitOptionSelected,,,,
+CEO_Menu_Refit_Package_Option,DialogOptionSelected,CEO isRefitPackageOptionSelected,,,,
+CEO_Menu_Refit_Package_Option_Confirm,DialogOptionSelected,CEO isRefitPackageOptionConfirmed,,,,
 CEO_Menu_Exit,DialogOptionSelected,$option == CEO_Menu_Exit,FireAll PopulateOptions,,,
 #CEO dialog,,,,,,

@@ -16,6 +16,8 @@ pow_torgue_flak,WEAPON,"A defensive weapon system that fires cluster bombs prope
 ,,,,,
 pow_torgue_flail_blank,WEAPON,"A defensive rocket system that fires cluster bombs propelled by rockets and equipped with a proximity fuse for maximum effect against fighters and missiles.",,,
 ,,,,,
+pow_torgue_javelin_blank,WEAPON,"A light but fast torpedo designed for fast strikes from a medium distance.",,,
+,,,,,
 # SHIPS SHIPS SHIPS
 torgue_basic_brawler,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. Typically deployed to beef up system police forces and port authority security, the Brawler-class frigate is a robust design which trades mobility (and comfort) for impressive firepower, armor, and a destroyer-grade power generator.",,,
@@ -96,15 +98,34 @@ The Cerberus is prized for providing a cost-effective balance between cargo capa
 In times past, before the fall of the gate system when Domain authority reigned, combat-enabled freighters like the Cerberus found only niche use on the edges of the rare warzone or in especially uncivilized hinterlands of the galaxy where Domain Armada patrols were stretched thinly. The crew combat training, weapon maintenance, and mass/thrust ratio loss caused by heavier armour were viewed as causing unnecessary cost overhead. But this is a new age filled with both danger and profitable opportunities; the abilities of the Cerberus have given the hull a new life in the trade lanes.",,,
 ,,,,,
 ,,,,,
-# FIGHTERS FIGHTERS FIGHTERS
+torgue_basic_enforcer,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Enforcer-class ships commonly serve in system or convoy defense roles. The design features good armor and multiple ballistic hardpoints, while shield performance is somewhat underwhelming. 
+
+The blueprints of the ship call for many components similar to those found in the Onslaught-class battleships, suggesting that the designs were created during a similar period of military expansion in the Domain. The Enforcer-class features similar no-nonsense weapon system design choices, tough bulkheads, and is well regarded by its crews.
+
+Tough to beat in a destroyer to destroyer fight, the Enforcer rarely takes part in larger battles due to the common view that its low speed makes it a liability. Nonetheless, Hegemony order of battle doctrines mandate an attached Enforcer squadron as a screen for Onslaught-class battleships. The logistical ease with which shared components can be used by both ship types is exactly the type of detail that excites Hegemony Logisticarum bureaucrats.",,,
 ,,,,,
-# FRIGATES FRIGATES FRIGATES
+torgue_advanced_enforcer,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Enforcer-class ships commonly serve in system or convoy defense roles. The design features good armor and multiple ballistic hardpoints, while shield performance is somewhat underwhelming. 
+
+The blueprints of the ship call for many components similar to those found in the Onslaught-class battleships, suggesting that the designs were created during a similar period of military expansion in the Domain. The Enforcer-class features similar no-nonsense weapon system design choices, tough bulkheads, and is well regarded by its crews.
+
+Tough to beat in a destroyer to destroyer fight, the Enforcer rarely takes part in larger battles due to the common view that its low speed makes it a liability. Nonetheless, Hegemony order of battle doctrines mandate an attached Enforcer squadron as a screen for Onslaught-class battleships. The logistical ease with which shared components can be used by both ship types is exactly the type of detail that excites Hegemony Logisticarum bureaucrats.",,,
 ,,,,,
-# DESTROYERS DESTROYERS DESTROYERS
+torgue_expert_enforcer,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Enforcer-class ships commonly serve in system or convoy defense roles. The design features good armor and multiple ballistic hardpoints, while shield performance is somewhat underwhelming. 
+
+The blueprints of the ship call for many components similar to those found in the Onslaught-class battleships, suggesting that the designs were created during a similar period of military expansion in the Domain. The Enforcer-class features similar no-nonsense weapon system design choices, tough bulkheads, and is well regarded by its crews.
+
+Tough to beat in a destroyer to destroyer fight, the Enforcer rarely takes part in larger battles due to the common view that its low speed makes it a liability. Nonetheless, Hegemony order of battle doctrines mandate an attached Enforcer squadron as a screen for Onslaught-class battleships. The logistical ease with which shared components can be used by both ship types is exactly the type of detail that excites Hegemony Logisticarum bureaucrats.",,,
 ,,,,,
-# CRUISERS CRUISERS CRUISERS
 ,,,,,
-# CAPITAL-SHIPS CAPITAL-SHIPS CAPITAL-SHIPS
+,,,,,
+,,,,,
+,,,,,
 ,,,,,
 # PLANETS PLANETS PLANETS
 ,,,,,

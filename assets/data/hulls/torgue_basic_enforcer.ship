@@ -1,0 +1,141 @@
+{
+  "hullName": "Torgue Basic Enforcer",
+  "hullId": "torgue_basic_enforcer",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/enforcer/torgue/torgue_basic_enforcer.png",
+  "style": "LOW_TECH",
+  "coversColor": "255,188,175,255",
+  "height": 138,
+  "width": 150,
+  "center": [75, 67],
+  "collisionRadius": 105,
+  "shieldCenter": [-5, -0],
+  "shieldRadius": 96,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [53, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [9, -52]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [37, -36]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [37, 36]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 45,
+      "locations": [9, 52]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-68, 28.5],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-68, -28.5],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-68, 37.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67, 19.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67, -20.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-68, -37.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    25, 51.5,
+    13, 65,
+    -19, 65,
+    -41.5, 48.5,
+    -54.5, 47,
+    -63.5, 41,
+    -64, 16,
+    -43, 8,
+    -30, -0.5,
+    -43, -8.5,
+    -64, -17,
+    -64, -40,
+    -55.5, -48,
+    -38, -48,
+    -20, -65,
+    13, -65,
+    27.5, -50.5,
+    47, -50.5,
+    47, -27,
+    30, -27,
+    37.5, -17,
+    70.5, -17,
+    70.5, 18,
+    36.5, 18,
+    30.5, 26,
+    48, 26,
+    48, 49
+  ]
+}

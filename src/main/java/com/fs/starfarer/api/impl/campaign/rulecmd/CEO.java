@@ -28,6 +28,7 @@ import java.util.Random;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
+import pantheonorbitalworks.RefitableDestroyer;
 import pantheonorbitalworks.RefitableFrigade;
 import pantheonorbitalworks.RefitablePhase;
 
@@ -38,7 +39,7 @@ public class CEO extends PaginatedOptions {
 	};
 
 	public enum DialogIdKeys {
-		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield
+		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName, originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield, chosenShipSize
 	}
 
 	public enum FinalMenuStates {
@@ -51,6 +52,10 @@ public class CEO extends PaginatedOptions {
 
 	public enum Shields {
 		low_tech_shield, mid_tech_shield, high_tech_shield
+	}
+
+	public enum ShipSize {
+		frigate, destroyer, cruiser, capital
 	}
     
 	protected CampaignFleetAPI playerFleet;
@@ -94,6 +99,7 @@ public class CEO extends PaginatedOptions {
 		switch (arg)
 		{
 			case "init":
+			visual.fadeVisualOut();
 				break;
 			case "isRefitRepresentative":
 				SectorEntityToken sectorEntity = dialog.getInteractionTarget();
@@ -110,7 +116,7 @@ public class CEO extends PaginatedOptions {
 					return false;
 				}
 				break;
-			case "refitFrigades":
+			case "chooseHullSize":
 				originalPlugin = dialog.getPlugin();  
 
 				dialog.setPlugin(this);  
@@ -119,34 +125,58 @@ public class CEO extends PaginatedOptions {
 				visual.fadeVisualOut();
 				optionPanel.clearOptions();
 
-				for (RefitableFrigade refitableShip : RefitableFrigade.values())
-				{
-					String optionName = capitalize(refitableShip.toString()) + " refiting";
-					String optionId = DialogIdKeys.chosenHullId + ":" + refitableShip + ";";
-					for (RefitablePhase phaseShip : RefitablePhase.values()) {
-						if (phaseShip.toString().equals(refitableShip.toString())) {
-							optionId = optionId + DialogIdKeys.isPhase + ":true;";
-						}
-					}
-					optionPanel.addOption(optionName, optionId, "No refitable ship of this hulltype found in your fleet");
-					optionPanel.setEnabled(optionId, false);
-					for (String fleetHullId : fleetHullIds) {
-						if (fleetHullId.equalsIgnoreCase(refitableShip.toString())) {
-							optionPanel.setEnabled(optionId, true);
-							optionPanel.setTooltip(optionId, "");
-							break;
-						}
-						if ((fleetHullId.contains(RefitPackage.basic.toString()) || fleetHullId.contains(RefitPackage.advanced.toString())) && fleetHullId.substring(fleetHullId.toString().lastIndexOf("_") + 1).equalsIgnoreCase(refitableShip.toString())) {
-							optionPanel.setEnabled(optionId, true);
-							optionPanel.setTooltip(optionId, "");
-							break;
-						}
-					}
+				for (ShipSize shipSize : ShipSize.values()) {
+					optionPanel.addOption("Refit " + shipSize + "s", DialogIdKeys.chosenShipSize + ":" + shipSize + ";");
 				}
+				
 				optionPanel.addOption("Exit", "CEO_Menu_Exit");
 				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
 				break;
-			case "chooseFrigadeToRefit":
+			case "chooseHullType":
+				visual.fadeVisualOut();
+				optionPanel.clearOptions();
+				String option = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				Global.getSector().getCampaignUI().addMessage(option);
+				if (option.contains(DialogIdKeys.chosenShipSize.toString())) {
+					HashMap<String, String> dialogData = parseDialogOptionId(option);
+					String chosenShipSizeString = dialogData.get(DialogIdKeys.chosenShipSize.toString());
+					if (chosenShipSizeString != null) {
+						ShipSize chosenShipSize = ShipSize.valueOf(chosenShipSizeString);
+						switch (chosenShipSize) {
+							case frigate:
+								for (RefitableFrigade refitableShip : RefitableFrigade.values())
+								{
+									displayAvailableHulls(refitableShip.toString());
+								}
+								break;
+							case destroyer:
+								for (RefitableDestroyer refitableShip : RefitableDestroyer.values())
+								{
+									displayAvailableHulls(refitableShip.toString());
+								}
+								break;
+							// case cruiser:
+							// 	for (RefitableFrigade refitableShip : RefitableFrigade.values())
+							// 	{
+							// 		displayAvailableHulls(refitableShip.toString());
+							// 	}
+							// 	break;
+							// case capital:
+							// 	for (RefitableFrigade refitableShip : RefitableFrigade.values())
+							// 	{
+							// 		displayAvailableHulls(refitableShip.toString());
+							// 	}
+							// 	break;
+							default:
+								break;
+						}
+					}
+				}
+
+				optionPanel.addOption("Exit", "CEO_Menu_Exit");
+				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false, false);
+				break;
+			case "chooseShipToRefit":
 				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString()) && !chosenHull.contains(DialogIdKeys.chosenShipName.toString())) {
 					visual.fadeVisualOut();
@@ -246,7 +276,6 @@ public class CEO extends PaginatedOptions {
 
 						if (selectedPackageOption.contains(DialogIdKeys.newShield.toString())) {
 							String newShield = dialogData.get(DialogIdKeys.newShield.toString());
-							Global.getSector().getCampaignUI().addMessage("pow_" + newShield);
 							shipPreview.getVariant().addPermaMod("pow_" + newShield);
 						}
 
@@ -342,7 +371,6 @@ public class CEO extends PaginatedOptions {
 						newHullMods.add("phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
 					}
 					if (confirmation.contains(DialogIdKeys.newShield.toString())) {
-						Global.getSector().getCampaignUI().addMessage("pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
 						newHullMods.add("pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
 					}
 
@@ -452,5 +480,30 @@ public class CEO extends PaginatedOptions {
 			}
 		}
 		return null;
+	}
+
+	private String displayAvailableHulls(String hull) {
+		String optionName = capitalize(hull) + " refiting";
+		String optionId = DialogIdKeys.chosenHullId + ":" + hull + ";";
+		for (RefitablePhase phaseShip : RefitablePhase.values()) {
+			if (phaseShip.toString().equals(hull)) {
+				optionId = optionId + DialogIdKeys.isPhase + ":true;";
+			}
+		}
+		optionPanel.addOption(optionName, optionId, "No refitable ship of this hulltype found in your fleet");
+		optionPanel.setEnabled(optionId, false);
+		for (String fleetHullId : fleetHullIds) {
+			if (fleetHullId.equalsIgnoreCase(hull)) {
+				optionPanel.setEnabled(optionId, true);
+				optionPanel.setTooltip(optionId, "");
+				break;
+			}
+			if ((fleetHullId.contains(RefitPackage.basic.toString()) || fleetHullId.contains(RefitPackage.advanced.toString())) && fleetHullId.substring(fleetHullId.toString().lastIndexOf("_") + 1).equalsIgnoreCase(hull)) {
+				optionPanel.setEnabled(optionId, true);
+				optionPanel.setTooltip(optionId, "");
+				break;
+			}
+		}
+		return "";
 	}
 }

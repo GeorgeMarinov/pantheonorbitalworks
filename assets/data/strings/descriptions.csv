@@ -18,6 +18,8 @@ pow_torgue_flail_blank,WEAPON,"A defensive rocket system that fires cluster bomb
 ,,,,,
 pow_torgue_javelin_blank,WEAPON,"A light but fast torpedo designed for fast strikes from a medium distance.",,,
 ,,,,,
+pow_torgue_spear_blank,WEAPON,"A large torpedo with huge fuel reserves able to strike targets at a long distance.",,,
+,,,,,
 # SHIPS SHIPS SHIPS
 torgue_basic_brawler,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. Typically deployed to beef up system police forces and port authority security, the Brawler-class frigate is a robust design which trades mobility (and comfort) for impressive firepower, armor, and a destroyer-grade power generator.",,,
@@ -122,6 +124,23 @@ The blueprints of the ship call for many components similar to those found in th
 
 Tough to beat in a destroyer to destroyer fight, the Enforcer rarely takes part in larger battles due to the common view that its low speed makes it a liability. Nonetheless, Hegemony order of battle doctrines mandate an attached Enforcer squadron as a screen for Onslaught-class battleships. The logistical ease with which shared components can be used by both ship types is exactly the type of detail that excites Hegemony Logisticarum bureaucrats.",,,
 ,,,,,
+torgue_basic_shrike,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+An advanced fast-attack light destroyer from the same design team as the near-ubiquitous Wolf, the Shrike's advanced propulsion system is designed to selectively vent plasma in a 'microburn' maneuver. This allows the Shrike to dart into tactical opportunities as they arise, strike, and escape before a proper counter-attack is mounted. Shields, armour, and sustained flux capacity are somewhat underwhelming due to the need to build a light yet economical hull which prioritizes attack speed, leading to the Shrike gaining the reputation as a glass cannon best entrusted to skilled captains.
+
+Certain unique structural elements in the plasma venting system are known to, with wear, corrode in oxygen-rich atmospheres, so care must be taken to re-apply ceramopolymer coating at each hull servicing.",,,
+,,,,,
+torgue_advanced_shrike,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+An advanced fast-attack light destroyer from the same design team as the near-ubiquitous Wolf, the Shrike's advanced propulsion system is designed to selectively vent plasma in a 'microburn' maneuver. This allows the Shrike to dart into tactical opportunities as they arise, strike, and escape before a proper counter-attack is mounted. Shields, armour, and sustained flux capacity are somewhat underwhelming due to the need to build a light yet economical hull which prioritizes attack speed, leading to the Shrike gaining the reputation as a glass cannon best entrusted to skilled captains.
+
+Certain unique structural elements in the plasma venting system are known to, with wear, corrode in oxygen-rich atmospheres, so care must be taken to re-apply ceramopolymer coating at each hull servicing.",,,
+,,,,,
+torgue_expert_shrike,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+An advanced fast-attack light destroyer from the same design team as the near-ubiquitous Wolf, the Shrike's advanced propulsion system is designed to selectively vent plasma in a 'microburn' maneuver. This allows the Shrike to dart into tactical opportunities as they arise, strike, and escape before a proper counter-attack is mounted. Shields, armour, and sustained flux capacity are somewhat underwhelming due to the need to build a light yet economical hull which prioritizes attack speed, leading to the Shrike gaining the reputation as a glass cannon best entrusted to skilled captains.
+
+Certain unique structural elements in the plasma venting system are known to, with wear, corrode in oxygen-rich atmospheres, so care must be taken to re-apply ceramopolymer coating at each hull servicing.",,,
 ,,,,,
 ,,,,,
 ,,,,,

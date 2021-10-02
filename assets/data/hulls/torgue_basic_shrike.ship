@@ -1,0 +1,138 @@
+{
+  "hullName": "Torgue Basic Shrike",
+  "hullId": "torgue_basic_shrike",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/shrike/torgue/torgue_basic_shrike.png",
+  "style": "HIGH_TECH",
+  "height": 170,
+  "width": 110,
+  "center": [55, 79],
+  "collisionRadius": 120,
+  "shieldCenter": [6, 0],
+  "shieldRadius": 116,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [60, -16]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [60, 16]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-29, -42]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-29, 42]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-76, 14],
+      "length": 48,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-76, -14],
+      "length": 48,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-66, 34],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-69, 28],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-71, 23],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-71, -23],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-69, -28],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-66, -34],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    1, 49.5,
+    74.5, 26,
+    74.5, -27,
+    -1, -50,
+    -19, -33.5,
+    -22.5, -52.5,
+    -36, -52.5,
+    -39.5, -34.5,
+    -70.5, -38.5,
+    -74, -9,
+    -56, -6,
+    -56, 7,
+    -74, 10,
+    -70, 38,
+    -38.5, 34.5,
+    -35.5, 53.5,
+    -23, 53,
+    -20, 34
+  ]
+}

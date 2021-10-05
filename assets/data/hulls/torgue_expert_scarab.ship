@@ -2,7 +2,7 @@
   "hullName": "Torgue Expert Scarab",
   "hullId": "torgue_expert_scarab",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_expert_scarab.png",
+  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_expert_scarab_paint.png",
   "style": "HIGH_TECH",
   "height": 96,
   "width": 96,

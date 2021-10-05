@@ -2,7 +2,7 @@
   "hullName": "Torgue Expert Brawler",
   "hullId": "torgue_expert_brawler",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_expert_brawler.png",
+  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_expert_brawler_paint.png",
   "style": "MIDLINE",
   "height": 70,
   "width": 110,
@@ -12,14 +12,16 @@
   "shieldRadius": 59,
   "viewOffset": 0,
   "builtInWeapons": {
-    "WS0005": "torgue_medium_annihilator",
-    "WS0006": "torgue_medium_annihilator",
+    "WS0007": "torgue_annihilator_tube",
+    "WS0008": "torgue_annihilator_tube",
+    "WS0009": "torgue_annihilator_tube",
+    "WS0010": "torgue_annihilator_tube"
   },
   "weaponSlots": [
     {
       "id": "WS0005",
       "size": "MEDIUM",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -0,
@@ -28,7 +30,7 @@
     {
       "id": "WS0006",
       "size": "MEDIUM",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
@@ -69,6 +71,42 @@
       "arc": 10,
       "angle": -0,
       "locations": [0.5, -29]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [16, 36.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [16, -36.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [20, 32.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [20, -32.5]
     }
   ],
   "engineSlots": [

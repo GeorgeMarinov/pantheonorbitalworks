@@ -2,7 +2,7 @@
   "hullName": "Torgue Basic Afflictor",
   "hullId": "torgue_basic_afflictor",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_basic_afflictor.png",
+  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_basic_afflictor_paint.png",
   "style": "HIGH_TECH",
   "height": 140,
   "width": 72,

@@ -2,7 +2,7 @@
   "hullName": "Torgue Basic Brawler",
   "hullId": "torgue_basic_brawler",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_basic_brawler.png",
+  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_basic_brawler_paint.png",
   "style": "MIDLINE",
   "height": 70,
   "width": 110,

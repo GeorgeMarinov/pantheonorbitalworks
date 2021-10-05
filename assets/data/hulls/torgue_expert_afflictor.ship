@@ -2,7 +2,7 @@
   "hullName": "Torgue Expert Afflictor",
   "hullId": "torgue_expert_afflictor",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_expert_afflictor.png",
+  "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_expert_afflictor_paint.png",
   "style": "HIGH_TECH",
   "height": 170,
   "width": 92,

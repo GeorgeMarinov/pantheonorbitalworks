@@ -2,7 +2,7 @@
   "hullName": "Torgue Advanced Scarab",
   "hullId": "torgue_advanced_scarab",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_advanced_scarab.png",
+  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_advanced_scarab_paint.png",
   "style": "HIGH_TECH",
   "height": 96,
   "width": 96,

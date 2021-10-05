@@ -2,7 +2,7 @@
   "hullName": "Torgue Advanced Brawler",
   "hullId": "torgue_advanced_brawler",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_advanced_brawler.png",
+  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_advanced_brawler_paint.png",
   "style": "MIDLINE",
   "height": 70,
   "width": 110,

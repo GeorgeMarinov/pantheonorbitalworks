@@ -36,8 +36,8 @@ public class CEO extends PaginatedOptions {
 
 	public final RefitRepresentative[] refitRepresentative = new RefitRepresentative[] {
 			new RefitRepresentative("Mr. Torgue", "Torgue"), new RefitRepresentative("Andreyevna", "Vladof"),
-			new RefitRepresentative("Katagawa", "Maliwan"), new RefitRepresentative("Jacobs", "Jacobs"),
-			new RefitRepresentative("Rhys", "Atlas"), new RefitRepresentative("Handsome Jack", "Hyperion") };
+			new RefitRepresentative("Katagawa Jr.", "Maliwan"), new RefitRepresentative("Jacobs", "Jacobs"),
+			new RefitRepresentative("Rhys Strongfork", "Atlas"), new RefitRepresentative("Handsome Jack", "Hyperion") };
 
 	public enum DialogIdKeys {
 		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName,

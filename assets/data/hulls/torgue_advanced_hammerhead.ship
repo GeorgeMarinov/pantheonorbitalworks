@@ -1,0 +1,170 @@
+{
+  "hullName": "Torgue Advanced Hammerhead",
+  "hullId": "torgue_advanced_hammerhead",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/hammerhead/torgue/torgue_advanced_hammerhead.png",
+  "style": "MIDLINE",
+  "coversColor": "255,255,255,255",
+  "height": 164,
+  "width": 108,
+  "center": [54, 71],
+  "collisionRadius": 130,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 120,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [84, 31]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [84, -31]
+    },
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [67, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -45,
+      "locations": [22, -41]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 45,
+      "locations": [22, 41]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -45,
+      "locations": [4, -45]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 45,
+      "locations": [4, 45]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-70, 38],
+      "length": 75,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-69, 27],
+      "length": 65,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 60,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-68, 15],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-68, -15],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-69, -26],
+      "length": 65,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-70, -38],
+      "length": 75,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-71.5, -0],
+      "length": 70,
+      "width": 45,
+      "angle": 180,
+      "contrailSize": 45,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    48.5, 30.5,
+    50.5, 51,
+    72, 51,
+    89, 37.5,
+    89, -39,
+    73, -51.5,
+    50.5, -51.5,
+    50, -29.5,
+    26, -37,
+    31, -41.5,
+    22, -48,
+    16, -41,
+    6.5, -40,
+    11.5, -46,
+    4.5, -52.5,
+    -2, -46.5,
+    -17, -52.5,
+    -42, -41,
+    -71, -45,
+    -71, 45,
+    -40, 41,
+    -15.5, 53,
+    -1.5, 46,
+    4.5, 52.5,
+    12, 47.5,
+    8, 40.5,
+    14, 39.5,
+    22.5, 49.5,
+    30.5, 42,
+    27, 38
+  ]
+}

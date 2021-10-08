@@ -1,6 +1,5 @@
 package pantheonorbitalworks;
 
 public enum RefitableDestroyer {
-    enforcer,
-    shrike
+    enforcer, shrike, hammerhead
 }

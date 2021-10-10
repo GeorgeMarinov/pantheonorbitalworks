@@ -1,0 +1,17 @@
+{
+	"id":"pow_weaponsfocus",
+	"type":"STAT_MOD",
+
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"pantheonorbitalworks.shipsystems.POW_WeaponFocusStats",
+	
+	"weaponGlowColor":[255,0,255,255],
+	"weaponTypes":[ENERGY],
+	
+	"useSound":"system_high_energy_focus_activate",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+	
+	"outOfUsesSound":"gun_out_of_ammo",
+	"loopSound":"system_high_energy_focus_loop",	
+}

@@ -1,0 +1,130 @@
+{
+  "hullName": "Torgue Advanced Wolf",
+  "hullId": "torgue_advanced_wolf",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/wolf/torgue/torgue_advanced_wolf.png",
+  "style": "HIGH_TECH",
+  "height": 96,
+  "width": 80,
+  "center": [40, 42],
+  "collisionRadius": 80,
+  "shieldCenter": [7, -0],
+  "shieldRadius": 70,
+  "viewOffset": 50,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [45, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [44, 16]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [44, -16]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [10, 19]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [10, -19]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-7, 26]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-7, -26]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-38.5, 11],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42.5, -1],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-38.5, -12],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    54.5, 7.5,
+    54.5, -8.5,
+    48.5, -10.5,
+    48.5, -21.5,
+    40, -21.5,
+    25, -11.5,
+    15.5, -16.5,
+    14.5, -24.5,
+    -3.5, -22,
+    -3.5, -31,
+    -22, -34,
+    -34.5, -17,
+    -41, -0.5,
+    -34, 16.5,
+    -22.5, 34.5,
+    -3, 30,
+    -3, 23.5,
+    14.5, 23.5,
+    15.5, 15.5,
+    25.5, 10.5,
+    36, 21,
+    48.5, 21,
+    48.5, 10
+  ]
+}

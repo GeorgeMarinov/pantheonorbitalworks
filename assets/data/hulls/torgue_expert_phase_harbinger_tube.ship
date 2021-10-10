@@ -1,0 +1,39 @@
+{
+  "hullName": "Segment",
+  "hullId": "torgue_expert_phase_harbinger_tube",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/weapons/blank.png",
+  "style": "HIGH_TECH",
+  "height": 170,
+  "width": 92,
+  "center": [46, 136],
+  "collisionRadius": 97,
+  "shieldCenter": [-4, -0],
+  "shieldRadius": 90,
+  "viewOffset": 0,
+  "builtInMods": [
+    "never_detaches",
+    "masterwork_torgue_expert_refit"
+  ],
+  "builtInWeapons": {
+    "WS0001": "pow_torgue_flail_blank"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [0, 0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -37, 0,
+    -38, 0,
+    -38, 1,
+    -37, 1
+  ]
+}

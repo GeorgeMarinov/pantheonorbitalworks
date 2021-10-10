@@ -1,0 +1,206 @@
+{
+  "hullName": "Torgue Expert Sunder",
+  "hullId": "torgue_expert_sunder",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/sunder/torgue/torgue_expert_sunder.png",
+  "style": "MIDLINE",
+  "height": 192,
+  "width": 200,
+  "center": [100, 85],
+  "collisionRadius": 111,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 128,
+  "viewOffset": 100,
+  "builtInWeapons": {
+    "WS0008": "torgue_annihilator_tube",
+    "WS0009": "torgue_annihilator_tube",
+    "WS0010": "pow_torgue_flail_blank",
+    "WS0011": "pow_torgue_flail_blank"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [36, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [41, -69]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [41, 69]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [15, -29]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [15, 29]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [35, -52]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [35, 52]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [57, 21]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [57, -21]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [10, 43]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [10, -43]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-80, 33],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-86, 17],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-86, -17],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-80, -33],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-35.5, -58],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-35.5, 58],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-80.5, -0],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    97.5, 12.5,
+    47.5, 29.5,
+    34.5, 15.5,
+    16.5, 38.5,
+    37, 58,
+    49.5, 62,
+    50, 74.5,
+    15, 86.5,
+    -11.5, 78,
+    -43, 39,
+    -77.5, 37.5,
+    -83.5, 13.5,
+    -83.5, -11.5,
+    -76.5, -37.5,
+    -42.5, -39.5,
+    -19, -72.5,
+    12, -87,
+    50, -74.5,
+    49, -62,
+    37, -58,
+    15.5, -40.5,
+    33.5, -14.5,
+    47.5, -29.5,
+    98.5, -11.5,
+    39.5, -0.5
+  ]
+}

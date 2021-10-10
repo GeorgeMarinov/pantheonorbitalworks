@@ -99,6 +99,28 @@ The Cerberus is prized for providing a cost-effective balance between cargo capa
 
 In times past, before the fall of the gate system when Domain authority reigned, combat-enabled freighters like the Cerberus found only niche use on the edges of the rare warzone or in especially uncivilized hinterlands of the galaxy where Domain Armada patrols were stretched thinly. The crew combat training, weapon maintenance, and mass/thrust ratio loss caused by heavier armour were viewed as causing unnecessary cost overhead. But this is a new age filled with both danger and profitable opportunities; the abilities of the Cerberus have given the hull a new life in the trade lanes.",,,
 ,,,,,
+torgue_basic_wolf,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A technologically advanced frigate with an efficient shield generator and an impressive weapons package that allows it to punch far above its weight. These same characteristics mean its frigate-grade power core struggles to keep up, making careful flux management a priority.",,,
+,,,,,
+torgue_advanced_wolf,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A technologically advanced frigate with an efficient shield generator and an impressive weapons package that allows it to punch far above its weight. These same characteristics mean its frigate-grade power core struggles to keep up, making careful flux management a priority.",,,
+,,,,,
+torgue_expert_wolf,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A technologically advanced frigate with an efficient shield generator and an impressive weapons package that allows it to punch far above its weight. These same characteristics mean its frigate-grade power core struggles to keep up, making careful flux management a priority.",,,
+,,,,,
+torgue_basic_phase_harbinger,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A deadly phase destroyer feared and scorned by those crews who have suffered the misfortune of facing it in battle. The Harbinger possesses a device which allows it to briefly disable enemy ships, creating openings that it - or its allies - can exploit.
+
+""The Tri-Tachyon Corporation denies allegations of ongoing involvement in phasing experiments, much less the - and I quote - 'clandestine development and operation of phase warships' which would of course be in direct violation of the Treaty of Thule. It is Company policy to pursue full persecution of individuals, mercantile bodies, spiritual clades, and any registered polities committing gross and flagrant defamation to the full extent of local jurisdictional power as per the Sector Commercial Accords of Cycle 32 AC. Our legal team will be in touch.""",,,
+torgue_advanced_phase_harbinger,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A deadly phase destroyer feared and scorned by those crews who have suffered the misfortune of facing it in battle. The Harbinger possesses a device which allows it to briefly disable enemy ships, creating openings that it - or its allies - can exploit.
+
+""The Tri-Tachyon Corporation denies allegations of ongoing involvement in phasing experiments, much less the - and I quote - 'clandestine development and operation of phase warships' which would of course be in direct violation of the Treaty of Thule. It is Company policy to pursue full persecution of individuals, mercantile bodies, spiritual clades, and any registered polities committing gross and flagrant defamation to the full extent of local jurisdictional power as per the Sector Commercial Accords of Cycle 32 AC. Our legal team will be in touch.""",,,
+torgue_expert_phase_harbinger,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+A deadly phase destroyer feared and scorned by those crews who have suffered the misfortune of facing it in battle. The Harbinger possesses a device which allows it to briefly disable enemy ships, creating openings that it - or its allies - can exploit.
+
+""The Tri-Tachyon Corporation denies allegations of ongoing involvement in phasing experiments, much less the - and I quote - 'clandestine development and operation of phase warships' which would of course be in direct violation of the Treaty of Thule. It is Company policy to pursue full persecution of individuals, mercantile bodies, spiritual clades, and any registered polities committing gross and flagrant defamation to the full extent of local jurisdictional power as per the Sector Commercial Accords of Cycle 32 AC. Our legal team will be in touch.""",,,
+,,,,,
 ,,,,,
 torgue_basic_enforcer,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 
@@ -172,6 +194,47 @@ The Mule-class is a tough nut to crack, which makes its designation as a combat 
 
 Often its captains casually ferry cargo to and fro between the star systems of the Sector alone and comfortable in the knowledge that they could afford the best protection a freighter captain can hope to get, short of an escort, of course.",,,
 ,,,,,
+torgue_basic_medusa,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A fearsome ship whose top tier engines provide great speed and maneuverability for a destroyer. Multiple energy weapon slots allow for a plethora of tactical possibilities. Its best-in-class performance is matched by a demanding logistical profile that has led some fleet commanders to eschew its use in favor of other ships that can be deployed more frequently and cheaply.
+
+The Medusa is one of the most respected destroyers in the sector due to its association with black ops and elite pirates. The few that have been aboard a Medusa can attest to its extreme level of technological sophistication. Medusa-class blueprints are few in number and are some of the rarest and most closely guarded data in the Sector.
+
+Deemed too expensive to mass produce by most corporations and governments, it is rarely employed by the lawful authorities as a black ops cruiser. On the rarest occasion, a Medusa-class hull may fall into the hands of pirates. The usual results are a drastic reduction in system small to medium shipping, which puts a strain on most planetary and outpost economies.
+
+Sector naval tacticians have few answers for the threat that the Medusa presents.",,,
+,,,,,
+torgue_advanced_medusa,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A fearsome ship whose top tier engines provide great speed and maneuverability for a destroyer. Multiple energy weapon slots allow for a plethora of tactical possibilities. Its best-in-class performance is matched by a demanding logistical profile that has led some fleet commanders to eschew its use in favor of other ships that can be deployed more frequently and cheaply.
+
+The Medusa is one of the most respected destroyers in the sector due to its association with black ops and elite pirates. The few that have been aboard a Medusa can attest to its extreme level of technological sophistication. Medusa-class blueprints are few in number and are some of the rarest and most closely guarded data in the Sector.
+
+Deemed too expensive to mass produce by most corporations and governments, it is rarely employed by the lawful authorities as a black ops cruiser. On the rarest occasion, a Medusa-class hull may fall into the hands of pirates. The usual results are a drastic reduction in system small to medium shipping, which puts a strain on most planetary and outpost economies.
+
+Sector naval tacticians have few answers for the threat that the Medusa presents.",,,
+,,,,,
+torgue_expert_medusa,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A fearsome ship whose top tier engines provide great speed and maneuverability for a destroyer. Multiple energy weapon slots allow for a plethora of tactical possibilities. Its best-in-class performance is matched by a demanding logistical profile that has led some fleet commanders to eschew its use in favor of other ships that can be deployed more frequently and cheaply.
+
+The Medusa is one of the most respected destroyers in the sector due to its association with black ops and elite pirates. The few that have been aboard a Medusa can attest to its extreme level of technological sophistication. Medusa-class blueprints are few in number and are some of the rarest and most closely guarded data in the Sector.
+
+Deemed too expensive to mass produce by most corporations and governments, it is rarely employed by the lawful authorities as a black ops cruiser. On the rarest occasion, a Medusa-class hull may fall into the hands of pirates. The usual results are a drastic reduction in system small to medium shipping, which puts a strain on most planetary and outpost economies.
+
+Sector naval tacticians have few answers for the threat that the Medusa presents.",,,
+,,,,,
+torgue_basic_sunder,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A technologically advanced yet fragile destroyer from the late Domain era designed to provide additional firepower in fleet actions carried out by the stretched Domain Navy rather than serve on independent patrols. It has powerful shield emitters and energy weapons but is vulnerable to strike craft and flanking assault frigates.",,,
+,,,,,
+torgue_advanced_sunder,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A technologically advanced yet fragile destroyer from the late Domain era designed to provide additional firepower in fleet actions carried out by the stretched Domain Navy rather than serve on independent patrols. It has powerful shield emitters and energy weapons but is vulnerable to strike craft and flanking assault frigates.",,,
+,,,,,
+torgue_expert_sunder,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A technologically advanced yet fragile destroyer from the late Domain era designed to provide additional firepower in fleet actions carried out by the stretched Domain Navy rather than serve on independent patrols. It has powerful shield emitters and energy weapons but is vulnerable to strike craft and flanking assault frigates.",,,
 ,,,,,
 ,,,,,
 # PLANETS PLANETS PLANETS
@@ -179,6 +242,8 @@ Often its captains casually ferry cargo to and fro between the star systems of t
 # SHIP-SYSTEMS SHIP-SYSTEMS SHIP-SYSTEMS
 ,,,,,
 pow_ammofeed,SHIP_SYSTEM,Activates an advanced mechanism for quickly delivering ammo to the ship's weapon emplacements. The mechanism must be re-calibrated and cooled before it can be used again.,Offensive,Provides a brief boost to the rate of fire of all weapons.,
+,,,,,
+pow_weaponsfocus,SHIP_SYSTEM,"Briefly increases the damage dealt by all weapons. The capacitor array stores multiple charges, which are slowly regenerated.",Offensive,Briefly increases the damage dealt by all weapons.,
 ,,,,,
 # COMMODITY COMMODITY COMMODITY
 ,,,,,

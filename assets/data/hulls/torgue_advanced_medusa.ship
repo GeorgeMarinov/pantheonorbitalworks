@@ -1,0 +1,269 @@
+{
+  "hullName": "Torgue Advanced Medusa",
+  "hullId": "torgue_advanced_medusa",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/medusa/torgue/torgue_advanced_medusa.png",
+  "style": "HIGH_TECH",
+  "coversColor": "255,255,255,255",
+  "height": 138,
+  "width": 180,
+  "center": [90, 63],
+  "collisionRadius": 110,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 110,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [56, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [50, 32]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [50, -32]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [48, 49]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [48, -49]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-63.5, 22],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-62.5, 15],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-62.5, -16],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63.5, -23],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-61.5, 4],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-61.5, -5],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-53, 59],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-53, -59],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, 55],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, -55],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58.5, 51.5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58.5, -51.5],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59.5, 48],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59.5, -48],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60.5, 45],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60.5, -45],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59.5, 41.5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59.5, -41.5],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58.5, 37.5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58.5, -37.5],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, 34],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, -34],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    53.5, 65,
+    59, 39.5,
+    61, 14,
+    70, 14,
+    70, -14.5,
+    61.5, -14.5,
+    59, -41.5,
+    52.5, -64,
+    29, -79,
+    10, -78.5,
+    9.5, -73,
+    9.5, -73,
+    -6.5, -73.5,
+    -9, -79.5,
+    -34, -76.5,
+    -48.5, -67,
+    -56.5, -46,
+    -58.5, -26,
+    -58.5, 24.5,
+    -56.5, 45.5,
+    -47.5, 66.5,
+    -31.5, 76.5,
+    -9, 79,
+    -7, 73.5,
+    10, 73.5,
+    10.5, 79,
+    31.5, 79
+  ]
+}

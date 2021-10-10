@@ -1,10 +1,5 @@
 package pantheonorbitalworks;
 
 public enum RefitableFrigade {
-    brawler,
-    lasher,
-    scarab,
-    afflictor,
-    monitor,
-    cerberus,
+    brawler, lasher, scarab, wolf, monitor, cerberus, afflictor
 }

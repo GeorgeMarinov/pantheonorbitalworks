@@ -1,0 +1,114 @@
+{
+  "hullName": "Torgue Basic Wolf",
+  "hullId": "torgue_basic_wolf",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/POW/ships/wolf/torgue/torgue_basic_wolf.png",
+  "style": "HIGH_TECH",
+  "height": 96,
+  "width": 52,
+  "center": [26, 42],
+  "collisionRadius": 80,
+  "shieldCenter": [7, 0],
+  "shieldRadius": 70,
+  "viewOffset": 50,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [45, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [44, 16]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [44, -16]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [10, 19]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [10, -19]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-36, 12],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, 0],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-36, -11],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    54, 8,
+    54, -8,
+    48, -10,
+    48, -21,
+    39.5, -21,
+    24.5, -11,
+    15, -16,
+    14, -24,
+    -1, -22.5,
+    -7.5, -15,
+    -15.5, -18.5,
+    -23.5, -14,
+    -35, -16.5,
+    -41.5, -0,
+    -34.5, 17,
+    -23.5, 14,
+    -16, 18.5,
+    -7.5, 15.5,
+    1, 24,
+    14, 24,
+    15, 16,
+    25, 11,
+    35.5, 21.5,
+    48, 21.5,
+    48, 10.5
+  ]
+}

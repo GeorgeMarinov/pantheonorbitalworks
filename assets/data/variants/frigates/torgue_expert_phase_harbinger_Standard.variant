@@ -1,0 +1,16 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_phase_harbinger",
+  "modules": [
+      {"WS0010": "torgue_expert_phase_harbinger_tube_Standard"},
+      {"WS0011": "torgue_expert_phase_harbinger_tube_Standard"},
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_phase_harbinger_Standard",
+  "weaponGroups": [],
+  "wings": []
+}

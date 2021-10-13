@@ -1,0 +1,191 @@
+{
+  "hullName": "Torgue Advanced Harbinger",
+  "hullId": "torgue_advanced_harbinger",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/POW/ships/harbinger/torgue/torgue_advanced_harbinger.png",
+  "style": "HIGH_TECH",
+  "height": 152,
+  "width": 170,
+  "center": [85, 81],
+  "collisionRadius": 120,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 107,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [51, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [60, 24]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [60, -24]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [56, 43]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": -0,
+      "locations": [57, -43]
+    },
+    {
+      "id": "WS0099",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-24.5, -12.5]
+    },
+    {
+      "id": "WS0098",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-24.5, 12]
+    },
+    {
+      "id": "WS0096",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [27, 35]
+    },
+    {
+      "id": "WS0097",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": -0,
+      "locations": [27, -35]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-79, 36],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-81, 28],
+      "length": 44,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-82, 20],
+      "length": 46,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 46,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, -36],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-82, -28],
+      "length": 44,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-82, -20],
+      "length": 46,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 46,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, 12.5],
+      "length": 32.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, -12.5],
+      "length": 32.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-82, 4.5],
+      "length": 46,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 46,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-82, -4.5],
+      "length": 46,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 46,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    63, 53,
+    63, -55,
+    23, -58,
+    -17, -35,
+    -40, -45,
+    -77, -43,
+    -77, 41,
+    -39, 44,
+    -17, 33,
+    21, 55
+  ]
+}

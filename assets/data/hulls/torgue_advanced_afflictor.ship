@@ -78,7 +78,7 @@
     {
       "id": "WS0098",
       "size": "SMALL",
-      "type": "DECORATIVE",
+      "type": "SYSTEM",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 90,
@@ -87,7 +87,7 @@
     {
       "id": "WS0099",
       "size": "SMALL",
-      "type": "DECORATIVE",
+      "type": "SYSTEM",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -90,

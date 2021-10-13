@@ -251,8 +251,8 @@ public class CEO extends PaginatedOptions {
 				String finalMenuStateString = dialogData.get(DialogIdKeys.finalMenuState.toString());
 				if (finalMenuStateString != null) {
 					FinalMenuStates finalMenuState = FinalMenuStates.valueOf(finalMenuStateString);
-					switch (finalMenuState) {
-						case preview:
+					switch (finalMenuState.toString()) {
+						case "preview":
 							optionPanel.clearOptions();
 							String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 							String chosenPackage = dialogData.get(DialogIdKeys.newPackage.toString());
@@ -270,32 +270,6 @@ public class CEO extends PaginatedOptions {
 							if (selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 								String phaseOption = dialogData.get(DialogIdKeys.replacePhaseCoils.toString());
 								shipPreview.getVariant().addPermaMod("phase_" + phaseOption);
-								// if (phaseOption != null) {
-								// PhaseCoilReplacemnts phaseReplacement =
-								// PhaseCoilReplacemnts.valueOf(phaseOption);
-								// switch (phaseReplacement) {
-								// case extra_cargo:
-								// shipPreview.getVariant().addPermaMod("phase_replacement_cargo");
-								// break;
-								// case built_in_weapons:
-
-								// break;
-								// case extra_flux_capacity_and_dissipation:
-
-								// break;
-								// case high_tech_shield_emmiter:
-
-								// break;
-								// case low_tech_shield_emmiter:
-
-								// break;
-								// case mid_tech_shield_emmiter:
-
-								// break;
-								// default:
-								// break;
-								// }
-								// }
 							}
 
 							if (selectedPackageOption.contains(DialogIdKeys.newShield.toString())) {
@@ -337,7 +311,8 @@ public class CEO extends PaginatedOptions {
 							optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
 									false, false);
 							return true;
-						case phase_coils:
+						case "phase_coils":
+							Global.getSector().getCampaignUI().addMessage("in phase menu");
 							optionPanel.clearOptions();
 							for (PhaseCoilReplacemnts phaseCoilReplacemnt : PhaseCoilReplacemnts.values()) {
 								int originalCreditsCost = Integer
@@ -355,8 +330,10 @@ public class CEO extends PaginatedOptions {
 														DialogIdKeys.creditsCost + ":" + totalCost + ";")
 												+ DialogIdKeys.replacePhaseCoils + ":" + phaseCoilReplacemnt + ";");
 							}
-						case shield_swap:
+							return true;
+						case "shield_swap":
 							optionPanel.clearOptions();
+							Global.getSector().getCampaignUI().addMessage("in shield_swap menu");
 							for (Shields newShield : Shields.values()) {
 								int originalCreditsCost = Integer
 										.parseInt(dialogData.get(DialogIdKeys.creditsCost.toString()));

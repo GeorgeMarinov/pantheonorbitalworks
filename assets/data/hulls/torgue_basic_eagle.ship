@@ -1,0 +1,196 @@
+{
+  "hullName": "Torgue Basic Eagle",
+  "hullId": "torgue_basic_eagle",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/POW/ships/eagle/torgue/torgue_basic_eagle.png",
+  "style": "MIDLINE",
+  "height": 218,
+  "width": 168,
+  "center": [84, 86],
+  "collisionRadius": 182,
+  "shieldCenter": [25, 0],
+  "shieldRadius": 155,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [113, 16]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [113, -16]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [61, -59]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [61, 59]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-18, 73]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-18, -73]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-82, 42],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, 31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, 20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, -20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, -31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83, -41],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-37, 78],
+      "length": 24,
+      "width": 8,
+      "angle": 160,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-42, 67],
+      "length": 28,
+      "width": 8,
+      "angle": 165,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, 55],
+      "length": 32,
+      "width": 8,
+      "angle": 170,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-37, -78],
+      "length": 24,
+      "width": 8,
+      "angle": 200,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-42, -67],
+      "length": 28,
+      "width": 8,
+      "angle": 195,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, -55],
+      "length": 32,
+      "width": 8,
+      "angle": 190,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -16, 80,
+    -11, 65,
+    -0.5, 68.5,
+    42, 58,
+    48, 68.5,
+    68, 67,
+    68, 49,
+    129.5, 34.5,
+    129.5, -35,
+    69, -49.5,
+    69, -65,
+    47.5, -67,
+    42.5, -58.5,
+    0.5, -69.5,
+    -12, -66,
+    -14, -78,
+    -29, -78,
+    -47, -48,
+    -76, -52,
+    -81, -11,
+    -45, -9,
+    -45, 9,
+    -79, 11,
+    -76, 53,
+    -45, 46,
+    -29, 79
+  ]
+}

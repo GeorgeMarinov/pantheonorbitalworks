@@ -28,6 +28,7 @@ import java.util.Random;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
+import pantheonorbitalworks.RefitableCruiser;
 import pantheonorbitalworks.RefitableDestroyer;
 import pantheonorbitalworks.RefitableFrigade;
 import pantheonorbitalworks.RefitablePhase;
@@ -157,12 +158,11 @@ public class CEO extends PaginatedOptions {
 									displayAvailableHulls(refitableShip.toString());
 								}
 								break;
-							// case cruiser:
-							// for (RefitableFrigade refitableShip : RefitableFrigade.values())
-							// {
-							// displayAvailableHulls(refitableShip.toString());
-							// }
-							// break;
+							case cruiser:
+								for (RefitableCruiser refitableShip : RefitableCruiser.values()) {
+									displayAvailableHulls(refitableShip.toString());
+								}
+								break;
 							// case capital:
 							// for (RefitableFrigade refitableShip : RefitableFrigade.values())
 							// {

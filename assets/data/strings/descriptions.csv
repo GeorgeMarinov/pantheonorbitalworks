@@ -10,6 +10,8 @@ torgue_lasher_back_annihilator,WEAPON,Custom Torgue rocket pod firing bursts of 
 ,,,,,
 torgue_annihilator_tube,WEAPON,Custom Torgue rocket tube firing fast annihilator missiles.,,,
 ,,,,,
+pow_torgue_two_stage_annihilator_blank,WEAPON,Custom Torgue rocket tube firing fast two stage annihilator missiles.,,,
+,,,,,
 torgue_phase_replacement,WEAPON,Custom Torgue rocket pods firing two stage annihilator missiles.,,,
 ,,,,,
 pow_torgue_flak,WEAPON,"A defensive weapon system that fires cluster bombs propelled by torgue gyrojets and equipped with a proximity fuse for maximum effect against fighters and missiles.",,,
@@ -303,6 +305,32 @@ These strengths are somewhat countered by strike craft - an Eagle captain must a
 
 The embodiment of the sleek and powerful space cruiser from the time of the Domain, the Eagle-class ships are a beautiful reminder of the technological and aesthetic achievements of humanity's past. ","Agile for a cruiser, the Eagle is difficult to flank and has impressive and focused frontal firepower.",,
 ,,,,,
+torgue_basic_apogee,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+The Apogee-class vessel is an effective mix of advanced scientific and military technologies, perfect for long-range exploration of hostile space. 
+
+The class features an asymmetric design with a large forward section, usually outfitted with long-range tech scanners. Apogee captains are used to operating alone and tend to be an independent, self-reliant lot. 
+
+The ship can hold its own in one-on-one engagements by smart use of its powerful shield emitter and strong engines. However, its armor rating makes it seem somewhat fragile on paper, and thus it is rarely part of big fleet actions.
+
+The high construction costs typically mean that only affluent tech mining consortiums can afford an Apogee-class vessel that is fully outfitted for an aggressive exploratory role.",,,
+,,,,,
+torgue_advanced_apogee,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+The Apogee-class vessel is an effective mix of advanced scientific and military technologies, perfect for long-range exploration of hostile space. 
+
+The class features an asymmetric design with a large forward section, usually outfitted with long-range tech scanners. Apogee captains are used to operating alone and tend to be an independent, self-reliant lot. 
+
+The ship can hold its own in one-on-one engagements by smart use of its powerful shield emitter and strong engines. However, its armor rating makes it seem somewhat fragile on paper, and thus it is rarely part of big fleet actions.
+
+The high construction costs typically mean that only affluent tech mining consortiums can afford an Apogee-class vessel that is fully outfitted for an aggressive exploratory role.",,,
+,,,,,
+torgue_expert_apogee,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+The Apogee-class vessel is an effective mix of advanced scientific and military technologies, perfect for long-range exploration of hostile space. 
+
+The class features an asymmetric design with a large forward section, usually outfitted with long-range tech scanners. Apogee captains are used to operating alone and tend to be an independent, self-reliant lot. 
+
+The ship can hold its own in one-on-one engagements by smart use of its powerful shield emitter and strong engines. However, its armor rating makes it seem somewhat fragile on paper, and thus it is rarely part of big fleet actions.
+
+The high construction costs typically mean that only affluent tech mining consortiums can afford an Apogee-class vessel that is fully outfitted for an aggressive exploratory role.",,,
 ,,,,,
 ,,,,,
 ,,,,,

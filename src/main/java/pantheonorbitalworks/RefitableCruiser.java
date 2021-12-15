@@ -1,5 +1,5 @@
 package pantheonorbitalworks;
 
 public enum RefitableCruiser {
-    dominator, eagle, apogee
+    dominator, eagle, apogee, venture
 }

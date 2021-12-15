@@ -1,0 +1,164 @@
+{
+  "hullName": "Torgue Basic Venture",
+  "hullId": "torgue_basic_venture",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/POW/ships/venture/torgue/torgue_basic_venture.png",
+  "style": "LOW_TECH",
+  "height": 190,
+  "width": 194,
+  "center": [97, 89],
+  "collisionRadius": 135,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 135,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [88, 33]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [88, -33]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [57, -43]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [57, 43]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [48, -59]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [48, 59]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [6, 80]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [6, -80]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87, 63],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, -62],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, 55],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, -54],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-83, 77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-83, -77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    97, 19,
+    97, -17,
+    77, -35,
+    59, -47,
+    49, -67,
+    24, -67,
+    -11, -94,
+    -46, -94,
+    -77, -91,
+    -86, -49,
+    -49, -49,
+    -28, -38,
+    -64, -26,
+    -65, -0,
+    -62, 26,
+    -27, 39,
+    -84, 50,
+    -78, 88,
+    -46, 95,
+    -10, 95,
+    25, 69,
+    48, 69,
+    58.5, 46.5,
+    77, 35
+  ]
+}

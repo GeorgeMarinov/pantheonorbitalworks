@@ -112,6 +112,12 @@ Torgue Expert Eagle,torgue_expert_eagle,Cruiser,Torgue,maneuveringjets,14,8000,1
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Torgue Basic Apogee,torgue_basic_apogee,Cruiser,Torgue,flarelauncher_active,14,9000,750,12000,14000,700,140,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,168000,3,15,420,0.25,18,18,,,,,,,,,,0.6,2,3,,403
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Torgue Advanced Apogee,torgue_advanced_apogee,Cruiser,Torgue,flarelauncher_active,14,9000,750,12000,14000,700,140,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,210000,3,15,420,0.25,18,18,,,,,,,,,,0.6,2,3,,403
+Torgue Advanced Apogee,torgue_advanced_apogee,Cruiser,Torgue,flarelauncher_active,14,9000,750,12000,14000,700,150,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,210000,3,15,420,0.25,18,18,,,,,,,,,,0.6,2,3,,403
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Torgue Expert Apogee,torgue_expert_apogee,Cruiser,Torgue,flarelauncher_active,14,9000,750,12000,14000,700,140,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,280000,3,15,420,0.25,18,18,,,,,,,,,,0.6,2,3,,403
+Torgue Expert Apogee,torgue_expert_apogee,Cruiser,Torgue,flarelauncher_active,14,9000,750,12000,14000,700,130,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,280000,3,15,420,0.25,18,18,,,,,,,,,,0.6,2,3,,403
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Basic Venture,torgue_basic_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1250,7000,6000,300,110,,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,125,350,350,120,3,40,7,132000,5,10,540,0.25,15,15,,,,,,,,,,0.4,2,3,,402
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Advanced Venture,torgue_advanced_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1250,7000,6000,300,125,,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,125,350,350,120,3,40,7,165000,5,10,540,0.25,15,15,,,,,,,,,,0.4,2,3,,402
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Expert Venture,torgue_expert_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1250,7000,6000,300,125,,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,125,350,350,120,3,40,7,220000,5,10,540,0.25,15,15,,,,,,,,,,0.4,2,3,,402

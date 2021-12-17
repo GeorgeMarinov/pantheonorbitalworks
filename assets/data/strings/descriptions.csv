@@ -351,6 +351,54 @@ The Venture-class ships are perhaps the most widely used civilian cruisers in th
 
 When used by small corporations, the ship is usually the pride of the fleet and is used to underpin vital operations. Due to its ubiquity, the vessel also serves with quite a few pirate outfits, where it sometimes fills the role of command ship.","Tough and dependable, the Venture is usually fitted with a good missile complement but lacks the sustained damage output needed to do well in prolonged engagements. A built-in mining drone bay provides additional defenses - a particularly good thing because the civilian-grade power generators make the shields easy to overwhelm.",,
 ,,,,,
+torgue_basic_champion,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Champion-class heavy cruiser is a versatile warship featuring a range of powerful energy weapons; the crowning element is a heavy energy turret mounting, rare among midline ships. This offensive array is backed by a robust energy grid capable of supercharging the energy weapon loadout, increasing damage output to devastating levels. A heavy missile hardpoint complements the loadout by enabling the Champion to unleash a crippling strike without taxing flux levels. The Champion is a solid and capable contender, able to face capital ships on the battle-line.
+
+A relatively recent design, the Champion is a product of the historically recent ""Cruiser School"" naval revolution that never saw active service in the pre-collapse Domain Armada. Although prototypes were constructed and forge-ready specifications distributed to several battlegroups, the Champion was never cleared for active deployment due to an ongoing lawsuit between Altair Exotech and Orion Shipyards. Each megacorp accused the other of industrial espionage and innappropriately influencing the Armada officers overseeing the procurement process. The truth was more complex, inflaming longstanding rivalries in the officer corps as the investigatory committee called witness after witness. The Collapse prevented any sort of conclusive ruling from reaching the Persean Sector however, and now the entire matter is considered irrelevant. With the discovery of Champion plans on a Domain armaments courier, the warship was quickly put into service by the fleet of the Persean League, among others.",,,,
+,,,,,
+torgue_advanced_champion,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Champion-class heavy cruiser is a versatile warship featuring a range of powerful energy weapons; the crowning element is a heavy energy turret mounting, rare among midline ships. This offensive array is backed by a robust energy grid capable of supercharging the energy weapon loadout, increasing damage output to devastating levels. A heavy missile hardpoint complements the loadout by enabling the Champion to unleash a crippling strike without taxing flux levels. The Champion is a solid and capable contender, able to face capital ships on the battle-line.
+
+A relatively recent design, the Champion is a product of the historically recent ""Cruiser School"" naval revolution that never saw active service in the pre-collapse Domain Armada. Although prototypes were constructed and forge-ready specifications distributed to several battlegroups, the Champion was never cleared for active deployment due to an ongoing lawsuit between Altair Exotech and Orion Shipyards. Each megacorp accused the other of industrial espionage and innappropriately influencing the Armada officers overseeing the procurement process. The truth was more complex, inflaming longstanding rivalries in the officer corps as the investigatory committee called witness after witness. The Collapse prevented any sort of conclusive ruling from reaching the Persean Sector however, and now the entire matter is considered irrelevant. With the discovery of Champion plans on a Domain armaments courier, the warship was quickly put into service by the fleet of the Persean League, among others.",,,,
+,,,,,
+torgue_expert_champion,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Champion-class heavy cruiser is a versatile warship featuring a range of powerful energy weapons; the crowning element is a heavy energy turret mounting, rare among midline ships. This offensive array is backed by a robust energy grid capable of supercharging the energy weapon loadout, increasing damage output to devastating levels. A heavy missile hardpoint complements the loadout by enabling the Champion to unleash a crippling strike without taxing flux levels. The Champion is a solid and capable contender, able to face capital ships on the battle-line.
+
+A relatively recent design, the Champion is a product of the historically recent ""Cruiser School"" naval revolution that never saw active service in the pre-collapse Domain Armada. Although prototypes were constructed and forge-ready specifications distributed to several battlegroups, the Champion was never cleared for active deployment due to an ongoing lawsuit between Altair Exotech and Orion Shipyards. Each megacorp accused the other of industrial espionage and innappropriately influencing the Armada officers overseeing the procurement process. The truth was more complex, inflaming longstanding rivalries in the officer corps as the investigatory committee called witness after witness. The Collapse prevented any sort of conclusive ruling from reaching the Persean Sector however, and now the entire matter is considered irrelevant. With the discovery of Champion plans on a Domain armaments courier, the warship was quickly put into service by the fleet of the Persean League, among others.",,,,
+,,,,,
+torgue_basic_aurora,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Aurora-class cruiser is a technological marvel, rarely seen. Among the fastest and most maneuverable cruisers in the Sector, it is also one of the safest due to its wide shield coverage. 
+
+One can only wonder what the Domain Navy could accomplish with a fleet of these sleek, asymmetric, and eminently effective vessels. The shields are backed up by hyper-advanced flux dissipation systems installed throughout the hull, which gives the Aurora a deep flux pool.
+
+Most blueprints required to manufacture Aurora-class ships are closely guarded corporate secrets, but a few have also seen service in Tri-Tachyon fleets and, rarely, in the hands of enterprising mercenary captains.
+
+Few ships can outperform the Aurora ton for ton. Its only weakness is its prohibitive cost.",,,,
+,,,,,
+torgue_advanced_aurora,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Aurora-class cruiser is a technological marvel, rarely seen. Among the fastest and most maneuverable cruisers in the Sector, it is also one of the safest due to its wide shield coverage. 
+
+One can only wonder what the Domain Navy could accomplish with a fleet of these sleek, asymmetric, and eminently effective vessels. The shields are backed up by hyper-advanced flux dissipation systems installed throughout the hull, which gives the Aurora a deep flux pool.
+
+Most blueprints required to manufacture Aurora-class ships are closely guarded corporate secrets, but a few have also seen service in Tri-Tachyon fleets and, rarely, in the hands of enterprising mercenary captains.
+
+Few ships can outperform the Aurora ton for ton. Its only weakness is its prohibitive cost.",,,,
+,,,,,
+torgue_expert_aurora,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Aurora-class cruiser is a technological marvel, rarely seen. Among the fastest and most maneuverable cruisers in the Sector, it is also one of the safest due to its wide shield coverage. 
+
+One can only wonder what the Domain Navy could accomplish with a fleet of these sleek, asymmetric, and eminently effective vessels. The shields are backed up by hyper-advanced flux dissipation systems installed throughout the hull, which gives the Aurora a deep flux pool.
+
+Most blueprints required to manufacture Aurora-class ships are closely guarded corporate secrets, but a few have also seen service in Tri-Tachyon fleets and, rarely, in the hands of enterprising mercenary captains.
+
+Few ships can outperform the Aurora ton for ton. Its only weakness is its prohibitive cost.",,,,
+,,,,,
 ,,,,,
 ,,,,,
 # PLANETS PLANETS PLANETS

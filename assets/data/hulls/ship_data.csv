@@ -121,3 +121,15 @@ Torgue Basic Venture,torgue_basic_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1
 Torgue Advanced Venture,torgue_advanced_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1250,7000,6000,300,125,,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,125,350,350,120,3,40,7,165000,5,10,540,0.25,15,15,,,,,,,,,,0.4,2,3,,402
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Torgue Expert Venture,torgue_expert_venture,Cruiser,Torgue,pow_ammofeed,10,10000,1250,7000,6000,300,125,,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,125,350,350,120,3,40,7,220000,5,10,540,0.25,15,15,,,,,,,,,,0.4,2,3,,402
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Basic Champion,torgue_basic_champion,Heavy Cruiser,Torgue,pow_weaponsfocus,15,10000,1250,10000,11000,550,165,,60,40,30,15,20,1500,FRONT,,210,0.4,0.8,,,200,300,150,150,4,38,8,150000,4,12,480,0.25,25,25,,,,,,,,,,0.5,2,4,,401.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Advanced Champion,torgue_advanced_champion,Heavy Cruiser,Torgue,pow_weaponsfocus,15,10000,1250,10000,11000,550,180,,60,40,30,15,20,1500,FRONT,,210,0.4,0.8,,,200,300,150,150,4,38,8,187500,4,12,480,0.25,25,25,,,,,,,,,,0.5,2,4,,401.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Expert Champion,torgue_expert_champion,Heavy Cruiser,Torgue,pow_weaponsfocus,15,10000,1250,10000,11000,550,180,,60,40,30,15,20,1500,FRONT,,210,0.4,0.8,,,200,300,150,150,4,38,8,250000,4,12,480,0.25,25,25,,,,,,,,,,0.5,2,4,,401.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Basic Aurora,torgue_basic_aurora,Cruiser,Torgue,plasmajets,17,8000,800,11000,16000,800,165,,80,50,25,25,25,1800,OMNI,,180,0.5,0.8,,,75,200,150,90,3,30,8,240000,4,20,420,0.25,30,30,,,,,,,,,,0.6,2,3,,405
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Advanced Aurora,torgue_advanced_aurora,Cruiser,Torgue,plasmajets,17,8000,800,11000,16000,800,180,,80,50,25,25,25,1800,OMNI,,180,0.5,0.8,,,75,200,150,90,3,30,8,300000,4,20,420,0.25,30,30,,,,,,,,,,0.6,2,3,,405
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torgue Expert Aurora,torgue_expert_aurora,Cruiser,Torgue,plasmajets,17,8000,800,11000,16000,800,185,,80,50,25,25,25,1800,OMNI,,180,0.5,0.8,,,75,200,150,90,3,30,8,400000,4,20,420,0.25,30,30,,,,,,,,,,0.6,2,3,,405

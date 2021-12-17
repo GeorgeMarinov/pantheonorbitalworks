@@ -1,0 +1,212 @@
+{
+  "hullName": "Torgue Advanced Champion",
+  "hullId": "torgue_advanced_champion",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/POW/ships/champion/torgue/torgue_advanced_champion.png",
+  "style": "MIDLINE",
+  "height": 260,
+  "width": 300,
+  "center": [150, 122.5],
+  "collisionRadius": 170,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 160,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [119.5, 48]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [119.5, -48]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [119.5, 17]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [119.5, -17]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [77.5, 50]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [77.5, -50]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [66.5, -120]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [66.5, 120]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-111, 59],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-112, 48],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-113, 34],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-113, -33],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-112, -47],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-111, -59],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-105, 17],
+      "length": 80,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-105, -16],
+      "length": 80,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-122.5, -0],
+      "length": 122,
+      "width": 50,
+      "angle": 180,
+      "contrailSize": 50,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    71, 82.5,
+    128, 64.5,
+    128, 31.5,
+    111, 31.5,
+    111, 25.5,
+    122.5, 25.5,
+    122.5, 8.5,
+    107, 8.5,
+    107, -8,
+    122, -8,
+    122, -25,
+    111.5, -25,
+    111.5, -32,
+    128, -32,
+    128, -64.5,
+    71, -82.5,
+    30.5, -78,
+    44.5, -51.5,
+    33, -44,
+    12.5, -69.5,
+    20.5, -78,
+    20.5, -96,
+    73.5, -105,
+    74, -137,
+    -3.5, -137,
+    -48, -85.5,
+    -61, -86,
+    -61, -71.5,
+    -94, -81,
+    -111, -32,
+    -102, -26,
+    -118, -13.5,
+    -118, 13.5,
+    -103, 25,
+    -111, 33,
+    -95, 82,
+    -61.5, 72,
+    -61.5, 85.5,
+    -48.5, 85.5,
+    -1.5, 138,
+    72.5, 138,
+    72.5, 104.5,
+    20, 98.5,
+    19.5, 78.5,
+    13, 71,
+    33.5, 43,
+    46, 52.5,
+    30.5, 78
+  ]
+}

@@ -22,6 +22,8 @@ pow_torgue_javelin_blank,WEAPON,"A light but fast torpedo designed for fast stri
 ,,,,,
 pow_torgue_spear_blank,WEAPON,"A large torpedo with huge fuel reserves able to strike targets at a long distance.",,,
 ,,,,,
+pow_doom_minelayer_blank,WEAPON,"Deploys low-velocity proximity charges with an impressive blast radius and ability to shrug off point-defense fire. Especially devastating against fighters, but also effective vs armored targets.",,,,
+,,,,,
 # SHIPS SHIPS SHIPS
 torgue_basic_brawler,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. Typically deployed to beef up system police forces and port authority security, the Brawler-class frigate is a robust design which trades mobility (and comfort) for impressive firepower, armor, and a destroyer-grade power generator.",,,
@@ -398,6 +400,38 @@ One can only wonder what the Domain Navy could accomplish with a fleet of these 
 Most blueprints required to manufacture Aurora-class ships are closely guarded corporate secrets, but a few have also seen service in Tri-Tachyon fleets and, rarely, in the hands of enterprising mercenary captains.
 
 Few ships can outperform the Aurora ton for ton. Its only weakness is its prohibitive cost.",,,,
+,,,,,
+torgue_basic_phase_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+torgue_advanced_phase_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+torgue_expert_phase_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+,,,,,
+torgue_basic_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+torgue_advanced_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+torgue_expert_doom,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
+
+Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
 ,,,,,
 ,,,,,
 ,,,,,

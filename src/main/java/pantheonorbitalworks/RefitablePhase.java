@@ -1,5 +1,5 @@
 package pantheonorbitalworks;
 
 public enum RefitablePhase {
-    afflictor, harbinger
+    afflictor, harbinger, doom
 }

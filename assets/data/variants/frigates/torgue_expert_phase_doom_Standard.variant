@@ -1,0 +1,15 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_phase_doom",
+  "modules": [
+      {"WS0011": "torgue_expert_phase_doom_minelayer_Standard"},
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_phase_doom_Standard",
+  "weaponGroups": [],
+  "wings": []
+}

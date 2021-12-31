@@ -10,6 +10,8 @@ torgue_lasher_back_annihilator,WEAPON,Custom Torgue rocket pod firing bursts of 
 ,,,,,
 torgue_annihilator_tube,WEAPON,Custom Torgue rocket tube firing fast annihilator missiles.,,,
 ,,,,,
+pow_torgue_annihilator_spitter,WEAPON,Custom Torgue weapon platform designed to saturate with fast annihilator missiles.,,,
+,,,,,
 pow_torgue_two_stage_annihilator_blank,WEAPON,Custom Torgue rocket tube firing fast two stage annihilator missiles.,,,
 ,,,,,
 torgue_phase_replacement,WEAPON,Custom Torgue rocket pods firing two stage annihilator missiles.,,,
@@ -432,6 +434,36 @@ torgue_expert_doom,SHIP,"This ship has been refitted by the Torgue smiths and fe
 Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
 
 Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
+,,,,,
+torgue_basic_onslaught,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A venerable design, the Onslaught-class battleships were first created to serve the Domain Armada long ago, before the development of advanced strike weapons, modern energy weapons, and shield systems. 
+
+When first launched from orbital dock, they must have surely dwarfed any other ship in existence and intimidated entire systems. Some even say that they were built to combat non-humans in a long forgotten war. Much later, Domain engineers made modifications to the blueprints to include a shield system, upgraded the FTL drives, and reduced the necessary crew complement through automation and iterative engineering. Even though more advanced blueprints are available, the Onslaught remains the easiest to manufacture due to the brutal simplicity of its systems. 
+
+A ship designed without shields in mind, built to be able to withstand a heavy barrage of enemy fire and strike back while protecting its crew is much loved by its officers and crew. And strike back it can; the Onslaught's unmatched ballistic potential can devastate entire fleets in minutes, its only drawback a logistical dependency on ammunition. 
+
+The Onslaught-class proudly serves as the backbone of the Hegemony Navy.",,,,
+,,,,,
+torgue_advanced_onslaught,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A venerable design, the Onslaught-class battleships were first created to serve the Domain Armada long ago, before the development of advanced strike weapons, modern energy weapons, and shield systems. 
+
+When first launched from orbital dock, they must have surely dwarfed any other ship in existence and intimidated entire systems. Some even say that they were built to combat non-humans in a long forgotten war. Much later, Domain engineers made modifications to the blueprints to include a shield system, upgraded the FTL drives, and reduced the necessary crew complement through automation and iterative engineering. Even though more advanced blueprints are available, the Onslaught remains the easiest to manufacture due to the brutal simplicity of its systems. 
+
+A ship designed without shields in mind, built to be able to withstand a heavy barrage of enemy fire and strike back while protecting its crew is much loved by its officers and crew. And strike back it can; the Onslaught's unmatched ballistic potential can devastate entire fleets in minutes, its only drawback a logistical dependency on ammunition. 
+
+The Onslaught-class proudly serves as the backbone of the Hegemony Navy.",,,,
+,,,,,
+torgue_expert_onslaught,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+A venerable design, the Onslaught-class battleships were first created to serve the Domain Armada long ago, before the development of advanced strike weapons, modern energy weapons, and shield systems. 
+
+When first launched from orbital dock, they must have surely dwarfed any other ship in existence and intimidated entire systems. Some even say that they were built to combat non-humans in a long forgotten war. Much later, Domain engineers made modifications to the blueprints to include a shield system, upgraded the FTL drives, and reduced the necessary crew complement through automation and iterative engineering. Even though more advanced blueprints are available, the Onslaught remains the easiest to manufacture due to the brutal simplicity of its systems. 
+
+A ship designed without shields in mind, built to be able to withstand a heavy barrage of enemy fire and strike back while protecting its crew is much loved by its officers and crew. And strike back it can; the Onslaught's unmatched ballistic potential can devastate entire fleets in minutes, its only drawback a logistical dependency on ammunition. 
+
+The Onslaught-class proudly serves as the backbone of the Hegemony Navy.",,,,
 ,,,,,
 ,,,,,
 ,,,,,

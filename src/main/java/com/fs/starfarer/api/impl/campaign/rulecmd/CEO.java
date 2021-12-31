@@ -28,6 +28,7 @@ import java.util.Random;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
+import pantheonorbitalworks.RefitableCapital;
 import pantheonorbitalworks.RefitableCruiser;
 import pantheonorbitalworks.RefitableDestroyer;
 import pantheonorbitalworks.RefitableFrigade;
@@ -163,12 +164,11 @@ public class CEO extends PaginatedOptions {
 									displayAvailableHulls(refitableShip.toString());
 								}
 								break;
-							// case capital:
-							// for (RefitableFrigade refitableShip : RefitableFrigade.values())
-							// {
-							// displayAvailableHulls(refitableShip.toString());
-							// }
-							// break;
+							case capital:
+								for (RefitableCapital refitableShip : RefitableCapital.values()) {
+									displayAvailableHulls(refitableShip.toString());
+								}
+								break;
 							default:
 								break;
 						}
@@ -267,6 +267,7 @@ public class CEO extends PaginatedOptions {
 							FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
 							shipPreview.setShipName(chosenShipName);
 							shipPreview.getVariant().addPermaMod("normal_torgue_" + chosenPackage + "_refit");
+							shipPreview.getVariant().addPermaMod("armoredweapons");
 							if (selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 								String phaseOption = dialogData.get(DialogIdKeys.replacePhaseCoils.toString());
 								shipPreview.getVariant().addPermaMod("phase_" + phaseOption);
@@ -385,6 +386,7 @@ public class CEO extends PaginatedOptions {
 									+ " refiting will be complete in " + refitDuration + " days.");
 
 					List<String> newHullMods = new ArrayList<String>();
+					newHullMods.add("armoredweapons");
 					if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 						newHullMods.add("phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
 					}

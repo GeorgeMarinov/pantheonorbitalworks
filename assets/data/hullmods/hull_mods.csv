@@ -217,3 +217,5 @@ High tech shield,pow_high_tech_shield,0,,,,0,false,true,false,,5,10,15,20,panthe
  Shield Upkeep: %s
  Shield Efficiency: %s
  Supply cost increase: %s",,graphics/hullmods/front_shield_generator.png
+
+Heavy weapons integration,pow_heavy_weapons_integration,,,,,,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.POW_HeavyWeaponsIntegration,Reduces the OP cost to fit large weapons by %s.,Reduces OP cost of large weapons.,graphics/hullmods/ballistics_integration.png

@@ -26,6 +26,8 @@ pow_torgue_spear_blank,WEAPON,"A large torpedo with huge fuel reserves able to s
 ,,,,,
 pow_doom_minelayer_blank,WEAPON,"Deploys low-velocity proximity charges with an impressive blast radius and ability to shrug off point-defense fire. Especially devastating against fighters, but also effective vs armored targets.",,,,
 ,,,,,
+pow_torgue_titan_slayer_blank,WEAPON,"Large armored rocket designed to brute force its way through point defense and deliver a devastating payload capable of crippling unshielded titan class ships or outright destroying anything smaller.",,,
+,,,,,
 # SHIPS SHIPS SHIPS
 torgue_basic_brawler,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. Typically deployed to beef up system police forces and port authority security, the Brawler-class frigate is a robust design which trades mobility (and comfort) for impressive firepower, armor, and a destroyer-grade power generator.",,,
@@ -466,6 +468,22 @@ A ship designed without shields in mind, built to be able to withstand a heavy b
 The Onslaught-class proudly serves as the backbone of the Hegemony Navy.",,,,
 ,,,,,
 torgue_basic_conquest,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Conquest-class battlecruiser is the embodiment of concentrated firepower. Developed in the period just preceding the popularization of fighter craft, the class emphasizes firepower and speed over armor protection.
+
+Space Naval tacticians of the day were confident that new weapons systems would always outperform armor and shields and thus were the key to winning an engagement. So why not build a ship for speed and power? Give it the armor protection of a cruiser, but arm it with the best weapons available to any ship, and have it remain faster than any of those lumbering behemoths of the line. The Conquest is a good example of these concepts put into a hull. Many other advanced technologies were incorporated into the design, including weapon mounts designed for a circling engagement. This maneuver requires greater navigational skill while serving to provide more tactical options to the commanding officers. 
+
+Fortune favors the bold, the ancients said. This class of ships does indeed favor the bold captain, willing to risk everything for the thrill of victory.",,,,
+,,,,,
+torgue_advanced_conquest,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The Conquest-class battlecruiser is the embodiment of concentrated firepower. Developed in the period just preceding the popularization of fighter craft, the class emphasizes firepower and speed over armor protection.
+
+Space Naval tacticians of the day were confident that new weapons systems would always outperform armor and shields and thus were the key to winning an engagement. So why not build a ship for speed and power? Give it the armor protection of a cruiser, but arm it with the best weapons available to any ship, and have it remain faster than any of those lumbering behemoths of the line. The Conquest is a good example of these concepts put into a hull. Many other advanced technologies were incorporated into the design, including weapon mounts designed for a circling engagement. This maneuver requires greater navigational skill while serving to provide more tactical options to the commanding officers. 
+
+Fortune favors the bold, the ancients said. This class of ships does indeed favor the bold captain, willing to risk everything for the thrill of victory.",,,,
+,,,,,
+torgue_expert_conquest,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 
 The Conquest-class battlecruiser is the embodiment of concentrated firepower. Developed in the period just preceding the popularization of fighter craft, the class emphasizes firepower and speed over armor protection.
 

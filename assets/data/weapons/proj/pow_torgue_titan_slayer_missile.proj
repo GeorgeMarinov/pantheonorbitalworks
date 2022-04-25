@@ -1,0 +1,61 @@
+{
+	"id":"pow_torgue_titan_slayer_missile",
+	"specClass":"missile",
+	"missileType":"PHASE_CHARGE",
+	"collisionRadius":25,
+	"collisionClass":"MISSILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"hitGlowRadius":160,
+	"fadeTime":1,
+	"center":[25,54],
+	"size":[50,108],
+	"fringeColor":[255,255,50,100],
+	"coreColor":[255,255,100,150],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"sprite":"graphics/POW/missiles/torgue_titan_slayer.png",
+	"explosionColor":[255,150,0,150],
+	"explosionRadius":375, # purely visual
+	"renderTargetIndicator":false, # no target diamond in combat view, not targeted by flares
+	#"flameoutTime":1,
+	"noEngineGlowTime":0.5,
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  "acc":500,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-50, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[225,100,70,255],
+						"glowSizeMult":4,
+						"contrailDuration":4,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":4,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.5, # how far away from engine it starts
+						"contrailColor":[225,180,150,75],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":10.0,
+				    "length":30.0,
+				    "angle":180.0}],
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":200,
+					"explosionSpec":{"duration":2.0f,
+									 "radius":550,
+									 "coreRadius":300,
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":5.0,
+									 "particleSizeRange":10.0,
+									 "particleDuration":2.5,
+									 "particleCount":400,
+									 "particleColor":[255,150,0,255],
+									 "sound":"mine_explosion"},
+					}
+					
+}

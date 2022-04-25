@@ -1,0 +1,428 @@
+{
+  "hullName": "Torgue Advanced Conquest",
+  "hullId": "torgue_advanced_conquest",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/POW/ships/conquest/torgue/torgue_advanced_conquest.png",
+  "style": "MIDLINE",
+  "coversColor": "255,255,255,255",
+  "height": 440,
+  "width": 340,
+  "center": [170, 178],
+  "collisionRadius": 300,
+  "shieldCenter": [26.5, -0],
+  "shieldRadius": 250,
+  "viewOffset": 0,
+  "builtInMods": [
+    "pow_heavy_weapons_integration"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [179, 24]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [179, -16]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [224, 47]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [224, -39]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [144, 83]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [144, -75]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [90, 78]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [90, -70]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [29, 82]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [29, -74]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [10, 81]
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [10, -73]
+    },
+    {
+      "id": "WS0013",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-46, 68]
+    },
+    {
+      "id": "WS0014",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-46, -60]
+    },
+    {
+      "id": "WS0015",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [118, 77]
+    },
+    {
+      "id": "WS0016",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [118, -69]
+    },
+    {
+      "id": "WS0017",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [62, 80]
+    },
+    {
+      "id": "WS0018",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [62, -72]
+    },
+    {
+      "id": "WS0019",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-66, -123]
+    },
+    {
+      "id": "WS0020",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-66, 123]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-151, 0.5],
+      "length": 96,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-173, 22.5],
+      "length": 72,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-173, -20.5],
+      "length": 72,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-178, 64.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-179, 53.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-180, 39.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-180, -38.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-179, -52.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-178, -62.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-177, 78.5],
+      "length": 80,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-177, -76.5],
+      "length": 80,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [41, 76],
+      "length": 32,
+      "width": 12,
+      "angle": 90,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [41, -76.5],
+      "length": 32,
+      "width": 12,
+      "angle": -90,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-168.5, -124.5],
+      "length": 80,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-168.5, 124.5],
+      "length": 80,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-152, -91.5],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-152, 91.5],
+      "length": 32,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-152, -102],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-152, 102],
+      "length": 32,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    232.5, 51.5,
+    152.5, 73,
+    151, 86.5,
+    134, 87,
+    133.5, 94.5,
+    101, 95,
+    101, 80.5,
+    80, 81,
+    80, 96.5,
+    45, 96.5,
+    44.5, 70,
+    37, 70,
+    36.5, 86,
+    1, 86.5,
+    0.5, 73.5,
+    -28, 80,
+    -56, 67.5,
+    -70.5, 81.5,
+    -70, 98.5,
+    -56.5, 112.5,
+    -57, 136,
+    -111, 145,
+    -166, 136.5,
+    -164, 116,
+    -151, 112,
+    -151, 85.5,
+    -171.5, 85,
+    -179, 36,
+    -164, 13,
+    -148.5, 10,
+    -148.5, -10,
+    -164, -13,
+    -178, -33,
+    -173, -84.5,
+    -150.5, -90,
+    -150.5, -111,
+    -165.5, -115.5,
+    -166.5, -136,
+    -92.5, -145,
+    -57, -132.5,
+    -57, -113,
+    -71, -100.5,
+    -67, -75.5,
+    -54, -70,
+    -27, -80,
+    1, -75,
+    3, -85.5,
+    37, -85.5,
+    37, -71,
+    45, -71,
+    45.5, -96,
+    79.5, -96.5,
+    79.5, -81.5,
+    100, -81.5,
+    100.5, -94,
+    134.5, -93,
+    134.5, -87.5,
+    152, -87.5,
+    152.5, -73,
+    232, -51.5,
+    232, -34,
+    196, -29.5,
+    195, -6.5,
+    128, -17,
+    123, -3,
+    14, -17,
+    14, 17,
+    123, 3,
+    128, 18,
+    195, 6,
+    195, 31,
+    232.5, 33.5
+  ]
+}

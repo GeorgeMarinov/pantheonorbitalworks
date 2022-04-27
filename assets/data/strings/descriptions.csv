@@ -28,6 +28,9 @@ pow_doom_minelayer_blank,WEAPON,"Deploys low-velocity proximity charges with an 
 ,,,,,
 pow_torgue_titan_slayer_blank,WEAPON,"Large armored rocket designed to brute force its way through point defense and deliver a devastating payload capable of crippling unshielded titan class ships or outright destroying anything smaller.",,,
 ,,,,,
+pow_torgue_expert_paragon_special,WEAPON,"Generates a series if explosions centered on the paragon.",,,
+,,,,,
+,,,,,
 # SHIPS SHIPS SHIPS
 torgue_basic_brawler,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
 This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems. Typically deployed to beef up system police forces and port authority security, the Brawler-class frigate is a robust design which trades mobility (and comfort) for impressive firepower, armor, and a destroyer-grade power generator.",,,
@@ -490,6 +493,25 @@ The Conquest-class battlecruiser is the embodiment of concentrated firepower. De
 Space Naval tacticians of the day were confident that new weapons systems would always outperform armor and shields and thus were the key to winning an engagement. So why not build a ship for speed and power? Give it the armor protection of a cruiser, but arm it with the best weapons available to any ship, and have it remain faster than any of those lumbering behemoths of the line. The Conquest is a good example of these concepts put into a hull. Many other advanced technologies were incorporated into the design, including weapon mounts designed for a circling engagement. This maneuver requires greater navigational skill while serving to provide more tactical options to the commanding officers. 
 
 Fortune favors the bold, the ancients said. This class of ships does indeed favor the bold captain, willing to risk everything for the thrill of victory.",,,,
+,,,,,
+torgue_basic_paragon,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The pinnacle of the Domain's battleship designs, though perhaps less the result of military necessity and more of the ambitions of certain senior strategic staff of the Domain Navy - with considerable backing from the Tri-Tachyon corporation, among other major contractors.
+
+No ship can outlast or outgun the Paragon-class, a true Leviathan of a bygone epoch.",,,,
+,,,,,
+torgue_advanced_paragon,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The pinnacle of the Domain's battleship designs, though perhaps less the result of military necessity and more of the ambitions of certain senior strategic staff of the Domain Navy - with considerable backing from the Tri-Tachyon corporation, among other major contractors.
+
+No ship can outlast or outgun the Paragon-class, a true Leviathan of a bygone epoch.",,,,
+,,,,,
+torgue_expert_paragon,SHIP,"This ship has been refitted by the Torgue smiths and features heavier armor plating, increased overall performance and unique systems.
+
+The pinnacle of the Domain's battleship designs, though perhaps less the result of military necessity and more of the ambitions of certain senior strategic staff of the Domain Navy - with considerable backing from the Tri-Tachyon corporation, among other major contractors.
+
+No ship can outlast or outgun the Paragon-class, a true Leviathan of a bygone epoch.",,,,
+,,,,,
 ,,,,,
 ,,,,,
 ,,,,,

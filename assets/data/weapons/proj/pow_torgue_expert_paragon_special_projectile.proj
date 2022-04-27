@@ -1,0 +1,46 @@
+{
+	"id":"pow_torgue_expert_paragon_special_projectile",
+	"specClass":"missile",
+	"missileType":"PHASE_CHARGE",
+	"collisionRadius":5,
+	"collisionClass":"MISSILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"hitGlowRadius":60,
+	"fadeTime":0.1f,
+	"flameoutTime":0.1f,
+	"center":[20,25],
+	"size":[40,50],
+	"fringeColor":[255,50,50,155],
+	"coreColor":[255,255,200,150],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"sprite":"graphics/POW/missiles/flexington_special_projectile.png",
+	"explosionColor":[255,200,0,155],
+	"explosionRadius":75, # purely visual
+	"engineSpec":
+	{
+		"turnAcc":0,
+		"turnRate":0,
+		"acc":700,
+		"dec":0
+	},
+	"behaviorSpec":
+	{
+		"behavior":"PROXIMITY_FUSE",
+		"range":2000,
+		"explosionSpec":
+		{
+			"duration":0.2f,
+			"radius":2000,
+			"coreRadius":1500,
+			"collisionClass":PROJECTILE_FF,
+			"collisionClassByFighter":PROJECTILE_FIGHTER,
+			"particleSizeMin":3.0,
+			"particleSizeRange":3.0,
+			"particleDuration":3,
+			"particleCount":10,
+			"particleColor":[255,155,155,255],
+			"sound":"devastator_explosion"
+		},
+	}	
+}

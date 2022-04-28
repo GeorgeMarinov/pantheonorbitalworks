@@ -1,0 +1,236 @@
+{
+  "hullName": "Torgue Basic Odyssey",
+  "hullId": "torgue_basic_odyssey",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/POW/ships/odyssey/torgue/torgue_basic_odyssey.png",
+  "style": "HIGH_TECH",
+  "height": 460,
+  "width": 320,
+  "center": [158.5, 198.5],
+  "collisionRadius": 300,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 270,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hiressensors",
+    "eccm"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [224.5, 0.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [188.5, 33.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [144.5, 64.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [96.5, 57.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 45,
+      "locations": [55.5, 69.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [11.5, 76.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-35.5, 76.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-12, 57.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-80.5, 54]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-80.5, -52]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -45,
+      "locations": [177.5, -29]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [96.5, -21]
+    },
+    {
+      "id": "WS0013",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [18.5, -44.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-164.5, 22.5],
+      "length": 90,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-164.5, 11.5],
+      "length": 110,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-166.5, -0.5],
+      "length": 70,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-164.5, -11.5],
+      "length": 110,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-164.5, -22.5],
+      "length": 90,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    242, 16,
+    199, 20.5,
+    197.5, 43.5,
+    154.5, 50.5,
+    154.5, 74,
+    134.5, 74,
+    132.5, 52,
+    112.5, 52,
+    111.5, 75.5,
+    80.5, 76.5,
+    79.5, 58,
+    62, 57,
+    75, 72.5,
+    57, 88,
+    32, 72,
+    21, 86.5,
+    1, 86.5,
+    -4, 77,
+    -19.5, 76.5,
+    -26, 86.5,
+    -46.5, 87,
+    -47.5, 68.5,
+    -72.5, 42.5,
+    -70, 64.5,
+    -90.5, 64.5,
+    -92.5, 44,
+    -111.5, 43.5,
+    -117.5, 70.5,
+    -139.5, 71,
+    -165.5, 55.5,
+    -152.5, 33.5,
+    -162.5, 24.5,
+    -163.5, -27.5,
+    -151.5, -39.5,
+    -165.5, -54.5,
+    -144.5, -69,
+    -115, -74,
+    -105, -48.5,
+    -91, -46,
+    -89.5, -64,
+    -70.5, -64,
+    -65, -47.5,
+    -41.5, -67,
+    6, -68,
+    38, -59,
+    38, -29,
+    66, -29.5,
+    79, -41,
+    114, -41,
+    130, -28.5,
+    153, -28.5,
+    182, -48,
+    195, -30.5,
+    188, -20.5,
+    241, -15
+  ]
+}

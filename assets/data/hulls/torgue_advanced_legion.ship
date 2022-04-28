@@ -1,0 +1,234 @@
+{
+  "hullName": "Torgue Advanced Legion",
+  "hullId": "torgue_advanced_legion",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/POW/ships/legion/torgue/torgue_advanced_legion.png",
+  "style": "LOW_TECH",
+  "height": 308,
+  "width": 340,
+  "center": [170, 149],
+  "collisionRadius": 200,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 190,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [128, 23]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [128, -23]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [97.5, -100]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [97.5, 100]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-99, -100]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -180,
+      "locations": [-99, 100]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [109, -68]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [109, 68]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-103, -129]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -180,
+      "locations": [-103, 129]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-10, -143.5]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-10, 143.5]
+    },
+    {
+      "id": "WS0013",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [-47, -141]
+    },
+    {
+      "id": "WS0014",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 45,
+      "locations": [-47, 141]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-126, 44],
+      "length": 100,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-127, -44],
+      "length": 100,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-131, 26],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 40,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-131, -26],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 40,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-150.5, -0],
+      "length": 172,
+      "width": 56,
+      "angle": 180,
+      "contrailSize": 56,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-132, 58.5],
+      "length": 100,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-132, -58.5],
+      "length": 100,
+      "width": 24,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    108.5, 114.5,
+    117, 81,
+    117, 51.5,
+    144, 35.5,
+    144, -36.5,
+    117, -54,
+    117, -79,
+    106.5, -116,
+    22, -138.5,
+    -3.5, -140,
+    -5, -149.5,
+    -15, -149.5,
+    -15.5, -138.5,
+    -43.5, -159,
+    -71, -147.5,
+    -113.5, -143.5,
+    -110.5, -81,
+    -126, -78,
+    -128.5, -17.5,
+    -146, -15,
+    -146, 15,
+    -128.5, 17.5,
+    -127, 75.5,
+    -110.5, 81.5,
+    -113.5, 141,
+    -70, 146.5,
+    -43.5, 159,
+    -16.5, 138.5,
+    -16.5, 149.5,
+    -4, 149.5,
+    -3, 139.5,
+    20, 137.5
+  ]
+}

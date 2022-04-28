@@ -1,5 +1,5 @@
 package pantheonorbitalworks;
 
 public enum RefitableCapital {
-    onslaught, conquest, paragon
+    onslaught, conquest, paragon, legion
 }

@@ -395,24 +395,29 @@ public class CEO extends PaginatedOptions {
 					}
 
 					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
+					String manufacturer = getMake();
 					for (SubmarketAPI submarketAPI : submarkets) {
 						if (submarketAPI.getName().equals("Storage")) {
 							Random randomNumberGenerator = new Random();
 							float random = randomNumberGenerator.nextInt(101);
-							if (random <= 30) {
-								newHullMods.add("normal_torgue_" + chosenPackage + "_refit");
-							} else if (random <= 50) {
-								newHullMods.add("superb_torgue_" + chosenPackage + "_refit");
-							} else if (random <= 70) {
-								newHullMods.add("legendary_torgue_" + chosenPackage + "_refit");
-							} else if (random <= 90) {
-								newHullMods.add("masterwork_torgue_" + chosenPackage + "_refit");
+							if (random < 50) {
+								newHullMods.add("normal_" + manufacturer + "_" + chosenPackage + "_refit");
+							} else if (random < 70) {
+								newHullMods.add("superb_" + manufacturer + "_" + chosenPackage + "_refit");
+							} else if (random < 80) {
+								newHullMods.add("legendary_" + manufacturer + "_" + chosenPackage + "_refit");
+							} else if (random < 90) {
+								newHullMods.add("masterwork_" + manufacturer + "_" + chosenPackage + "_refit");
+							} else if (random < 98) {
+								newHullMods.add("miracle_" + manufacturer + "_" + chosenPackage + "_refit");
+							} else {
+								newHullMods.add("normal_" + manufacturer + "_" + chosenPackage + "_refit");
 							}
 							CargoAPI storageCargo = submarketAPI.getCargo();
-							String newHull = getMake() + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+							String newHull = manufacturer + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
 							if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.isPhase.toString()))
 									&& !confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
-								newHull = getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
+								newHull = manufacturer + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
 							}
 							Global.getSector().addScript(new RefitShip(newHullMods, storageCargo, newHull, shipName,
 									capitalize(originalHullId.replaceAll("_", " ")), refitDuration));

@@ -59,6 +59,21 @@ Torgue Basic Refit,masterwork_torgue_basic_refit,0,,"special, offensive",Weapons
 
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
+Torgue Basic Refit,miracle_torgue_basic_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Basic.MiracleTorgueBasicRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull increased by: %s
+ Armor increased by: %s
+ Acceleration and maneuverability reduced by: %s
+ Minimum crew increased by: %s
+ Peak combat readiness reduced by: %s
+ Maintenance increased by: %s
+
+ Weapon configuration changed
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of that much higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
 Torgue Advanced Refit,normal_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.NormalTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
@@ -105,6 +120,21 @@ Torgue Advanced Refit,legendary_torgue_advanced_refit,0,,"special, offensive",We
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
 Torgue Advanced Refit,masterwork_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.MasterworkTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull increased by: %s
+ Armor increased by: %s
+ Acceleration and maneuverability reduced by: %s
+ Minimum crew increased by: %s
+ Peak combat readiness reduced by: %s
+ Maintenance increased by: %s
+
+ Weapon configuration changed
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of that much higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
+
+Torgue Advanced Refit,miracle_torgue_advanced_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Advanced.MiracleTorgueAdvancedRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
  Refit quality: %s
  Hull increased by: %s
  Armor increased by: %s
@@ -180,6 +210,21 @@ Torgue Expert Refit,masterwork_torgue_expert_refit,0,,"special, offensive",Weapo
  Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
 Phase coils replacement - cargo,phase_extra_cargo,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.Cargo,"The phase coils from this ship have been ripped out freeing %s extra space for cargo.",,graphics/hullmods/converted_fighter_bay.png
+
+Torgue Expert Refit,miracle_torgue_expert_refit,0,,"special, offensive",Weapons,0,false,true,false,Torgue,0,0,0,0,pantheonorbitalworks.hullmods.Torgue.Expert.MiracleTorgueExpertRefit,"The ship has been striped down to is core and rebuild anew with internal modifications:
+ Refit quality: %s
+ Hull increased by: %s
+ Armor increased by: %s
+ Acceleration and maneuverability reduced by: %s
+ Minimum crew increased by: %s
+ Peak combat readiness reduced by: %s
+ Maintenance increased by: %s
+
+ Weapon configuration changed
+
+ High Octane - overclocked systems allow the ship to operate %s faster at the cost of that much higher combat readiness degradation
+
+ Torguepedos - specialized rocket tubes build for forward thrust, increasing missile speed by %s, but reducing their maneuverability by %s.",,graphics/POW/hullmods/torgue.png
 
 Phase coils replacement - low tech shield emitter,phase_low_tech_shield_emitter,0,,,,0,false,true,false,,0,0,0,0,pantheonorbitalworks.hullmods.PhaseReplacement.LowTechShieldEmitter,"The phase coils from this ship have been replaced with a low tech shield emitter:
  Shield Arc: %s

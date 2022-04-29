@@ -5,7 +5,7 @@
 	"sprite":"graphics/POW/missiles/torgue_spear.png",
 	"size":[8,40],	
 	"center":[4,20],
-	"collisionRadius":25,
+	"collisionRadius":50,
 	"collisionClass":"MISSILE_FF",
 	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":150, # purely visual
@@ -14,7 +14,7 @@
 	"fadeTime":0.5, # fadeout duration	
 	"engineSpec":{"turnAcc":0,
 				  "turnRate":0,
-				  "acc":600,
+				  "acc":1000,
 				  "dec":0},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-20, 0],
@@ -34,7 +34,15 @@
 					},
 				    "width":5.0,
 				    "length":50.0,
-				    "angle":180.0}]
+				    "angle":180.0}],
+	"explosionSpec":
+	{
+		"duration":0.1f, # not visual
+		"radius":275,
+		"coreRadius":125, # full damage within core radius
+		"collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+		"collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+	},
 }
 
 			

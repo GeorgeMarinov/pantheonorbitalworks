@@ -14,5 +14,4 @@ public class ExpertConstants {
 	public static float ShipSpeed = 15;
 	public static float MissileSpeed = 100;
 	public static int MissileTurn = 50;
-	public static int MissileRange = 30;
 }

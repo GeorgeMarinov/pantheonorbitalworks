@@ -14,7 +14,7 @@
 	"fadeTime":0.5, # fadeout duration	
 	"engineSpec":{"turnAcc":360,
 				  "turnRate":180,
-				  "acc":1000,
+				  "acc":100,
 				  "dec":0},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-11, 0],

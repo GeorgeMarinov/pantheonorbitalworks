@@ -23,7 +23,6 @@ public class MiracleTorgueExpertRefit extends BaseHullMod {
 		stats.getSuppliesPerMonth().modifyPercent(id, ExpertConstants.Supplies);
 		stats.getSuppliesToRecover().modifyPercent(id, ExpertConstants.Supplies);
 		stats.getTimeMult().modifyMult(id, ((ExpertConstants.ShipSpeed * QualityMultiplier) / 100) + 1);
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, -ExpertConstants.MissileRange);
 		stats.getMissileMaxSpeedBonus().modifyPercent(id, ExpertConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileAccelerationBonus().modifyPercent(id, ExpertConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -ExpertConstants.MissileTurn);

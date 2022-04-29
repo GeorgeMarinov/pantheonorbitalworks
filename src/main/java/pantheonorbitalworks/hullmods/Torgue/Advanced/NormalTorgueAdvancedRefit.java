@@ -23,7 +23,6 @@ public class NormalTorgueAdvancedRefit extends BaseHullMod {
 		stats.getSuppliesPerMonth().modifyPercent(id, AdvancedConstants.Supplies);
 		stats.getSuppliesToRecover().modifyPercent(id, AdvancedConstants.Supplies);
 		stats.getTimeMult().modifyMult(id, ((AdvancedConstants.ShipSpeed * QualityMultiplier) / 100) + 1);
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, -AdvancedConstants.MissileRange);
 		stats.getMissileMaxSpeedBonus().modifyPercent(id, AdvancedConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileAccelerationBonus().modifyPercent(id, AdvancedConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -AdvancedConstants.MissileTurn);

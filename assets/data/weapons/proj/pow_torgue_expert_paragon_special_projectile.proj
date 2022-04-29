@@ -21,7 +21,7 @@
 	{
 		"turnAcc":0,
 		"turnRate":0,
-		"acc":700,
+		"acc":500,
 		"dec":0
 	},
 	"behaviorSpec":
@@ -42,5 +42,5 @@
 			"particleColor":[255,155,155,255],
 			"sound":"devastator_explosion"
 		},
-	}	
+	}
 }

@@ -23,7 +23,6 @@ public class MasterworkTorgueBasicRefit extends BaseHullMod {
 		stats.getSuppliesPerMonth().modifyPercent(id, BasicConstants.Supplies);
 		stats.getSuppliesToRecover().modifyPercent(id, BasicConstants.Supplies);
 		stats.getTimeMult().modifyMult(id, ((BasicConstants.ShipSpeed * QualityMultiplier) / 100) + 1);
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, -BasicConstants.MissileRange);
 		stats.getMissileMaxSpeedBonus().modifyPercent(id, BasicConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileAccelerationBonus().modifyPercent(id, BasicConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -BasicConstants.MissileTurn);

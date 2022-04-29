@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInWeapons": {
     "WS0003": "torgue_annihilator_tube",
-    "WS0004": "torgue_annihilator_tube",
+    "WS0004": "torgue_annihilator_tube"
   },
   "weaponSlots": [
     {
@@ -104,17 +104,12 @@
     }
   ],
   "bounds": [
-    47, 25,
+    50.5, 26,
     21, 43,
-    -2, 33,
     -29, 38,
-    -37, 1,
+    -41.5, 1,
     -28, -37,
-    -5, -33,
     20, -45,
-    47, -23,
-    33, -14,
-    42, 0,
-    35, 12
+    50.5, -25
   ]
 }

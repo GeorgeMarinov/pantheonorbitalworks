@@ -3,9 +3,9 @@
 	"specClass":"missile",
 	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
 	"sprite":"graphics/POW/missiles/missile_torgue_annihilator_tip.png",
-	"size":[4,18],	
-	"center":[2,9],
-	"collisionRadius":12,
+	"size":[4,14],	
+	"center":[2,7],
+	"collisionRadius":25,
 	"collisionClass":"MISSILE_FF",
 	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":75, # purely visual
@@ -14,7 +14,7 @@
 	"fadeTime":0.5, # fadeout duration	
 	"engineSpec":{"turnAcc":360,
 				  "turnRate":180,
-				  "acc":100,
+				  "acc":500,
 				  "dec":0},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-11, 0],
@@ -32,9 +32,17 @@
 						"contrailColor":[75,75,75,150],
 						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
 					},
-				    "width":4.0,
-				    "length":30.0,
-				    "angle":180.0}]
+	"width":4.0,
+	"length":30.0,
+	"angle":180.0}],
+	"explosionSpec":
+	{
+		"duration":0.1f, # not visual
+		"radius":75,
+		"coreRadius":25, # full damage within core radius
+		"collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+		"collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+	},
 }
 
 			

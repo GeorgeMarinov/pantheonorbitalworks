@@ -7,7 +7,7 @@
 	"statsScript":"pantheonorbitalworks.shipsystems.POW_WeaponFocusStats",
 	
 	"weaponGlowColor":[255,0,255,255],
-	"weaponTypes":[ENERGY],
+	"weaponTypes":[ENERGY, BALLISTIC, MISSILE],
 	
 	"useSound":"system_high_energy_focus_activate",
 	"deactivateSound":"system_high_energy_focus_deactivate",

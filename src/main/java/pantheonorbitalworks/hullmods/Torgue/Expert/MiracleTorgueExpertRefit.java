@@ -1,7 +1,10 @@
 package pantheonorbitalworks.hullmods.Torgue.Expert;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class MiracleTorgueExpertRefit extends BaseHullMod {
@@ -51,5 +54,10 @@ public class MiracleTorgueExpertRefit extends BaseHullMod {
 		if (index == 9)
 			return ExpertConstants.MissileTurn + "%";
 		return null;
+	}
+
+	@Override
+	public void advanceInCombat(ShipAPI ship, float amount) {
+		ship.setJitterUnder(ship, new Color(255, 255, 100, 255), 0.5f, 5, 100);
 	}
 }

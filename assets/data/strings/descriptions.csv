@@ -20,8 +20,6 @@ pow_torgue_flak,WEAPON,"A defensive weapon system that fires cluster bombs prope
 ,,,,,
 pow_torgue_flail_blank,WEAPON,"A defensive rocket system that fires cluster bombs propelled by rockets and equipped with a proximity fuse for maximum effect against fighters and missiles.",,,
 ,,,,,
-pow_torgue_javelin_blank,WEAPON,"A light but fast torpedo designed for fast strikes from a medium distance.",,,
-,,,,,
 pow_torgue_spear_blank,WEAPON,"A large torpedo with huge fuel reserves able to strike targets at a long distance.",,,
 ,,,,,
 pow_doom_minelayer_blank,WEAPON,"Deploys low-velocity proximity charges with an impressive blast radius and ability to shrug off point-defense fire. Especially devastating against fighters, but also effective vs armored targets.",,,,

@@ -17,7 +17,9 @@
   "builtInWeapons": {
     "WS0001": "pow_torgue_flak",
     "WS0002": "pow_torgue_flak",
-    "WS0007": "pow_torgue_flail_blank"
+    "WS0007": "torgue_annihilator_tube",
+    "WS0008": "torgue_annihilator_tube",
+    "WS0009": "torgue_annihilator_tube",
   },
   "weaponSlots": [
     {
@@ -81,121 +83,35 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -0,
-      "locations": [25, -0]
+      "locations": [24.5, 6.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [24.5, -6.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [24.5, -0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-27, 45],
-      "length": 24,
-      "width": 8,
+      "location": [-30, -0],
+      "length": 60,
+      "width": 19,
       "angle": 180,
-      "contrailSize": 64,
+      "contrailSize": 19,
       "style": "MIDLINE"
-    },
-    {
-      "location": [-29, 39],
-      "length": 32,
-      "width": 12,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-29, 33],
-      "length": 32,
-      "width": 12,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-28, 28],
-      "length": 24,
-      "width": 8,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-28, -27],
-      "length": 24,
-      "width": 8,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-29, -32],
-      "length": 32,
-      "width": 12,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-29, -38],
-      "length": 32,
-      "width": 12,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-27, -44],
-      "length": 24,
-      "width": 8,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-27, -0],
-      "length": 8,
-      "width": 9,
-      "angle": 180,
-      "contrailSize": 9,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-31, 23.5],
-      "length": 6,
-      "width": 2,
-      "angle": 180,
-      "contrailSize": 2,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-31, -23.5],
-      "length": 6,
-      "width": 2,
-      "angle": -180,
-      "contrailSize": 2,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-31, 19.5],
-      "length": 6,
-      "width": 2,
-      "angle": 180,
-      "contrailSize": 2,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-31, -19.5],
-      "length": 6,
-      "width": 2,
-      "angle": -180,
-      "contrailSize": 2,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-8, -0],
-      "length": 3.5,
-      "width": 13,
-      "angle": 180,
-      "contrailSize": 13,
-      "style": "COBRA_BOMBER"
     },
     {
       "location": [-17, 10],
@@ -212,12 +128,76 @@
       "angle": -180,
       "contrailSize": 5,
       "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-30, 22.5],
+      "length": 3.5,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-30, -22.5],
+      "length": 3.5,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-28.5, 19.5],
+      "length": 3.5,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-28.5, -19.5],
+      "length": 3.5,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-30.5, 27],
+      "length": 3.5,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-30.5, -27],
+      "length": 3.5,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-25.5, 43],
+      "length": 37,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-25.5, -43],
+      "length": 37,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "MIDLINE"
     }
   ],
   "bounds": [
-    31, 53.5,
-    31, -53.5,
-    -27, -47,
-    -27, 45
+    32, 53.5,
+    32, -51.5,
+    -27.5, -52,
+    -27.5, 53.5
   ]
 }

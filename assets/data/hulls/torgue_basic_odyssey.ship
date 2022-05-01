@@ -20,7 +20,7 @@
       "id": "WS0001",
       "size": "LARGE",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [224.5, 0.5]
@@ -29,7 +29,7 @@
       "id": "WS0002",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [188.5, 33.5]
@@ -38,7 +38,7 @@
       "id": "WS0003",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [144.5, 64.5]
@@ -47,7 +47,7 @@
       "id": "WS0004",
       "size": "LARGE",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [96.5, 57.5]
@@ -56,7 +56,7 @@
       "id": "WS0005",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 45,
       "locations": [55.5, 69.5]
@@ -65,7 +65,7 @@
       "id": "WS0006",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [11.5, 76.5]
@@ -74,7 +74,7 @@
       "id": "WS0007",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [-35.5, 76.5]
@@ -83,7 +83,7 @@
       "id": "WS0008",
       "size": "LARGE",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [-12, 57.5]
@@ -92,7 +92,7 @@
       "id": "WS0009",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
       "locations": [-80.5, 54]
@@ -101,7 +101,7 @@
       "id": "WS0010",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
       "locations": [-80.5, -52]
@@ -110,7 +110,7 @@
       "id": "WS0011",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -45,
       "locations": [177.5, -29]
@@ -119,7 +119,7 @@
       "id": "WS0012",
       "size": "LARGE",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
       "locations": [96.5, -21]
@@ -128,7 +128,7 @@
       "id": "WS0013",
       "size": "LARGE",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [18.5, -44.5]

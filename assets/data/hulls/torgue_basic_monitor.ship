@@ -59,7 +59,7 @@
       "id": "WS0005",
       "size": "SMALL",
       "type": "SYSTEM",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 5,
       "angle": 160,
       "locations": [-27, 17]
@@ -68,7 +68,7 @@
       "id": "WS0006",
       "size": "SMALL",
       "type": "SYSTEM",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 5,
       "angle": 200,
       "locations": [-27, -16]

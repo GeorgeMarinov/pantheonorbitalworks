@@ -26,7 +26,7 @@
       "id": "WS0001",
       "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [21, 17]
@@ -35,7 +35,7 @@
       "id": "WS0002",
       "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [21, -17]
@@ -44,7 +44,7 @@
       "id": "WS0003",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [16, 30]
@@ -53,7 +53,7 @@
       "id": "WS0004",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [16, -30]
@@ -62,7 +62,7 @@
       "id": "WS0005",
       "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [15, -44]
@@ -71,7 +71,7 @@
       "id": "WS0006",
       "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [15, 44]
@@ -80,7 +80,7 @@
       "id": "WS0007",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [52, -0]
@@ -89,7 +89,7 @@
       "id": "WS0008",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [52, -3]
@@ -98,7 +98,7 @@
       "id": "WS0009",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [52, 3]
@@ -107,7 +107,7 @@
       "id": "WS0010",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [49, -7.5]
@@ -116,7 +116,7 @@
       "id": "WS0011",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [49, 7.5]
@@ -125,7 +125,7 @@
       "id": "WS0012",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
       "locations": [46, -10.5]
@@ -134,7 +134,7 @@
       "id": "WS0013",
       "size": "SMALL",
       "type": "BUILT_IN",
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
       "locations": [46, 10.5]

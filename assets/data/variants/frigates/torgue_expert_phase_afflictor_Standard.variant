@@ -5,9 +5,12 @@
   "goalVariant": true,
   "hullId": "torgue_expert_phase_afflictor",
   "modules": [
-    {
-      "WS0005": "torgue_expert_phase_afflictor_turret_Standard"
-    }
+    {"WS0010": "torgue_phase_two_stage_annihilator_tube_Standard"},
+    {"WS0011": "torgue_phase_two_stage_annihilator_tube_Standard"},
+    {"WS0012": "torgue_phase_two_stage_annihilator_tube_Standard"},
+    {"WS0013": "torgue_phase_two_stage_annihilator_tube_Standard"},
+    {"WS0014": "torgue_phase_two_stage_annihilator_tube_Standard"},
+    {"WS0015": "torgue_phase_two_stage_annihilator_tube_Standard"},
   ],
   "permaMods": [],
   "quality": 0,

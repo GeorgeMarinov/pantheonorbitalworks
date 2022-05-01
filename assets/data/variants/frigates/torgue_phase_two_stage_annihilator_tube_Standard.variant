@@ -1,0 +1,14 @@
+{
+  "variantId": "torgue_phase_two_stage_annihilator_tube_Standard",
+  "hullId": "torgue_phase_two_stage_annihilator_tube",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

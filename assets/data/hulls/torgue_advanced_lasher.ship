@@ -2,75 +2,75 @@
   "hullName": "Torgue Advanced Lasher",
   "hullId": "torgue_advanced_lasher",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/lasher/torgue/torgue_advanced_lasher_paint.png",
+  "spriteName": "graphics/POW/ships/lasher/torgue/torgue_advanced_lasher.png",
   "style": "LOW_TECH",
   "coversColor": "255,188,175,255",
-  "height": 96,
-  "width": 80,
-  "center": [39, 35],
+  "height": 110,
+  "width": 110,
+  "center": [55, 44],
   "collisionRadius": 75,
-  "shieldCenter": [8.5, -0],
+  "shieldCenter": [3, -0],
   "shieldRadius": 64,
   "viewOffset": 0,
   "weaponSlots": [
     {
-      "id": "WS 001",
-      "size": "SMALL",
-      "type": "COMPOSITE",
-      "mount": "HARDPOINT",
-      "arc": 5,
-      "angle": 0,
-      "locations": [7, 9]
-    },
-    {
-      "id": "WS 004",
-      "size": "SMALL",
-      "type": "COMPOSITE",
-      "mount": "HARDPOINT",
-      "arc": 5,
-      "angle": 0,
-      "locations": [7, -11]
-    },
-    {
-      "id": "WS 008",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 60,
-      "angle": 160,
-      "locations": [-16.5, 16]
-    },
-    {
-      "id": "WS 009",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 60,
-      "angle": 200,
-      "locations": [-17.5, -18.5]
-    },
-    {
       "id": "WS0001",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "HARDPOINT",
-      "arc": 5,
+      "mount": "TURRET",
+      "arc": 0,
       "angle": 0,
-      "locations": [21, 26.5]
+      "locations": [21, 17]
     },
     {
       "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [21, -17]
+    },
+    {
+      "id": "WS0003",
       "size": "MEDIUM",
       "type": "COMPOSITE",
-      "mount": "HARDPOINT",
-      "arc": 5,
+      "mount": "TURRET",
+      "arc": 0,
       "angle": 0,
-      "locations": [19.5, -28.5]
+      "locations": [16, 30]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [16, -30]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [15, -44]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [15, 44]
     }
   ],
   "engineSlots": [
     {
-      "location": [-32, -1],
+      "location": [-38.5, 0],
       "length": 64,
       "width": 16,
       "angle": 180,
@@ -78,44 +78,27 @@
       "style": "LOW_TECH"
     },
     {
-      "location": [-34.5, 11.5],
-      "length": 32,
-      "width": 8,
+      "location": [-40.5, -14],
+      "length": 64,
+      "width": 16,
       "angle": 180,
       "contrailSize": 64,
       "style": "LOW_TECH"
     },
     {
-      "location": [-36, 17.5],
-      "length": 32,
-      "width": 8,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-34.5, -13.5],
-      "length": 32,
-      "width": 8,
-      "angle": 180,
-      "contrailSize": 64,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-37, -19.5],
-      "length": 32,
-      "width": 8,
-      "angle": 180,
+      "location": [-40.5, 14],
+      "length": 64,
+      "width": 16,
+      "angle": -180,
       "contrailSize": 64,
       "style": "LOW_TECH"
     }
   ],
   "bounds": [
-    64, -1.5,
-    32.5, 34.5,
-    -4, 34.5,
-    -38, -1,
-    -8.5, -37,
-    28.5, -37
+    59.5, 0,
+    6.5, 52,
+    -40, 24,
+    -40, -24.5,
+    7.5, -51.5
   ]
 }

@@ -11,9 +11,6 @@
   "shieldCenter": [-5, -0],
   "shieldRadius": 90,
   "viewOffset": 0,
-  "builtInWeapons": {
-    "WS0005": "torgue_phase_annihilator_tubes"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",

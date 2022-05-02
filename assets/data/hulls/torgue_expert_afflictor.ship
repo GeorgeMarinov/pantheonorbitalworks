@@ -4,22 +4,30 @@
   "hullSize": "FRIGATE",
   "spriteName": "graphics/POW/ships/afflictor/torgue/torgue_expert_afflictor.png",
   "style": "HIGH_TECH",
-  "height": 170,
-  "width": 92,
-  "center": [46, 79],
+  "height": 140,
+  "width": 100,
+  "center": [50, 63],
   "collisionRadius": 97,
-  "shieldCenter": [-5, -0],
+  "shieldCenter": [0, -0],
   "shieldRadius": 90,
   "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0010": "pow_torgue_two_stage_annihilator_blank",
+    "WS0011": "pow_torgue_two_stage_annihilator_blank",
+    "WS0012": "pow_torgue_two_stage_annihilator_blank",
+    "WS0013": "pow_torgue_two_stage_annihilator_blank",
+    "WS0014": "pow_torgue_two_stage_annihilator_blank",
+    "WS0015": "pow_torgue_two_stage_annihilator_blank"
+  },
   "weaponSlots": [
     {
       "id": "WS0001",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [40.5, 34]
+      "locations": [33, 28]
     },
     {
       "id": "WS0002",
@@ -28,7 +36,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [37, 17]
+      "locations": [39, 17]
     },
     {
       "id": "WS0003",
@@ -37,16 +45,16 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [37, -17]
+      "locations": [39, -17]
     },
     {
       "id": "WS0004",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [40, -34]
+      "locations": [33, -28]
     },
     {
       "id": "WS0007",
@@ -55,7 +63,7 @@
       "mount": "HIDDEN",
       "arc": 5,
       "angle": 160,
-      "locations": [13.5, 36.5]
+      "locations": [10, 27]
     },
     {
       "id": "WS0008",
@@ -63,26 +71,89 @@
       "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 5,
-      "angle": -158.5,
-      "locations": [13, -37]
+      "angle": 200,
+      "locations": [10, -26]
     },
     {
       "id": "WS0005",
       "size": "MEDIUM",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [49, -0]
+      "locations": [58, 0]
     },
     {
-      "id": "WS0098",
+      "id": "WS0006",
       "size": "SMALL",
-      "type": "SYSTEM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-23, 38]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-23, -38]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 90,
-      "locations": [-18.5, 10]
+      "locations": [-24.5, 21]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-24.5, -21]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-18.5, 21]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-18.5, -21]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-12.5, 21]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-12.5, -21]
     },
     {
       "id": "WS0099",
@@ -91,33 +162,63 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -90,
-      "locations": [-18.5, -10]
+      "locations": [-22.5, -8.5]
+    },
+    {
+      "id": "WS0098",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-22.5, 8.5]
     }
   ],
   "engineSlots": [
     {
-      "location": [-75.5, 12.5],
-      "length": 64,
-      "width": 16,
+      "location": [-64.5, 22.5],
+      "length": 30,
+      "width": 10,
       "angle": 180,
-      "contrailSize": 64,
+      "contrailSize": 30,
       "style": "HIGH_TECH"
     },
     {
-      "location": [-75, -14.5],
-      "length": 64,
-      "width": 16,
+      "location": [-64.5, -22.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-64.5, 15.5],
+      "length": 30,
+      "width": 10,
       "angle": 180,
-      "contrailSize": 64,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-64.5, -15.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
       "style": "HIGH_TECH"
     }
   ],
   "bounds": [
-    -17.5, 17,
-    48.5, 49.5,
-    48.5, -49.5,
-    -17, -16,
-    -60.5, -27,
-    -61, 29
+    9.5, 21.5,
+    30, 37,
+    48, 12,
+    73, -0.5,
+    46.5, -13,
+    29.5, -38.5,
+    8, -22,
+    -43.5, -46.5,
+    -60.5, -29,
+    -60, 29.5,
+    -42.5, 46
   ]
 }

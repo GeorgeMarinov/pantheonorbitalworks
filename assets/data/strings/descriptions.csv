@@ -4,6 +4,8 @@ id,type,text1,text2,text3,notes
 ,,,,,
 torgue_annihilator_tube,WEAPON,Custom Torgue rocket tube firing fast annihilator missiles.,,,
 ,,,,,
+torgue_annihilator_array,WEAPON,Custom Torgue rocket array firing fast annihilator missiles.,,,
+,,,,,
 pow_torgue_annihilator_spitter,WEAPON,Custom Torgue weapon platform designed to saturate with fast annihilator missiles.,,,
 ,,,,,
 pow_torgue_two_stage_annihilator_blank,WEAPON,Custom Torgue rocket tube firing fast two stage annihilator missiles.,,,

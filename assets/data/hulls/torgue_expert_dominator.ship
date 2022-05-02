@@ -18,8 +18,8 @@
     "WS0013": "torgue_annihilator_tube",
     "WS0014": "torgue_annihilator_tube",
     "WS0015": "torgue_annihilator_tube",
-    "WS0016": "torgue_medium_annihilator_array",
-    "WS0017": "torgue_medium_annihilator_array"
+    "WS0016": "torgue_annihilator_array",
+    "WS0017": "torgue_annihilator_array"
   },
   "weaponSlots": [
     {

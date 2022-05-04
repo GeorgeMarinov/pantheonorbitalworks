@@ -12,6 +12,6 @@ public class BasicConstants {
 	public static int PeakCR = 30;
 	public static int Supplies = 20;
 	public static float ShipSpeed = 5;
-	public static float MissileSpeed = 20;
+	public static float MissileSpeed = 40;
 	public static int MissileTurn = 20;
 }

@@ -30,6 +30,7 @@ public class MiracleTorgueAdvancedRefit extends BaseHullMod {
 		stats.getMissileAccelerationBonus().modifyPercent(id, AdvancedConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -AdvancedConstants.MissileTurn);
 		stats.getMissileTurnAccelerationBonus().modifyPercent(id, -AdvancedConstants.MissileTurn);
+		stats.getMissileWeaponRangeBonus().modifyPercent(id, -AdvancedConstants.MissileTurn);
 	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {

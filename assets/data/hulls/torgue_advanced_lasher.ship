@@ -12,6 +12,9 @@
   "shieldCenter": [3, -0],
   "shieldRadius": 64,
   "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder"
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",

@@ -12,14 +12,13 @@
   "shieldCenter": [3, -0],
   "shieldRadius": 64,
   "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder"
+  ],
   "builtInWeapons": {
     "WS0007": "torgue_annihilator_tube",
     "WS0008": "torgue_annihilator_tube",
-    "WS0009": "torgue_annihilator_tube",
-    "WS0010": "torgue_annihilator_tube",
-    "WS0011": "torgue_annihilator_tube",
-    "WS0012": "torgue_annihilator_tube",
-    "WS0013": "torgue_annihilator_tube",
+    "WS0009": "torgue_annihilator_tube"
   },
   "weaponSlots": [
     {
@@ -92,7 +91,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [52, -3]
+      "locations": [49, -7.5]
     },
     {
       "id": "WS0009",
@@ -101,43 +100,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [52, 3]
-    },
-    {
-      "id": "WS0010",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": 0,
-      "locations": [49, -7.5]
-    },
-    {
-      "id": "WS0011",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": -0,
       "locations": [49, 7.5]
-    },
-    {
-      "id": "WS0012",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": 0,
-      "locations": [46, -10.5]
-    },
-    {
-      "id": "WS0013",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": -0,
-      "locations": [46, 10.5]
     }
   ],
   "engineSlots": [

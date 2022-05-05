@@ -14,4 +14,5 @@ public class AdvancedConstants {
 	public static float ShipSpeed = 10;
 	public static float MissileSpeed = 60;
 	public static int MissileTurn = 30;
+	public static int MissileRangeBalanse = 20;
 }

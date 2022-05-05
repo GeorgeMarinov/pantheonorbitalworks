@@ -27,7 +27,7 @@ public class NormalTorgueBasicRefit extends BaseHullMod {
 		stats.getMissileAccelerationBonus().modifyPercent(id, BasicConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -BasicConstants.MissileTurn);
 		stats.getMissileTurnAccelerationBonus().modifyPercent(id, -BasicConstants.MissileTurn);
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, -BasicConstants.MissileTurn);
+		stats.getMissileWeaponRangeBonus().modifyPercent(id, -BasicConstants.MissileRangeBalanse);
 	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {

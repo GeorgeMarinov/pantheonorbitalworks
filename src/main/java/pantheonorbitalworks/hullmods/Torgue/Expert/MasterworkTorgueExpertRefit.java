@@ -27,7 +27,7 @@ public class MasterworkTorgueExpertRefit extends BaseHullMod {
 		stats.getMissileAccelerationBonus().modifyPercent(id, ExpertConstants.MissileSpeed * QualityMultiplier);
 		stats.getMissileMaxTurnRateBonus().modifyPercent(id, -ExpertConstants.MissileTurn);
 		stats.getMissileTurnAccelerationBonus().modifyPercent(id, -ExpertConstants.MissileTurn);
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, -ExpertConstants.MissileTurn);
+		stats.getMissileWeaponRangeBonus().modifyPercent(id, -ExpertConstants.MissileRangeBalanse);
 	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {

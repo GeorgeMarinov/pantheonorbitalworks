@@ -38,7 +38,7 @@
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": 0,
-      "locations": [67, -0]
+      "locations": [77, -0]
     },
     {
       "id": "WS0002",
@@ -46,8 +46,8 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 10,
-      "angle": -45,
-      "locations": [22, -41]
+      "angle": 0,
+      "locations": [76, -47]
     },
     {
       "id": "WS0003",
@@ -55,8 +55,8 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 10,
-      "angle": 45,
-      "locations": [22, 41]
+      "angle": -0,
+      "locations": [76, 47]
     }
   ],
   "engineSlots": [
@@ -110,12 +110,13 @@
     }
   ],
   "bounds": [
-    50.5, 30.5,
+    41.5, 17.5,
     54.5, 51,
-    84.5, 40.5,
-    84.5, -40,
+    73, 53,
+    95.5, -0,
+    72, -52,
     53.5, -51,
-    50, -29.5,
+    41, -18,
     -13, -52,
     -71, -45,
     -68, 44,

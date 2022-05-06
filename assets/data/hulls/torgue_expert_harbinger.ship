@@ -12,8 +12,14 @@
   "shieldRadius": 107,
   "viewOffset": 0,
   "builtInWeapons": {
-    "WS0010": "pow_torgue_flail_blank",
-    "WS0011": "pow_torgue_flail_blank"
+    "WS0006": "torgue_annihilator_tube",
+    "WS0007": "torgue_annihilator_tube",
+    "WS0008": "torgue_annihilator_tube",
+    "WS0009": "torgue_annihilator_tube",
+    "WS0010": "torgue_annihilator_tube",
+    "WS0011": "torgue_annihilator_tube",
+    "WS0012": "torgue_annihilator_tube",
+    "WS0013": "torgue_annihilator_tube",
   },
   "weaponSlots": [
     {
@@ -62,24 +68,6 @@
       "locations": [57, -43]
     },
     {
-      "id": "WS0010",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 6,
-      "angle": 0,
-      "locations": [43, 70.5]
-    },
-    {
-      "id": "WS0011",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 6,
-      "angle": -0,
-      "locations": [43, -70.5]
-    },
-    {
       "id": "WS0099",
       "size": "SMALL",
       "type": "SYSTEM",
@@ -114,6 +102,78 @@
       "arc": 6,
       "angle": -0,
       "locations": [27, -35]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-35.5, -45]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-35.5, 45]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-41.5, -45]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-41.5, 45]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-47.5, -45]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-47.5, 45]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": -0,
+      "locations": [43.5, -70]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [43.5, 70]
     }
   ],
   "engineSlots": [

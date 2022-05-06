@@ -13,8 +13,7 @@
   "shieldRadius": 190,
   "viewOffset": 0,
   "builtInWeapons": {
-    "WS0007": "pow_torgue_flail_blank",
-    "WS0008": "pow_torgue_flail_blank"
+    "WS0007": "torgue_annihilator_array",
   },
   "weaponSlots": [
     {
@@ -73,21 +72,12 @@
     },
     {
       "id": "WS0007",
-      "size": "SMALL",
+      "size": "LARGE",
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [102, 86]
-    },
-    {
-      "id": "WS0008",
-      "size": "SMALL",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": -0,
-      "locations": [127, -42]
+      "locations": [45, 38.5]
     }
   ],
   "engineSlots": [

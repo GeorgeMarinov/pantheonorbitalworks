@@ -13,10 +13,12 @@
   "shieldRadius": 110,
   "viewOffset": 0,
   "builtInWeapons": {
-    "WS0006": "torgue_annihilator_tube",
-    "WS0007": "torgue_annihilator_tube",
-    "WS0008": "torgue_annihilator_tube",
-    "WS0009": "torgue_annihilator_tube"
+    "WS0006": "pow_torgue_two_stage_annihilator_blank",
+    "WS0007": "pow_torgue_two_stage_annihilator_blank",
+    "WS0008": "pow_torgue_two_stage_annihilator_blank",
+    "WS0009": "pow_torgue_two_stage_annihilator_blank",
+    "WS0010": "pow_torgue_two_stage_annihilator_blank",
+    "WS0011": "pow_torgue_two_stage_annihilator_blank",
   },
   "weaponSlots": [
     {
@@ -70,8 +72,8 @@
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [26, 9]
+      "angle": -90,
+      "locations": [7.5, -68]
     },
     {
       "id": "WS0007",
@@ -79,8 +81,8 @@
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -0,
-      "locations": [26, -9]
+      "angle": 90,
+      "locations": [7.5, 68]
     },
     {
       "id": "WS0008",
@@ -88,8 +90,8 @@
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [31, 4]
+      "angle": -90,
+      "locations": [1.5, -68]
     },
     {
       "id": "WS0009",
@@ -97,8 +99,26 @@
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -0,
-      "locations": [31, -4]
+      "angle": 90,
+      "locations": [1.5, 68]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-4.5, -68]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-4.5, 68]
     }
   ],
   "engineSlots": [

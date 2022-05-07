@@ -4,11 +4,11 @@
   "hullSize": "DESTROYER",
   "spriteName": "graphics/POW/ships/shrike/torgue/torgue_basic_shrike.png",
   "style": "HIGH_TECH",
-  "height": 170,
-  "width": 110,
-  "center": [55, 79],
+  "height": 153,
+  "width": 106,
+  "center": [53, 79],
   "collisionRadius": 120,
-  "shieldCenter": [6, 0],
+  "shieldCenter": [5, -0],
   "shieldRadius": 116,
   "viewOffset": 0,
   "weaponSlots": [
@@ -19,7 +19,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [60, -16]
+      "locations": [58, -16]
     },
     {
       "id": "WS0002",
@@ -28,7 +28,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [60, 16]
+      "locations": [58, 16]
     },
     {
       "id": "WS0003",
@@ -36,22 +36,31 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -90,
-      "locations": [-29, -42]
+      "angle": 0,
+      "locations": [53, -0]
     },
     {
       "id": "WS0004",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 90,
-      "locations": [-29, 42]
+      "angle": 0,
+      "locations": [64, -29]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [64, 29]
     }
   ],
   "engineSlots": [
     {
-      "location": [-76, 14],
+      "location": [-80.5, 13.5],
       "length": 48,
       "width": 20,
       "angle": 180,
@@ -59,7 +68,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-76, -14],
+      "location": [-80.5, -14.5],
       "length": 48,
       "width": 20,
       "angle": 180,
@@ -67,7 +76,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-66, 34],
+      "location": [-70.5, 33.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -75,7 +84,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-69, 28],
+      "location": [-73.5, 27.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -83,7 +92,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-71, 23],
+      "location": [-75.5, 22.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -91,7 +100,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-71, -23],
+      "location": [-75.5, -23.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -99,7 +108,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-69, -28],
+      "location": [-73.5, -28.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -107,7 +116,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-66, -34],
+      "location": [-70.5, -34.5],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -116,20 +125,14 @@
     }
   ],
   "bounds": [
-    1, 49.5,
-    74.5, 26,
-    74.5, -27,
-    -1, -50,
-    -19, -33.5,
-    -30, -54,
-    -39.5, -34.5,
-    -70.5, -38.5,
-    -74, -9,
-    -54, 0.5,
-    -74, 10,
-    -70, 38,
-    -38.5, 34.5,
-    -29, 54.5,
-    -20, 34
+    -5, 51,
+    63.5, 34,
+    63.5, -35,
+    -5, -50.5,
+    -67.5, -35.5,
+    -77, -13,
+    -58, -0,
+    -77.5, 13.5,
+    -68, 35.5
   ]
 }

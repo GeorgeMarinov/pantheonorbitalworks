@@ -4,15 +4,22 @@
   "hullSize": "DESTROYER",
   "spriteName": "graphics/POW/ships/shrike/torgue/torgue_expert_shrike.png",
   "style": "HIGH_TECH",
-  "height": 170,
-  "width": 110,
-  "center": [55, 79],
+  "height": 153,
+  "width": 120,
+  "center": [60, 79],
   "collisionRadius": 120,
-  "shieldCenter": [6, 0],
+  "shieldCenter": [5, -0],
   "shieldRadius": 116,
   "viewOffset": 0,
   "builtInWeapons": {
-    "WS0007": "pow_torgue_spear_blank"
+    "WS0008": "pow_torgue_two_stage_annihilator_blank",
+    "WS0009": "pow_torgue_two_stage_annihilator_blank",
+    "WS0010": "pow_torgue_two_stage_annihilator_blank",
+    "WS0011": "pow_torgue_two_stage_annihilator_blank",
+    "WS0012": "pow_torgue_two_stage_annihilator_blank",
+    "WS0013": "pow_torgue_two_stage_annihilator_blank",
+    "WS0014": "pow_torgue_two_stage_annihilator_blank",
+    "WS0015": "pow_torgue_two_stage_annihilator_blank",
   },
   "weaponSlots": [
     {
@@ -22,7 +29,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [60, -16]
+      "locations": [58, -16]
     },
     {
       "id": "WS0002",
@@ -31,7 +38,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [60, 16]
+      "locations": [58, 16]
     },
     {
       "id": "WS0003",
@@ -39,17 +46,17 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -90,
-      "locations": [-29, -42]
+      "angle": 0,
+      "locations": [53, 0]
     },
     {
       "id": "WS0004",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 90,
-      "locations": [-29, 42]
+      "angle": 0,
+      "locations": [64, -29]
     },
     {
       "id": "WS0005",
@@ -57,8 +64,8 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -90,
-      "locations": [-45, -44]
+      "angle": -0,
+      "locations": [64, 29]
     },
     {
       "id": "WS0006",
@@ -66,22 +73,94 @@
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 90,
-      "locations": [-45, 44]
+      "angle": 0,
+      "locations": [-18, -53]
     },
     {
       "id": "WS0007",
-      "size": "MEDIUM",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-18, 53]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [58.5, -0]
+      "angle": 90,
+      "locations": [20.5, 34]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [20.5, -34]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [26.5, 32]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [26.5, -32]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [32.5, 30]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [32.5, -30]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [38.5, 28]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [38.5, -28]
     }
   ],
   "engineSlots": [
     {
-      "location": [-76, 14],
+      "location": [-80, 14],
       "length": 48,
       "width": 20,
       "angle": 180,
@@ -89,7 +168,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-76, -14],
+      "location": [-80, -14],
       "length": 48,
       "width": 20,
       "angle": 180,
@@ -97,7 +176,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-66, 34],
+      "location": [-70, 34],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -105,7 +184,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-69, 28],
+      "location": [-73, 28],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -113,7 +192,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-71, 23],
+      "location": [-75, 23],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -121,7 +200,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-71, -23],
+      "location": [-75, -23],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -129,7 +208,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-69, -28],
+      "location": [-73, -28],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -137,7 +216,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-66, -34],
+      "location": [-70, -34],
       "length": 24,
       "width": 6,
       "angle": 180,
@@ -145,24 +224,37 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-73, -0],
-      "length": 60,
-      "width": 34,
+      "location": [-76.5, -5],
+      "length": 24,
+      "width": 6,
       "angle": 180,
-      "contrailSize": 34,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-76.5, 5],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-74, -0],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 64,
       "style": "HIGH_TECH"
     }
   ],
   "bounds": [
-    1, 49.5,
-    74.5, 26,
-    74.5, -27,
-    -1, -50,
-    -14.5, -35,
-    -22.5, -52.5,
-    -72.5, -37.5,
-    -73, 38,
-    -22.5, 53,
-    -14, 34.5
+    -29, 60,
+    64.5, 34.5,
+    64.5, -34.5,
+    -28.5, -60.5,
+    -66.5, -35,
+    -77.5, 1,
+    -67, 36
   ]
 }

@@ -17,8 +17,6 @@ import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.util.Misc.Token;
 
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -69,30 +67,24 @@ public class CEO extends PaginatedOptions {
 	protected List<String> fleetHullIds = new ArrayList<>();
 	protected SectorEntityToken entity;
 	protected MarketAPI market;
-	// protected TextPanelAPI text;
-	// protected CargoAPI playerCargo;
 	protected PersonAPI person;
 	protected FactionAPI faction;
-	protected float points;
-	protected List<String> disabledOpts = new ArrayList<>();
 	protected OptionPanelAPI optionPanel;
 	protected VisualPanelAPI visual;
-	private Logger log = Global.getLogger(this.getClass());
 
 	@Override
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params,
 			Map<String, MemoryAPI> memoryMap) {
 		String arg = params.get(0).getString(memoryMap);
+
 		this.dialog = dialog;
 		this.memoryMap = memoryMap;
 
 		entity = dialog.getInteractionTarget();
 		market = entity.getMarket();
-		// text = dialog.getTextPanel();
 		playerFleet = Global.getSector().getPlayerFleet();
 		fleetData = playerFleet.getFleetData();
 		fleetList = fleetData.getMembersListCopy();
-		// playerCargo = playerFleet.getCargo();
 		person = dialog.getInteractionTarget().getActivePerson();
 		optionPanel = dialog.getOptionPanel();
 		visual = dialog.getVisualPanel();
@@ -139,11 +131,10 @@ public class CEO extends PaginatedOptions {
 						false);
 				break;
 			case "chooseHullType":
-				visual.fadeVisualOut();
-				optionPanel.clearOptions();
 				String option = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				Global.getSector().getCampaignUI().addMessage(option);
 				if (option.contains(DialogIdKeys.chosenShipSize.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
 					HashMap<String, String> dialogData = parseDialogOptionId(option);
 					String chosenShipSizeString = dialogData.get(DialogIdKeys.chosenShipSize.toString());
 					if (chosenShipSizeString != null) {
@@ -313,7 +304,6 @@ public class CEO extends PaginatedOptions {
 									false, false);
 							return true;
 						case "phase_coils":
-							Global.getSector().getCampaignUI().addMessage("in phase menu");
 							optionPanel.clearOptions();
 							for (PhaseCoilReplacemnts phaseCoilReplacemnt : PhaseCoilReplacemnts.values()) {
 								int originalCreditsCost = Integer
@@ -334,7 +324,6 @@ public class CEO extends PaginatedOptions {
 							return true;
 						case "shield_swap":
 							optionPanel.clearOptions();
-							Global.getSector().getCampaignUI().addMessage("in shield_swap menu");
 							for (Shields newShield : Shields.values()) {
 								int originalCreditsCost = Integer
 										.parseInt(dialogData.get(DialogIdKeys.creditsCost.toString()));

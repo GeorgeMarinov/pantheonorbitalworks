@@ -379,8 +379,8 @@ public class CEO extends PaginatedOptions {
 							break;
 						}
 					}
-					// int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
-					int refitDuration = 1;
+					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					// int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " "))
 									+ " refiting will be complete in " + refitDuration + " days.");

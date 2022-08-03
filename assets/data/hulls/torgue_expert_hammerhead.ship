@@ -12,6 +12,9 @@
   "shieldCenter": [11, -0],
   "shieldRadius": 120,
   "viewOffset": 0,
+  "builtInMods": [
+    "pow_torgue_refit",
+  ],
   "builtInWeapons": {
     "WS0008": "torgue_annihilator_tube",
     "WS0009": "torgue_annihilator_tube",

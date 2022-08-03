@@ -12,7 +12,8 @@
   "shieldRadius": 80,
   "viewOffset": 0,
   "builtInMods": [
-    "fluxshunt"
+    "fluxshunt",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0001": "pow_torgue_flak",

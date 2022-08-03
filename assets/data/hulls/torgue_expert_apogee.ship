@@ -14,7 +14,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "hiressensors",
-    "surveying_equipment"
+    "surveying_equipment",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0011": "pow_torgue_two_stage_annihilator_blank",

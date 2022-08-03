@@ -13,7 +13,8 @@
   "shieldRadius": 64,
   "viewOffset": 0,
   "builtInMods": [
-    "ballistic_rangefinder"
+    "ballistic_rangefinder",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0007": "torgue_annihilator_tube",

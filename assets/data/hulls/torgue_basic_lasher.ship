@@ -13,7 +13,8 @@
   "shieldRadius": 64,
   "viewOffset": 0,
   "builtInMods": [
-    "ballistic_rangefinder"
+    "ballistic_rangefinder",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

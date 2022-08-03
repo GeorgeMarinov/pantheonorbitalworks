@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "never_detaches",
-    "masterwork_torgue_expert_refit"
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0001": "pow_doom_minelayer_blank"

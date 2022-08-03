@@ -13,7 +13,8 @@
   "shieldRadius": 270,
   "viewOffset": 0,
   "builtInMods": [
-    "advancedcore"
+    "advancedcore",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

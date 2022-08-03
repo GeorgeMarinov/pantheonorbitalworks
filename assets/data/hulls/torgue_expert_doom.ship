@@ -11,6 +11,9 @@
   "shieldCenter": [13, 0],
   "shieldRadius": 155,
   "viewOffset": 0,
+  "builtInMods": [
+    "pow_torgue_refit",
+  ],
   "builtInWeapons": {
     "WS0011": "pow_doom_minelayer_blank"
   },

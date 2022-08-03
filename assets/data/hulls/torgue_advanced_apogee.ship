@@ -14,7 +14,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "hiressensors",
-    "surveying_equipment"
+    "surveying_equipment",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

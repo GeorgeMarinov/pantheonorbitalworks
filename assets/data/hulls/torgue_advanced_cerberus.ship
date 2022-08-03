@@ -12,7 +12,8 @@
   "shieldRadius": 75,
   "viewOffset": 0,
   "builtInMods": [
-    "shielded_holds"
+    "shielded_holds",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

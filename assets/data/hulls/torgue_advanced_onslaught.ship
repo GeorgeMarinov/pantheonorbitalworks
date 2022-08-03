@@ -12,7 +12,8 @@
   "shieldRadius": 240,
   "viewOffset": 200,
   "builtInMods": [
-    "pow_heavy_weapons_integration"
+    "pow_heavy_weapons_integration",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

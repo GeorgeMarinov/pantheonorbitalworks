@@ -13,7 +13,8 @@
   "shieldRadius": 250,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_heavy_weapons_integration"
+    "pow_heavy_weapons_integration",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0021": "pow_torgue_titan_slayer_blank"

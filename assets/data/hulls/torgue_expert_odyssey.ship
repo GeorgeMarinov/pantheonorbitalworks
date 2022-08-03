@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "hiressensors",
-    "eccm"
+    "eccm",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0015": "pow_torgue_two_stage_annihilator_blank",

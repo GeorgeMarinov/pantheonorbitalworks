@@ -11,6 +11,9 @@
   "shieldCenter": [0, -0],
   "shieldRadius": 90,
   "viewOffset": 0,
+  "builtInMods": [
+    "pow_torgue_refit",
+  ],
   "builtInWeapons": {
     "WS0010": "pow_torgue_two_stage_annihilator_blank",
     "WS0011": "pow_torgue_two_stage_annihilator_blank",

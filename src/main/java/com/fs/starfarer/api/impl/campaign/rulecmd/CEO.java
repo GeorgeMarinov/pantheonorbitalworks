@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import pantheonorbitalworks.PhaseCoilReplacemnts;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitShip;
@@ -31,6 +32,7 @@ import pantheonorbitalworks.RefitableCruiser;
 import pantheonorbitalworks.RefitableDestroyer;
 import pantheonorbitalworks.RefitableFrigade;
 import pantheonorbitalworks.RefitablePhase;
+import pantheonorbitalworks.Shields;
 
 public class CEO extends PaginatedOptions {
 
@@ -46,15 +48,6 @@ public class CEO extends PaginatedOptions {
 
 	public enum FinalMenuStates {
 		preview, phase_coils, shield_swap
-	}
-
-	public enum PhaseCoilReplacemnts {
-		extra_cargo, extra_flux_capacity_and_dissipation, low_tech_shield_emitter, mid_tech_shield_emitter,
-		high_tech_shield_emitter, extra_weapons
-	}
-
-	public enum Shields {
-		low_tech_shield, mid_tech_shield, high_tech_shield
 	}
 
 	public enum ShipSize {
@@ -255,20 +248,22 @@ public class CEO extends PaginatedOptions {
 								previewHullId = getMake() + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
 							}
 
-							FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
-							shipPreview.setShipName(chosenShipName);
-							shipPreview.getVariant().addPermaMod("normal_torgue_" + chosenPackage + "_refit");
-							shipPreview.getVariant().addPermaMod("armoredweapons");
+							String hullMods = "";
+							hullMods = hullMods + ("normal_torgue_" + chosenPackage + "_refit");
 							if (selectedPackageOption.contains(DialogIdKeys.replacePhaseCoils.toString())) {
 								String phaseOption = dialogData.get(DialogIdKeys.replacePhaseCoils.toString());
-								shipPreview.getVariant().addPermaMod("phase_" + phaseOption);
+								hullMods = hullMods + (",phase_" + phaseOption);
 							}
 
 							if (selectedPackageOption.contains(DialogIdKeys.newShield.toString())) {
 								String newShield = dialogData.get(DialogIdKeys.newShield.toString());
-								shipPreview.getVariant().addPermaMod("pow_" + newShield);
+								hullMods = hullMods + (",pow_" + newShield);
 							}
 
+							FleetMemberAPI shipPreview = fleetData.addFleetMember(previewHullId);
+							String shipPreviewId = shipPreview.getId();
+							shipPreview.setId(shipPreviewId + "modIds=" + hullMods);
+							shipPreview.setShipName(chosenShipName);
 							visual.showFleetMemberInfo(shipPreview);
 							fleetData.removeFleetMember(shipPreview);
 
@@ -368,20 +363,13 @@ public class CEO extends PaginatedOptions {
 							break;
 						}
 					}
-					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
-					// int refitDuration = 1;
+					// int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " "))
 									+ " refiting will be complete in " + refitDuration + " days.");
 
-					List<String> newHullMods = new ArrayList<String>();
-					newHullMods.add("armoredweapons");
-					if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
-						newHullMods.add("phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
-					}
-					if (confirmation.contains(DialogIdKeys.newShield.toString())) {
-						newHullMods.add("pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
-					}
+					String newHullMods = "";
 
 					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 					String manufacturer = getMake();
@@ -390,18 +378,31 @@ public class CEO extends PaginatedOptions {
 							Random randomNumberGenerator = new Random();
 							float random = randomNumberGenerator.nextInt(101);
 							if (random < 50) {
-								newHullMods.add("normal_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods + ("normal_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else if (random < 70) {
-								newHullMods.add("superb_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods + ("superb_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else if (random < 80) {
-								newHullMods.add("legendary_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods
+										+ ("legendary_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else if (random < 90) {
-								newHullMods.add("masterwork_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods
+										+ ("masterwork_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else if (random < 98) {
-								newHullMods.add("miracle_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods
+										+ ("miracle_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else {
-								newHullMods.add("normal_" + manufacturer + "_" + chosenPackage + "_refit");
+								newHullMods = newHullMods + ("normal_" + manufacturer + "_" + chosenPackage + "_refit");
 							}
+
+							if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
+								newHullMods = newHullMods
+										+ (",phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
+							}
+							if (confirmation.contains(DialogIdKeys.newShield.toString())) {
+								newHullMods = newHullMods
+										+ (",pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
+							}
+
 							CargoAPI storageCargo = submarketAPI.getCargo();
 							String newHull = manufacturer + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
 							if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.isPhase.toString()))

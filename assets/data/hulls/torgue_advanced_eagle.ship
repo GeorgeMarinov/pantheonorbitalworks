@@ -11,6 +11,9 @@
   "shieldCenter": [24.5, -0],
   "shieldRadius": 155,
   "viewOffset": 0,
+  "builtInMods": [
+    "pow_torgue_refit",
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",

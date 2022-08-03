@@ -13,7 +13,8 @@
   "shieldRadius": 270,
   "viewOffset": 0,
   "builtInMods": [
-    "advancedcore"
+    "advancedcore",
+    "pow_torgue_refit",
   ],
   "builtInWeapons": {
     "WS0022": "pow_torgue_expert_paragon_special"

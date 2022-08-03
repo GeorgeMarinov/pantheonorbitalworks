@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "hiressensors",
-    "eccm"
+    "eccm",
+    "pow_torgue_refit",
   ],
   "weaponSlots": [
     {

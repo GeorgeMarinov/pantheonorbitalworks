@@ -157,11 +157,12 @@ public class CEO extends PaginatedOptions {
 								break;
 						}
 					}
-				}
 
-				optionPanel.addOption("Exit", "CEO_Menu_Exit");
-				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
-						false);
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
+							false,
+							false);
+				}
 				break;
 			case "chooseShipToRefit":
 				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
@@ -192,9 +193,11 @@ public class CEO extends PaginatedOptions {
 									+ DialogIdKeys.originalHullId + ":" + fleetShip.getHullId() + ";";
 							optionPanel.addOption(optionName, optionId);
 						}
+
 					}
 					optionPanel.addOption("Exit", "CEO_Menu_Exit");
-					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
+							false,
 							false);
 				}
 				break;

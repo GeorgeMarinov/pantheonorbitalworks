@@ -26,7 +26,7 @@ public class TorgueRefit extends BaseHullMod {
 	public static final float ShipSpeed = 5;
 	public static final float MissileSpeed = 40;
 	public static final float MissileTurn = 20;
-	public static final float MissileRangeReduction = 20;
+	public static final float MissileRangeReduction = 25;
 	public String ShipId = "";
 
 	@Override

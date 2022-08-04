@@ -1,7 +1,7 @@
 {
 	"id":"pow_torgue_titan_slayer_missile",
 	"specClass":"missile",
-	"missileType":"PHASE_CHARGE",
+	"missileType":"ROCKET",
 	"collisionRadius":25,
 	"collisionClass":"MISSILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
@@ -43,19 +43,18 @@
 				    "width":10.0,
 				    "length":30.0,
 				    "angle":180.0}],
-	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
-					"range":200,
-					"explosionSpec":{"duration":2.0f,
-									 "radius":550,
-									 "coreRadius":300,
-									 "collisionClass":PROJECTILE_FF,
-									 "collisionClassByFighter":PROJECTILE_FIGHTER,
-									 "particleSizeMin":5.0,
-									 "particleSizeRange":10.0,
-									 "particleDuration":2.5,
-									 "particleCount":400,
-									 "particleColor":[255,150,0,255],
-									 "sound":"mine_explosion"},
-					}
-					
+	"explosionSpec":{
+		"duration":0.12f,
+		"radius":550,
+		"coreRadius":300,
+		"collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+		"collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+		"particleSizeMin":7.0,
+		"particleSizeRange":4.0,
+		"particleDuration":2,
+		"particleCount":25,
+		"particleColor":[255,225,125,255],
+		"explosionColor":[255,225,125,125],
+		"sound":"devastator_explosion",
+	}				
 }

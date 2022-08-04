@@ -47,7 +47,7 @@ public class RefitShip implements EveryFrameScript {
                 for (FleetMemberAPI shipInStorage : shipsInStorage.getMembersListCopy()) {
                     if (shipInStorage.getShipName().equals(_shipName)) {
                         String shipId = shipInStorage.getId();
-                        String newId = shipId + "shipName=" + _shipName + "modIds=" + _hullModIds;
+                        String newId = shipId + "modIds=" + _hullModIds;
                         shipInStorage.setId(newId);
                     }
                 }

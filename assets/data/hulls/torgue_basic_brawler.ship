@@ -2,17 +2,17 @@
   "hullName": "Torgue Basic Brawler",
   "hullId": "torgue_basic_brawler",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_basic_brawler_paint.png",
+  "spriteName": "graphics/POW/ships/brawler/torgue/torgue_basic_brawler.png",
   "style": "MIDLINE",
-  "height": 70,
-  "width": 110,
-  "center": [55, 32.5],
+  "height": 66,
+  "width": 112,
+  "center": [56, 32.5],
   "collisionRadius": 70,
   "shieldCenter": [0, -0],
-  "shieldRadius": 59,
+  "shieldRadius": 66,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_torgue_refit",
+    "pow_torgue_refit"
   ],
   "weaponSlots": [
     {
@@ -22,7 +22,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -0,
-      "locations": [18, 22]
+      "locations": [11.5, 22]
     },
     {
       "id": "WS 002",
@@ -31,30 +31,30 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [18, -22]
+      "locations": [11.5, -22]
     },
     {
-      "id": "WS 003",
-      "size": "SMALL",
+      "id": "WS0001",
+      "size": "MEDIUM",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
-      "arc": 10,
+      "arc": 5,
       "angle": 0,
-      "locations": [8, 46]
+      "locations": [22.5, -41]
     },
     {
-      "id": "WS 004",
-      "size": "SMALL",
+      "id": "WS0002",
+      "size": "MEDIUM",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
-      "arc": 10,
-      "angle": 0,
-      "locations": [8, -46]
+      "arc": 5,
+      "angle": -0,
+      "locations": [22.5, 41]
     }
   ],
   "engineSlots": [
     {
-      "location": [-29.5, 28],
+      "location": [-34, 28],
       "length": 48,
       "width": 24,
       "angle": 180,
@@ -62,7 +62,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-29.5, -28],
+      "location": [-34, -28],
       "length": 48,
       "width": 24,
       "angle": 180,
@@ -70,7 +70,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-26.5, 11],
+      "location": [-31, 11],
       "length": 24,
       "width": 12,
       "angle": 180,
@@ -78,7 +78,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-26.5, -11],
+      "location": [-31, -11],
       "length": 24,
       "width": 12,
       "angle": 180,
@@ -86,7 +86,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-18.5, 52],
+      "location": [-23, 52],
       "length": 16,
       "width": 6,
       "angle": 145,
@@ -94,7 +94,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-18.5, -52],
+      "location": [-23, -52],
       "length": 16,
       "width": 6,
       "angle": 225,
@@ -102,7 +102,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-23.5, 44],
+      "location": [-28, 44],
       "length": 20,
       "width": 6,
       "angle": 160,
@@ -110,7 +110,7 @@
       "style": "MIDLINE"
     },
     {
-      "location": [-23.5, -44],
+      "location": [-28, -44],
       "length": 20,
       "width": 6,
       "angle": 200,
@@ -119,11 +119,11 @@
     }
   ],
   "bounds": [
-    -1, 54.5,
-    27.5, 30.5,
-    27.5, -30.5,
-    -1, -55,
-    -30.5, -31,
-    -30.5, 28
+    -21.5, 55,
+    32, 51.5,
+    16.5, -0,
+    32.5, -51,
+    -23.5, -55,
+    -31.5, -0
   ]
 }

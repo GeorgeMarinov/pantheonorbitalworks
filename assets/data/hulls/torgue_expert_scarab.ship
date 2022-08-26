@@ -2,24 +2,20 @@
   "hullName": "Torgue Expert Scarab",
   "hullId": "torgue_expert_scarab",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_expert_scarab_paint.png",
+  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_expert_scarab.png",
   "style": "HIGH_TECH",
-  "height": 96,
-  "width": 96,
-  "center": [48, 42],
+  "height": 104,
+  "width": 112,
+  "center": [56, 50],
   "collisionRadius": 90,
-  "shieldCenter": [0, 0],
+  "shieldCenter": [0, -0],
   "shieldRadius": 75,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_torgue_refit",
+    "pow_torgue_refit"
   ],
   "builtInWeapons": {
-    "WS0003": "torgue_annihilator_tube",
-    "WS0004": "torgue_annihilator_tube",
-    "WS0005": "torgue_annihilator_tube",
-    "WS0006": "torgue_annihilator_tube",
-    "WS0007": "torgue_annihilator_array"
+    "WS0007": "torgue_annihilator_array",
   },
   "weaponSlots": [
     {
@@ -29,7 +25,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [45, 20]
+      "locations": [38, 19]
     },
     {
       "id": "WS0002",
@@ -38,57 +34,57 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [45, -20]
+      "locations": [38, -19]
     },
     {
       "id": "WS0003",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [26, 35]
+      "locations": [44, 38]
     },
     {
       "id": "WS0004",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [26, -35]
+      "locations": [44, -38]
     },
     {
       "id": "WS0005",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [37, 6]
+      "angle": 45,
+      "locations": [-15, 39]
     },
     {
       "id": "WS0006",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -0,
-      "locations": [37, -6]
+      "angle": -45,
+      "locations": [-15, -39]
     },
     {
       "id": "WS0007",
-      "size": "MEDIUM",
+      "size": "LARGE",
       "type": "BUILT_IN",
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [-2.5, -0]
+      "locations": [-18, -0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-39, 21],
+      "location": [-48.5, 21],
       "length": 36,
       "width": 12,
       "angle": 180,
@@ -96,7 +92,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-39, -21],
+      "location": [-48.5, -21],
       "length": 36,
       "width": 12,
       "angle": 180,
@@ -104,7 +100,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-41.5, 6.5],
+      "location": [-51, 6.5],
       "length": 51.5,
       "width": 19,
       "angle": 180,
@@ -112,7 +108,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-41.5, -6.5],
+      "location": [-51, -6.5],
       "length": 51.5,
       "width": 19,
       "angle": -180,
@@ -121,12 +117,13 @@
     }
   ],
   "bounds": [
-    51.5, 23.5,
-    21, 43,
-    -29, 38,
-    -43.5, 1,
-    -28, -37,
-    20, -45,
-    51.5, -26.5
+    52, 44.5,
+    8, 55,
+    -37.5, 38.5,
+    -48.5, -0,
+    -37, -37,
+    8, -55,
+    52.5, -43.5,
+    37, -0
   ]
 }

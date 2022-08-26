@@ -2,7 +2,7 @@
   "hullName": "Torgue Basic Scarab",
   "hullId": "torgue_basic_scarab",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_basic_scarab_paint.png",
+  "spriteName": "graphics/POW/ships/scarab/torgue/torgue_basic_scarab.png",
   "style": "HIGH_TECH",
   "height": 96,
   "width": 96,
@@ -12,12 +12,8 @@
   "shieldRadius": 75,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_torgue_refit",
+    "pow_torgue_refit"
   ],
-  "builtInWeapons": {
-    "WS0003": "torgue_annihilator_tube",
-    "WS0004": "torgue_annihilator_tube"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -26,7 +22,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [45, 20]
+      "locations": [45, 19]
     },
     {
       "id": "WS0002",
@@ -35,25 +31,25 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [45, -20]
+      "locations": [45, -19]
     },
     {
       "id": "WS0003",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [26, 35]
+      "angle": 45,
+      "locations": [-7.5, 39.5]
     },
     {
       "id": "WS0004",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": -0,
-      "locations": [26, -35]
+      "angle": -45,
+      "locations": [-7.5, -39.5]
     }
   ],
   "engineSlots": [

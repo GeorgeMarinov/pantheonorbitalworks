@@ -15,6 +15,7 @@
   "builtInMods": [
     "ballistic_rangefinder",
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "builtInWeapons": {
     "WS0007": "torgue_annihilator_tube",

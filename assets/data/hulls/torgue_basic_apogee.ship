@@ -16,6 +16,7 @@
     "hiressensors",
     "surveying_equipment",
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "weaponSlots": [
     {

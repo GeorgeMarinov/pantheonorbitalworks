@@ -15,6 +15,7 @@
   "builtInMods": [
     "advancedcore",
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "weaponSlots": [
     {

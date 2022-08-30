@@ -15,6 +15,7 @@
   "builtInMods": [
     "pow_heavy_weapons_integration",
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "weaponSlots": [
     {

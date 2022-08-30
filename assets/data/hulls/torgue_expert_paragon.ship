@@ -15,6 +15,7 @@
   "builtInMods": [
     "advancedcore",
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "builtInWeapons": {
     "WS0022": "pow_torgue_expert_paragon_special"

@@ -12,7 +12,8 @@
   "shieldRadius": 66,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_torgue_refit"
+    "pow_torgue_refit",
+    "armoredweapons",
   ],
   "weaponSlots": [
     {

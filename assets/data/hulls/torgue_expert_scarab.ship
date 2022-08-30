@@ -12,7 +12,8 @@
   "shieldRadius": 75,
   "viewOffset": 0,
   "builtInMods": [
-    "pow_torgue_refit"
+    "pow_torgue_refit",
+    "armoredweapons",
   ],
   "builtInWeapons": {
     "WS0007": "torgue_annihilator_array",

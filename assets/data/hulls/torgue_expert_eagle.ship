@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "pow_torgue_refit",
+"armoredweapons",
   ],
   "builtInWeapons": {
     "WS0003": "torgue_annihilator_tube",

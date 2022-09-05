@@ -1,0 +1,59 @@
+{
+	"id":"pow_torgue_hellbore_gyrojet",
+	"specClass":"missile",
+	"missileType":"ROCKET",
+	"sprite":"graphics/missiles/shell_hellbore.png",
+	"size":[12,16],	
+	"center":[6,8],
+	"collisionRadius":180,
+	"collisionClass":"MISSILE_FF",
+	"hitGlowRadius":150,
+	"glowColor":[255,165,30,105],
+	"glowRadius":60,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"explosionColor":[255,255,255,200],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":540, # purely visual
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.1, # fadeout duration	
+	"engineSpec":{
+		"turnAcc":0,
+		"turnRate":0,
+		"acc":250,
+		"dec":0
+	},
+		"engineSlots": [{
+		"id":"ES1",
+		"loc":[-12, 0],
+		"style":"CUSTOM",
+		"styleSpec":
+		{
+			"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+			"engineColor":[255,165,30,175],
+			"contrailDuration":.2,
+			"contrailWidthMult":1,
+			"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow the end
+			"contrailMinSeg":5, # min segment length, in pixels
+			"contrailMaxSpeedMult":.0f,
+			"contrailAngularVelocityMult":0.5f,
+			"contrailSpawnDistMult":0f, # how far away from engine it starts
+			"contrailColor":[255,165,30,175],
+			"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+		},
+		"length":50.0,
+		"width":12.0,
+		"angle":180.0
+		}],
+	"explosionSpec":{
+		"duration":1.12f,
+		"radius":540,
+		"coreRadius":180,
+		"collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+		"collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+		"particleCount":0,
+		"explosionColor":[255,255,255,200],
+	},
+}
+
+			

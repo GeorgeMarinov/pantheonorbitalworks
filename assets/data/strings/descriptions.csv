@@ -12,12 +12,60 @@ torgue_phase_replacement,WEAPON,Custom Torgue rocket pods firing two stage annih
 ,,,,,,
 pow_torgue_flak,WEAPON,A defensive weapon system that fires cluster bombs propelled by torgue gyrojets and equipped with a proximity fuse for maximum effect against fighters and missiles.,,,,
 ,,,,,,
-,,,,,,
 pow_doom_minelayer_blank,WEAPON,"Deploys low-velocity proximity charges with an impressive blast radius and ability to shrug off point-defense fire. Especially devastating against fighters, but also effective vs armored targets.",,,,
 ,,,,,,
 pow_torgue_titan_slayer_blank,WEAPON,Large armored rocket designed to brute force its way through point defense and deliver a devastating payload capable of crippling unshielded titan class ships or outright destroying anything smaller.,,,,
 ,,,,,,
 pow_torgue_expert_paragon_special,WEAPON,Generates a series if explosions centered on the paragon.,,,,
+,,,,,,
+pow_torgue_lightag,WEAPON,"A small caliber cannon designed for close-range fights, excellent versus armor and with a superb fire rate.
+
+Small caliber cannon designed to fire high-explosive rounds. Design of the coolant systems and autoloader emphasizes safety and prevention of cook-off potentially caused by high flux levels. Favored by destroyer captains that have something to prove.",,,,
+,,,,,,
+pow_torgue_lightmortar,WEAPON,"An antiquated weapon that fires anti-armor rounds at a low rate of fire, muzzle velocity, and range. Its low flux buildup is a lone saving grace.
+
+The weapon blueprints for Light Mortars actually did not intend them for spacecraft at all, but an ingenious modification to the breech loading mechanism permits installation and use outside an atmospheric environment. In combat, there is little the Light Mortar can do versus moving or shielded targets due to its terrible mount rotation and rate of fire. Nonetheless, it is often used for training novice gunnery officers in the finer points of space ballistic tactics and nomenclature.
+
+Commonly fitted on private yachts and solo interplanetary vehicles because it is so light and cheap.",,,,
+,,,,,,
+pow_torgue_chaingun,WEAPON,"The GA-X Industries Mk. II chaingun excels at close-range fighting, where accuracy is less important than overall damage and volume of fire.
+
+A 'melee' captain's favorite tool, the Assault Chaingun delivers high-explosive shaped charge rounds on target at nearly 400 shells per minute. Features electrically driven feed and ejector systems and an advanced nano cooling unit built right into the barrel. 
+
+The only drawback is a heavier turret profile which, coupled with the lack of the accompanying governor blueprint, is typically mounted on incompatible rotators giving rise to unexpectedly low turret rotation speeds.",,,,
+,,,,,,
+pow_torgue_heavymauler,WEAPON,"An advanced weapon system designed to punch through armor plating at long-range. Has a low sustained rate of fire but high per-burst damage.
+
+A brutal weapon, the heavy mauler is designed to engage targets at medium to long-range. At its core, the weapon is an autocannon with a nano-cooling system and an external ejection port. However, unlike normal autocannons, the heavy mauler is distinguished by an antimatter barrel charger fed by trivial amounts of standard starship fuel.
+
+When leaving the firing chamber, each shell ogive is charged with a field of antiprotons which hovers 10-20 nanometers in front of the shell, stabilized by a baryon coating. On impact with a target, this antiproton ""sheath"" loses structural integrity and the resulting reaction does further damage. Given the fact that shells already deliver impressive destructive force to the target, the combined reaction makes the heavy mauler particularly effective versus armored targets.",,,,
+heavyac,WEAPON,"A triple-barreled cannon that fires a burst of standardized shells at medium range. It is most effective versus enemy shields.
+
+Medium caliber, triple-barreled autocannon, typically deployed with medium-bore ammunition. Electrically primed firing fuses ensure precise fire counts. A great fire support weapon, it is typically fitted on destroyer and cruiser class ships. A battery of heavy autocannons with a proper firing solution may pose a serious threat to capital ships. 
+
+Additional mass necessity to accommodate the complex autoloader and cooling systems results in a very poor turn rate.",,,,
+,,,,,,
+pow_torgue_heavymortar,WEAPON,"An antiquated weapon that fires larger anti-armor rounds at a somewhat higher rate of fire than its smaller cousin. Projectile speed is low and effective range is short. Low flux buildup is a lone saving grace.
+
+The Heavy Mortar was originally designed for use in planetary surface combat. Ostensibly intended for cracking fortifications, it saw far more use in urban bombardment. The robust internal mechanisms permit installation and use outside an atmospheric environment with only minor adjustments, notably replacement of the automatic rangefinder/targeting module. If employed against a large, unshielded, and slow-moving target, the heavy mortar can prove most effective.",,,,
+,,,,,,
+pow_torgue_dualflak,WEAPON,"An upgraded, viciously effective dual mount of the Flak Cannon. Nicknamed ""The Widowmaker"" for its ability to tear apart incoming fighters.
+
+Just like the standard flak cannon, this weapon devastates smaller fighter and missile targets, firing two proximity fuse fitted rounds. Shaped dispersal ensures dual detonation and a higher kill radius. Fighter craft are rarely launched against ships that are fitted with this weapon system, out of fear of what it can do. Excellent rate of fire and turret turn rate.",,,,
+,,,,,,
+pow_torgue_devastator,WEAPON,"Essentially a rapid-fire capital-sized flak cannon, the Devastator was developed by the Domain Armada using generic parts in response to a rebellious world which managed to acquire an extensive set of fighter LPCs.
+
+Three barrels launch a rapid barrage of explosive projectiles. The rapid rate of fire produces such a volume of munitions that the proximity detectors become somewhat unreliable, setting themselves off at seemingly random range. The margin of error was deemed acceptable after spectacular field results.
+
+A single salvo from the Devastator can eliminate a fighter wing or flight of missiles, though the shells are of only limited use against larger or more distant targets.",,,,
+,,,,,,
+pow_torgue_hellbore,WEAPON,"A huge cannon which fires slow-moving plasma-charged projectiles. Rounds are highly effective versus armor and obliterate any hull structure left underneath.
+
+A feared weapon platform, rarely deployed due to the complexity involved in manufacturing a built-up barrel that can safely fire enormous high-explosive shaped charge rounds. When such a shell impacts a target, the Neumann effect causes the warhead to propel a jet of molten metal into the target's armor, vaporizing a small area, causing hull breaches, depressurization, and extensive internal damage from the spall.",,,,
+,,,,,,
+pow_torgue_hephag,WEAPON,"A medium-range gun designed to punch through heavy armor. The raw damage output also enables it to overwhelm weaker shield emitters.
+
+A truly devastating weapon platform, named for an archaic god of volcanoes. A typical turret mount features two L/89 barrels that trade off firing armor-destroying rounds at 240 RPM. An electromagnetic ejector, powered feed system and nanocoolants allow the weapon to fire for extended time periods. The shaped charge shells have low muzzle velocity and great armor penetrating power. ",,,,
 ,,,,,,
 ,,,,,,
 # SHIPS SHIPS SHIPS

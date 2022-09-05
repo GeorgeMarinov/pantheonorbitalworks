@@ -1,8 +1,8 @@
 {
   "id": "pow_torgue_flak",
   "specClass": "projectile",
-  "projectileSpecId": "pow_flak_gyrojet",
-  "type": "BALLISTIC",
+  "projectileSpecId": "pow_torgue_flak_gyrojet",
+  "type": "COMPOSITE",
   "size": "MEDIUM",
   "displayArcRadius": 400,
   "turretSprite": "graphics/POW/weapons/torgue_flak_cannon_turret_base.png",

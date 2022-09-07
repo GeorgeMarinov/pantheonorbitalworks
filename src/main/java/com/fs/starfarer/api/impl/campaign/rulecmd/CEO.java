@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -14,7 +15,10 @@ import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemQuantity;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.util.Misc.Token;
 
 import java.util.ArrayList;
@@ -23,6 +27,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import pantheonorbitalworks.ConvertWeapon;
+import pantheonorbitalworks.Helpers;
 import pantheonorbitalworks.PhaseCoilReplacemnts;
 import pantheonorbitalworks.RefitPackage;
 import pantheonorbitalworks.RefitRepresentative;
@@ -31,7 +37,16 @@ import pantheonorbitalworks.RefitableCapital;
 import pantheonorbitalworks.RefitableCruiser;
 import pantheonorbitalworks.RefitableDestroyer;
 import pantheonorbitalworks.RefitableFrigade;
+import pantheonorbitalworks.RefitableLargeBallistic;
+import pantheonorbitalworks.RefitableLargeEnergy;
+import pantheonorbitalworks.RefitableLargeMissile;
+import pantheonorbitalworks.RefitableMediumBallistic;
+import pantheonorbitalworks.RefitableMediumEnergy;
+import pantheonorbitalworks.RefitableMediumMissile;
 import pantheonorbitalworks.RefitablePhase;
+import pantheonorbitalworks.RefitableSmallBallistic;
+import pantheonorbitalworks.RefitableSmallEnergy;
+import pantheonorbitalworks.RefitableSmallMissile;
 import pantheonorbitalworks.Shields;
 
 public class CEO extends PaginatedOptions {
@@ -43,7 +58,8 @@ public class CEO extends PaginatedOptions {
 
 	public enum DialogIdKeys {
 		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName,
-		originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield, chosenShipSize
+		originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield, chosenShipSize, chosenWeaponSize,
+		chosenWeaponType, weaponToConvert, quantityWeaponsToConvert, weaponConfirmed
 	}
 
 	public enum FinalMenuStates {
@@ -52,6 +68,10 @@ public class CEO extends PaginatedOptions {
 
 	public enum ShipSize {
 		frigate, destroyer, cruiser, capital
+	}
+
+	public enum WeaponType {
+		ballistic, energy, missile
 	}
 
 	protected CampaignFleetAPI playerFleet;
@@ -123,6 +143,24 @@ public class CEO extends PaginatedOptions {
 				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
 						false);
 				break;
+			case "chooseWeaponSize":
+				originalPlugin = dialog.getPlugin();
+
+				dialog.setPlugin(this);
+				init(dialog);
+
+				visual.fadeVisualOut();
+				optionPanel.clearOptions();
+
+				for (WeaponSize weaponSize : WeaponSize.values()) {
+					optionPanel.addOption("Convert " + weaponSize,
+							DialogIdKeys.chosenWeaponSize + ":" + weaponSize + ";");
+				}
+
+				optionPanel.addOption("Exit", "CEO_Menu_Exit");
+				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+						false);
+				break;
 			case "chooseHullType":
 				String option = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (option.contains(DialogIdKeys.chosenShipSize.toString())) {
@@ -164,6 +202,26 @@ public class CEO extends PaginatedOptions {
 							false);
 				}
 				break;
+			case "chooseWeaponType":
+				String weaponSize = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (weaponSize.contains(DialogIdKeys.chosenWeaponSize.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					HashMap<String, String> dialogData = parseDialogOptionId(weaponSize);
+					String chosenWeaponSizeString = dialogData.get(DialogIdKeys.chosenWeaponSize.toString());
+					if (chosenWeaponSizeString != null) {
+						for (WeaponType weaponType : WeaponType.values()) {
+							optionPanel.addOption("Convert " + weaponType, DialogIdKeys.chosenWeaponSize + ":"
+									+ chosenWeaponSizeString + ";" + DialogIdKeys.chosenWeaponType + ":" + weaponType
+									+ ";");
+						}
+					}
+
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+							false);
+				}
+				break;
 			case "chooseShipToRefit":
 				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString())
@@ -196,12 +254,89 @@ public class CEO extends PaginatedOptions {
 
 					}
 					optionPanel.addOption("Exit", "CEO_Menu_Exit");
-					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
-							false,
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
 							false);
 				}
 				break;
-			case "isRefitOptionSelected":
+			case "chooseWeaponToRefit":
+				String chosenWeapon = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (chosenWeapon.contains(DialogIdKeys.chosenWeaponSize.toString())
+						&& chosenWeapon.contains(DialogIdKeys.chosenWeaponType.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					HashMap<String, String> dialogData = parseDialogOptionId(chosenWeapon);
+					String chosenWeaponSize = dialogData.get(DialogIdKeys.chosenWeaponSize.toString());
+					String chosenWeaponType = dialogData.get(DialogIdKeys.chosenWeaponType.toString());
+					if (chosenWeaponSize.equals(WeaponSize.SMALL.toString())
+							&& chosenWeaponType.equals(WeaponType.ballistic.toString())) {
+						for (RefitableSmallBallistic weapon : RefitableSmallBallistic.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.equals(WeaponSize.MEDIUM.toString())
+							&& chosenWeaponType.equals(WeaponType.ballistic.toString())) {
+						for (RefitableMediumBallistic weapon : RefitableMediumBallistic.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.endsWith(WeaponSize.LARGE.toString())
+							&& chosenWeaponType.equals(WeaponType.ballistic.toString())) {
+						for (RefitableLargeBallistic weapon : RefitableLargeBallistic.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.equals(WeaponSize.SMALL.toString())
+							&& chosenWeaponType.equals(WeaponType.missile.toString())) {
+						for (RefitableSmallMissile weapon : RefitableSmallMissile.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.equals(WeaponSize.MEDIUM.toString())
+							&& chosenWeaponType.equals(WeaponType.missile.toString())) {
+						for (RefitableMediumMissile weapon : RefitableMediumMissile.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.endsWith(WeaponSize.LARGE.toString())
+							&& chosenWeaponType.equals(WeaponType.missile.toString())) {
+						for (RefitableLargeMissile weapon : RefitableLargeMissile.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.equals(WeaponSize.SMALL.toString())
+							&& chosenWeaponType.equals(WeaponType.energy.toString())) {
+						for (RefitableSmallEnergy weapon : RefitableSmallEnergy.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.equals(WeaponSize.MEDIUM.toString())
+							&& chosenWeaponType.equals(WeaponType.energy.toString())) {
+						for (RefitableMediumEnergy weapon : RefitableMediumEnergy.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+					if (chosenWeaponSize.endsWith(WeaponSize.LARGE.toString())
+							&& chosenWeaponType.equals(WeaponType.energy.toString())) {
+						for (RefitableLargeEnergy weapon : RefitableLargeEnergy.values()) {
+							optionPanel.addOption("Convert " + Helpers.weaponIdToLabel(weapon.toString()),
+									DialogIdKeys.weaponToConvert + ":" + weapon.toString() + ";");
+						}
+					}
+
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+							false);
+				}
+				break;
+			case "isRefitOptionSelected": {
 				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (selectedOption.contains(DialogIdKeys.chosenShipName.toString())
 						&& !selectedOption.contains(DialogIdKeys.creditsCost.toString())) {
@@ -232,7 +367,111 @@ public class CEO extends PaginatedOptions {
 					return true;
 				}
 				return false;
-			case "isRefitPackageOptionSelected":
+			}
+			case "isRefitWeaponSelected": {
+				String selectedWeapon = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (selectedWeapon.contains(DialogIdKeys.weaponToConvert.toString())) {
+					HashMap<String, String> dialogData = parseDialogOptionId(selectedWeapon);
+					String chosenWeaponData = dialogData.get(DialogIdKeys.weaponToConvert.toString());
+					String baseWeaponId = chosenWeaponData.split("_")[1];
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					Boolean playerHasChosenWeapon = false;
+					int creditsCostPerWeapon = 0;
+					playerFleet.getCargo().addWeapons("pow_" + chosenWeaponData, 1);
+					int baseWeaponCost = 0;
+					int convertedWeaponCost = 0;
+					int stackSize = 0;
+					List<CargoStackAPI> stacks = playerFleet.getCargo().getStacksCopy();
+					for (CargoStackAPI stack : stacks) {
+						Object stackData = stack.getData();
+						if (stackData != null && stackData.toString().equals(baseWeaponId)) {
+							baseWeaponCost = stack.getBaseValuePerUnit();
+							playerHasChosenWeapon = true;
+							stackSize = (int) stack.getSize();
+						}
+						if (stackData != null && stackData.toString().equals("pow_" + chosenWeaponData)) {
+							convertedWeaponCost = stack.getBaseValuePerUnit();
+							playerFleet.getCargo().removeWeapons("pow_" + chosenWeaponData, 1);
+						}
+					}
+					if (playerHasChosenWeapon) {
+						creditsCostPerWeapon = convertedWeaponCost - baseWeaponCost;
+					}
+
+					String singleOptionName = "Convert 1 " + Helpers.weaponIdToLabel(chosenWeaponData) + " -"
+							+ creditsCostPerWeapon
+							+ " credits";
+					String singleOptionId = selectedWeapon + DialogIdKeys.creditsCost + ":" + creditsCostPerWeapon + ";"
+							+ DialogIdKeys.quantityWeaponsToConvert + ":" + 1 + ";" + DialogIdKeys.finalMenuState + ":"
+							+ FinalMenuStates.preview + ";";
+					optionPanel.addOption(singleOptionName, singleOptionId);
+					if (creditsCostPerWeapon == 0) {
+						optionPanel.setEnabled(singleOptionId, false);
+						optionPanel.setTooltip(singleOptionId, "No weapon in inventory to convert");
+					}
+					if (playerFleet.getCargo().getCredits().get() < creditsCostPerWeapon) {
+						optionPanel.setEnabled(singleOptionId, false);
+						optionPanel.setTooltip(singleOptionId, "Not enough credits to convert");
+					}
+
+					String fiveOptionName = "Convert 5 " + Helpers.weaponIdToLabel(chosenWeaponData) + " -"
+							+ creditsCostPerWeapon * 5
+							+ " credits";
+					String fiveOptionId = selectedWeapon + DialogIdKeys.creditsCost + ":" + creditsCostPerWeapon + ";"
+							+ DialogIdKeys.quantityWeaponsToConvert + ":" + 5 + ";" + DialogIdKeys.finalMenuState + ":"
+							+ FinalMenuStates.preview + ";";
+					optionPanel.addOption(fiveOptionName, fiveOptionId);
+					if (stackSize < 5) {
+						optionPanel.setEnabled(fiveOptionId, false);
+						optionPanel.setTooltip(fiveOptionId, "Not enough weapons in inventory to convert");
+					}
+					if (playerFleet.getCargo().getCredits().get() < creditsCostPerWeapon * 5) {
+						optionPanel.setEnabled(fiveOptionId, false);
+						optionPanel.setTooltip(fiveOptionId, "Not enough credits to convert");
+					}
+
+					String tenOptionName = "Convert 10 " + Helpers.weaponIdToLabel(chosenWeaponData) + " -"
+							+ creditsCostPerWeapon * 10
+							+ " credits";
+					String tenOptionId = selectedWeapon + DialogIdKeys.creditsCost + ":" + creditsCostPerWeapon + ";"
+							+ DialogIdKeys.quantityWeaponsToConvert + ":" + 10 + ";" + DialogIdKeys.finalMenuState + ":"
+							+ FinalMenuStates.preview + ";";
+					optionPanel.addOption(tenOptionName, tenOptionId);
+					if (stackSize < 10) {
+						optionPanel.setEnabled(tenOptionId, false);
+						optionPanel.setTooltip(tenOptionId, "Not enough weapons in inventory to convert");
+					}
+					if (playerFleet.getCargo().getCredits().get() < creditsCostPerWeapon * 10) {
+						optionPanel.setEnabled(tenOptionId, false);
+						optionPanel.setTooltip(tenOptionId, "Not enough credits to convert");
+					}
+
+					String allOptionName = "Convert all " + Helpers.weaponIdToLabel(chosenWeaponData) + " -"
+							+ creditsCostPerWeapon * stackSize
+							+ " credits";
+					String allOptionId = selectedWeapon + DialogIdKeys.creditsCost + ":" + creditsCostPerWeapon + ";"
+							+ DialogIdKeys.quantityWeaponsToConvert + ":" + stackSize + ";"
+							+ "sameIdFailsafe:sameIdFailsafe;" + DialogIdKeys.finalMenuState + ":"
+							+ FinalMenuStates.preview + ";";
+					optionPanel.addOption(allOptionName, allOptionId);
+					if (stackSize < 1) {
+						optionPanel.setEnabled(allOptionId, false);
+						optionPanel.setTooltip(allOptionId, "Not enough weapons in inventory to convert");
+					}
+					if (playerFleet.getCargo().getCredits().get() < creditsCostPerWeapon * stackSize) {
+						optionPanel.setEnabled(allOptionId, false);
+						optionPanel.setTooltip(allOptionId, "Not enough credits to convert");
+					}
+
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+							true);
+					return true;
+				}
+				return false;
+			}
+			case "isRefitPackageOptionSelected": {
 				String selectedPackageOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				HashMap<String, String> dialogData = parseDialogOptionId(selectedPackageOption);
 				String finalMenuStateString = dialogData.get(DialogIdKeys.finalMenuState.toString());
@@ -349,7 +588,25 @@ public class CEO extends PaginatedOptions {
 				}
 
 				return false;
-			case "isRefitPackageOptionConfirmed":
+			}
+			case "isWeaponOptionSelected": {
+				String selectedPackageOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (selectedPackageOption.contains(DialogIdKeys.finalMenuState.toString()) &&
+						selectedPackageOption.contains(DialogIdKeys.creditsCost.toString()) &&
+						selectedPackageOption.contains(DialogIdKeys.quantityWeaponsToConvert.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					optionPanel.addOption("Yes",
+							selectedPackageOption + DialogIdKeys.weaponConfirmed + ":true;");
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
+							false, false);
+					return true;
+				}
+
+				return false;
+			}
+			case "isRefitPackageOptionConfirmed": {
 				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				HashMap<String, String> dialogDataf = parseDialogOptionId(confirmation);
 				if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.newHullConfirmed.toString()))) {
@@ -366,7 +623,7 @@ public class CEO extends PaginatedOptions {
 							break;
 						}
 					}
-					//int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					// int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
 					int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " "))
@@ -414,6 +671,7 @@ public class CEO extends PaginatedOptions {
 							}
 							Global.getSector().addScript(new RefitShip(newHullMods, storageCargo, newHull, shipName,
 									capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
+							break;
 						}
 					}
 
@@ -425,6 +683,49 @@ public class CEO extends PaginatedOptions {
 					return true;
 				}
 				return false;
+			}
+			case "isWeaponOptionConfirmed": {
+				String weaponConvert = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (weaponConvert.contains(DialogIdKeys.weaponConfirmed.toString())) {
+					HashMap<String, String> dialogDataw = parseDialogOptionId(weaponConvert);
+					String weaponToConvert = dialogDataw.get(DialogIdKeys.weaponToConvert.toString());
+					String weaponQuantity = dialogDataw.get(DialogIdKeys.quantityWeaponsToConvert.toString());
+					String creditsPerWeapon = dialogDataw.get(DialogIdKeys.creditsCost.toString());
+					playerFleet.getCargo().getCredits()
+							.subtract(Float.parseFloat(creditsPerWeapon) * Integer.parseInt(weaponQuantity));
+					List<CargoStackAPI> stacks = playerFleet.getCargo().getStacksCopy();
+					for (CargoStackAPI stack : stacks) {
+						Object stackData = stack.getData();
+						if (stackData != null && stackData.toString().equals(weaponToConvert.split("_")[1])) {
+							stack.subtract(Float.parseFloat(weaponQuantity));
+						}
+					}
+					// int refitDuration = 1 + Math.round(Float.parseFloat(creditsCost) / 1000);
+					int refitDuration = 1;
+					Global.getSector().getCampaignUI()
+							.addMessage(weaponQuantity + " " + Helpers.weaponIdToLabel(weaponToConvert)
+									+ " conversion will be complete in " + refitDuration + " days.");
+
+					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
+					for (SubmarketAPI submarketAPI : submarkets) {
+						if (submarketAPI.getName().equals("Storage")) {
+							CargoAPI storageCargo = submarketAPI.getCargo();
+							Global.getSector().addScript(new ConvertWeapon("pow_" + weaponToConvert, storageCargo,
+									Integer.parseInt(weaponQuantity), refitDuration));
+							break;
+						}
+					}
+
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+							false);
+					return true;
+				}
+
+				return false;
+			}
 		}
 
 		return false;

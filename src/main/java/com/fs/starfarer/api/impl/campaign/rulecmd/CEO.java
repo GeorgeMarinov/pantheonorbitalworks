@@ -108,7 +108,7 @@ public class CEO extends PaginatedOptions {
 
 		switch (arg) {
 			case "init":
-				visual.fadeVisualOut();
+				// visual.fadeVisualOut();
 				break;
 			case "isRefitRepresentative":
 				SectorEntityToken sectorEntity = dialog.getInteractionTarget();
@@ -117,6 +117,9 @@ public class CEO extends PaginatedOptions {
 					if (person != null) {
 						for (int i = 0; i < refitRepresentative.length; i++) {
 							if (person.getName().getFirst().equals(refitRepresentative[i].Name)) {
+								dialog.getTextPanel().clear();
+								dialog.getTextPanel().addPara(
+										"HI NEW BEST FRIEND, I'M TORGUE FROM THE TORGUE CORPORATION AND I AM SUPER DUPER PISSED THAT LASER GUNS EXISTS. THEY ARE MADE OF LIGHT WHICH DOESN'T EVEN EXPLODE! LIKE WHAT ?!");
 								return true;
 							}
 						}
@@ -164,6 +167,7 @@ public class CEO extends PaginatedOptions {
 			case "chooseHullType":
 				String option = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (option.contains(DialogIdKeys.chosenShipSize.toString())) {
+					dialog.getTextPanel().addPara("WHAT?!");
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					HashMap<String, String> dialogData = parseDialogOptionId(option);
@@ -226,6 +230,8 @@ public class CEO extends PaginatedOptions {
 				String chosenHull = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (chosenHull.contains(DialogIdKeys.chosenHullId.toString())
 						&& !chosenHull.contains(DialogIdKeys.chosenShipName.toString())) {
+					dialog.getTextPanel().addParagraph(
+							"WE AT THE TORGUE CORPORATION SINCERELY BELIVE THAT FITTING SHIPS WITH EXPLOSIVES IS F*CKING AWESOME!");
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					HashMap<String, String> dialogData = parseDialogOptionId(chosenHull);
@@ -340,6 +346,8 @@ public class CEO extends PaginatedOptions {
 				String selectedOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (selectedOption.contains(DialogIdKeys.chosenShipName.toString())
 						&& !selectedOption.contains(DialogIdKeys.creditsCost.toString())) {
+					dialog.getTextPanel().addParagraph(
+							"HOW ARE WE GOING TO REFIT IT? OH PROBABLY GET A TEAM HERE TO CREFULLY DISASSEMBLE IT AND WHAT THE F*CK DO YOU THINK ?! WE'RE GONNA BLOW IT UP!");
 					HashMap<String, String> dialogData = parseDialogOptionId(selectedOption);
 					String chosenHullId = dialogData.get(DialogIdKeys.chosenHullId.toString());
 					String originalHullId = dialogData.get(DialogIdKeys.originalHullId.toString());
@@ -508,8 +516,9 @@ public class CEO extends PaginatedOptions {
 							shipPreview.setShipName(chosenShipName);
 							visual.showFleetMemberInfo(shipPreview);
 							fleetData.removeFleetMember(shipPreview);
-
-							optionPanel.addOption("Yes",
+							dialog.getTextPanel().addParagraph(
+									"NOW BEFORE WE GET STARTED YOU GOTTA DIGITALLY SIGN OUR LEGAL WAIVER.");
+							optionPanel.addOption("Confirm",
 									selectedPackageOption + DialogIdKeys.newHullConfirmed + ":true;");
 
 							String phaseCoilMenuId = selectedPackageOption.replace(
@@ -596,7 +605,7 @@ public class CEO extends PaginatedOptions {
 						selectedPackageOption.contains(DialogIdKeys.quantityWeaponsToConvert.toString())) {
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
-					optionPanel.addOption("Yes",
+					optionPanel.addOption("Confirm",
 							selectedPackageOption + DialogIdKeys.weaponConfirmed + ":true;");
 					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
@@ -610,6 +619,8 @@ public class CEO extends PaginatedOptions {
 				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				HashMap<String, String> dialogDataf = parseDialogOptionId(confirmation);
 				if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.newHullConfirmed.toString()))) {
+					dialog.getTextPanel().addParagraph(
+							"JUST KIDDING! F*CK THE LEGAL WAIVER! YOU'RE IN TORGUE LAND NOW SUCKER! JUST WAIT FOR MY CREW TO FINISH WHILE I PLAY YOU A SICK GUITAIR SOLO! SQUEEDLYBAMBLYFEEDLYMEEDLYMOWWWWWWWWWOWWWWWWWOWWWWWWWWOWWWWWWNGGGGGGGGG!");
 					String shipName = dialogDataf.get(DialogIdKeys.chosenShipName.toString());
 					String chosenHullId = dialogDataf.get(DialogIdKeys.chosenHullId.toString());
 					String chosenPackage = dialogDataf.get(DialogIdKeys.newPackage.toString());

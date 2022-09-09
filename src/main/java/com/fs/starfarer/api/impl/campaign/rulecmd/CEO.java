@@ -15,10 +15,8 @@ import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemQuantity;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
-import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.util.Misc.Token;
 
 import java.util.ArrayList;
@@ -220,7 +218,7 @@ public class CEO extends PaginatedOptions {
 									+ ";");
 						}
 					}
-
+					// dialog.getTextPanel().addPara("TESTOSTERONE!");
 					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
 							false);
@@ -268,6 +266,7 @@ public class CEO extends PaginatedOptions {
 				String chosenWeapon = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (chosenWeapon.contains(DialogIdKeys.chosenWeaponSize.toString())
 						&& chosenWeapon.contains(DialogIdKeys.chosenWeaponType.toString())) {
+					// dialog.getTextPanel().addPara("WHAT?!");
 					visual.fadeVisualOut();
 					optionPanel.clearOptions();
 					HashMap<String, String> dialogData = parseDialogOptionId(chosenWeapon);
@@ -379,6 +378,7 @@ public class CEO extends PaginatedOptions {
 			case "isRefitWeaponSelected": {
 				String selectedWeapon = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (selectedWeapon.contains(DialogIdKeys.weaponToConvert.toString())) {
+					// dialog.getTextPanel().addPara("THINGS ARE GONNA EXPLODE!");
 					HashMap<String, String> dialogData = parseDialogOptionId(selectedWeapon);
 					String chosenWeaponData = dialogData.get(DialogIdKeys.weaponToConvert.toString());
 					String baseWeaponId = chosenWeaponData.split("_")[1];
@@ -607,6 +607,8 @@ public class CEO extends PaginatedOptions {
 					optionPanel.clearOptions();
 					optionPanel.addOption("Confirm",
 							selectedPackageOption + DialogIdKeys.weaponConfirmed + ":true;");
+					// dialog.getTextPanel().addParagraph(
+					// "NOW BEFORE WE GET STARTED YOU GOTTA DIGITALLY SIGN OUR LEGAL WAIVER.");
 					optionPanel.addOption("Exit", "CEO_Menu_Exit");
 					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
 							false, false);
@@ -698,6 +700,10 @@ public class CEO extends PaginatedOptions {
 			case "isWeaponOptionConfirmed": {
 				String weaponConvert = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				if (weaponConvert.contains(DialogIdKeys.weaponConfirmed.toString())) {
+					// dialog.getTextPanel().addParagraph(
+					// "JUST KIDDING! F*CK THE LEGAL WAIVER! YOU'RE IN TORGUE LAND NOW SUCKER! JUST
+					// WAIT FOR MY CREW TO FINISH WHILE I PLAY YOU A SICK GUITAIR SOLO!
+					// SQUEEDLYBAMBLYFEEDLYMEEDLYMOWWWWWWWWWOWWWWWWWOWWWWWWWWOWWWWWWNGGGGGGGGG!");
 					HashMap<String, String> dialogDataw = parseDialogOptionId(weaponConvert);
 					String weaponToConvert = dialogDataw.get(DialogIdKeys.weaponToConvert.toString());
 					String weaponQuantity = dialogDataw.get(DialogIdKeys.quantityWeaponsToConvert.toString());

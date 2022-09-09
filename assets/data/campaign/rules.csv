@@ -3,7 +3,7 @@ id,trigger,conditions,script,text,options,notes
 CEO_Menu,PopulateOptions,CEO isRefitRepresentative,,,"CEO_Menu_Refit_Ships:Refit ships
 CEO_Menu_Refit_Weapons:Refit weapons",
 CEO_Menu_Choose_Hull_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Ships,CEO chooseHullSize,F*CK YEAH LETS PIMP SOME RIDES MOTHERF*CKER!,,
-CEO_Menu_Choose_Weapon_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Weapons,CEO chooseWeaponSize,,,
+CEO_Menu_Choose_Weapon_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Weapons,CEO chooseWeaponSize,TORGUE MAKES THINGS EXPLODE! END OF SALES PITCH!,,
 CEO_Menu_Choose_Hull_Type,DialogOptionSelected,CEO chooseHullType,,,,
 CEO_Menu_Choose_Weapon_Type,DialogOptionSelected,CEO chooseWeaponType,,,,
 CEO_Menu_Choose_Refit_Ship,DialogOptionSelected,CEO chooseShipToRefit,,,,

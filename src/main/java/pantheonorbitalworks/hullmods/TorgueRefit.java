@@ -69,6 +69,8 @@ public class TorgueRefit extends BaseHullMod {
 						stats.getPeakCRDuration().modifyPercent(id, -(PeakCR * PackageMultiplier));
 						stats.getSuppliesPerMonth().modifyPercent(id, (Supplies * PackageMultiplier));
 						stats.getSuppliesToRecover().modifyPercent(id, (Supplies * PackageMultiplier));
+						stats.getDynamic().getMod("deployment_points_mod").modifyMult(id,
+								(Supplies * PackageMultiplier));
 						stats.getTimeMult().modifyMult(id,
 								(((ShipSpeed * PackageMultiplier) * QualityMultiplier) / 100) + 1);
 						stats.getMissileMaxSpeedBonus().modifyPercent(id,

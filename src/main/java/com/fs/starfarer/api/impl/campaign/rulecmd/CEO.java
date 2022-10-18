@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.Random;
 
 import pantheonorbitalworks.ConvertWeapon;
+import pantheonorbitalworks.ConvertableWeapons;
 import pantheonorbitalworks.Helpers;
 import pantheonorbitalworks.PhaseCoilReplacemnts;
 import pantheonorbitalworks.RefitPackage;
@@ -48,16 +49,10 @@ import pantheonorbitalworks.RefitableSmallMissile;
 import pantheonorbitalworks.Shields;
 
 public class CEO extends PaginatedOptions {
-
-	public final RefitRepresentative[] refitRepresentative = new RefitRepresentative[] {
-			new RefitRepresentative("Mr. Torgue", "Torgue"), new RefitRepresentative("Andreyevna", "Vladof"),
-			new RefitRepresentative("Katagawa Jr.", "Maliwan"), new RefitRepresentative("Jacobs", "Jacobs"),
-			new RefitRepresentative("Rhys Strongfork", "Atlas"), new RefitRepresentative("Handsome Jack", "Hyperion") };
-
 	public enum DialogIdKeys {
 		chosenHullId, originalHullPackage, isUpgrade, creditsCost, newPackage, newHullConfirmed, chosenShipName,
 		originalHullId, isPhase, replacePhaseCoils, finalMenuState, newShield, chosenShipSize, chosenWeaponSize,
-		chosenWeaponType, weaponToConvert, quantityWeaponsToConvert, weaponConfirmed
+		chosenWeaponType, weaponToConvert, quantityWeaponsToConvert, weaponConfirmed, chosenWeaponList
 	}
 
 	public enum FinalMenuStates {
@@ -113,8 +108,8 @@ public class CEO extends PaginatedOptions {
 				if (sectorEntity != null) {
 					PersonAPI person = sectorEntity.getActivePerson();
 					if (person != null) {
-						for (int i = 0; i < refitRepresentative.length; i++) {
-							if (person.getName().getFirst().equals(refitRepresentative[i].Name)) {
+						for (int i = 0; i < RefitRepresentative.list.length; i++) {
+							if (person.getName().getFirst().equals(RefitRepresentative.list[i].Name)) {
 								dialog.getTextPanel().clear();
 								dialog.getTextPanel().addPara(
 										"HI NEW BEST FRIEND, I'M TORGUE FROM THE TORGUE CORPORATION AND I AM SUPER DUPER PISSED THAT LASER GUNS EXISTS. THEY ARE MADE OF LIGHT WHICH DOESN'T EVEN EXPLODE! LIKE WHAT ?!");
@@ -158,6 +153,44 @@ public class CEO extends PaginatedOptions {
 							DialogIdKeys.chosenWeaponSize + ":" + weaponSize + ";");
 				}
 
+				Integer totalCreditsCost = 0;
+				HashMap<String, Integer> weaponList = new HashMap<String, Integer>();
+				String make = getMake();
+				for (ConvertableWeapons convertableWeapon : ConvertableWeapons.values()) {
+					String convertedWeaponId = "pow_" + make + "_"
+							+ convertableWeapon.toString().substring(convertableWeapon.toString().lastIndexOf("_") + 1);
+					Integer baseWeaponCost = 0;
+					Integer convertedWeaponCost = 0;
+					Integer stackSize = 0;
+					playerFleet.getCargo().addWeapons(convertedWeaponId, 1);
+					List<CargoStackAPI> cargoStacks = playerFleet.getCargo().getStacksCopy();
+					for (CargoStackAPI stack : cargoStacks) {
+						Object stackData = stack.getData();
+						if (stackData != null) {
+							if (stackData.toString().equals(convertedWeaponId.replace("pow_" + make + "_", ""))) {
+								baseWeaponCost = stack.getBaseValuePerUnit();
+								stackSize = (int) stack.getSize();
+								weaponList.put(convertedWeaponId, stackSize);
+							}
+							if (stackData.toString().equals(convertedWeaponId)) {
+								convertedWeaponCost = stack.getBaseValuePerUnit();
+								playerFleet.getCargo().removeWeapons(convertedWeaponId, 1);
+							}
+							if (baseWeaponCost > 0 && convertedWeaponCost > 0) {
+								totalCreditsCost += ((convertedWeaponCost - baseWeaponCost) * stackSize);
+								break;
+							}
+						}
+					}
+				}
+
+				String convertAllOptionId = DialogIdKeys.creditsCost + ":" + totalCreditsCost + ";"
+						+ DialogIdKeys.chosenWeaponList + ":"
+						+ weaponList + ";";
+				optionPanel.addOption("Convert all - " + totalCreditsCost + " credits", convertAllOptionId);
+				if (playerFleet.getCargo().getCredits().get() < totalCreditsCost) {
+					optionPanel.setEnabled(convertAllOptionId, false);
+				}
 				optionPanel.addOption("Exit", "CEO_Menu_Exit");
 				optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
 						false);
@@ -617,6 +650,24 @@ public class CEO extends PaginatedOptions {
 
 				return false;
 			}
+			case "isConvertAllWeaponOptionSelected": {
+				String convertAllOption = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (convertAllOption.contains(DialogIdKeys.creditsCost.toString()) &&
+						convertAllOption.contains(DialogIdKeys.chosenWeaponList.toString())) {
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					optionPanel.addOption("Confirm",
+							convertAllOption + DialogIdKeys.weaponConfirmed + ":true;");
+					// dialog.getTextPanel().addParagraph(
+					// "NOW BEFORE WE GET STARTED YOU GOTTA DIGITALLY SIGN OUR LEGAL WAIVER.");
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false,
+							false, false);
+					return true;
+				}
+
+				return false;
+			}
 			case "isRefitPackageOptionConfirmed": {
 				String confirmation = memoryMap.get(MemKeys.LOCAL).getString("$option");
 				HashMap<String, String> dialogDataf = parseDialogOptionId(confirmation);
@@ -636,8 +687,8 @@ public class CEO extends PaginatedOptions {
 							break;
 						}
 					}
-					// int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
-					int refitDuration = 1;
+					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					// int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " "))
 									+ " refiting will be complete in " + refitDuration + " days.");
@@ -649,7 +700,7 @@ public class CEO extends PaginatedOptions {
 					for (SubmarketAPI submarketAPI : submarkets) {
 						if (submarketAPI.getName().equals("Storage")) {
 							Random randomNumberGenerator = new Random();
-							float random = randomNumberGenerator.nextInt(101);
+							int random = randomNumberGenerator.nextInt(101);
 							if (random < 50) {
 								newHullMods = newHullMods + ("normal_" + manufacturer + "_" + chosenPackage + "_refit");
 							} else if (random < 70) {
@@ -699,7 +750,8 @@ public class CEO extends PaginatedOptions {
 			}
 			case "isWeaponOptionConfirmed": {
 				String weaponConvert = memoryMap.get(MemKeys.LOCAL).getString("$option");
-				if (weaponConvert.contains(DialogIdKeys.weaponConfirmed.toString())) {
+				if (weaponConvert.contains(DialogIdKeys.weaponConfirmed.toString())
+						&& !weaponConvert.contains(DialogIdKeys.chosenWeaponList.toString())) {
 					// dialog.getTextPanel().addParagraph(
 					// "JUST KIDDING! F*CK THE LEGAL WAIVER! YOU'RE IN TORGUE LAND NOW SUCKER! JUST
 					// WAIT FOR MY CREW TO FINISH WHILE I PLAY YOU A SICK GUITAIR SOLO!
@@ -708,8 +760,9 @@ public class CEO extends PaginatedOptions {
 					String weaponToConvert = dialogDataw.get(DialogIdKeys.weaponToConvert.toString());
 					String weaponQuantity = dialogDataw.get(DialogIdKeys.quantityWeaponsToConvert.toString());
 					String creditsPerWeapon = dialogDataw.get(DialogIdKeys.creditsCost.toString());
+					Float creditsCost = Float.parseFloat(creditsPerWeapon) * Integer.parseInt(weaponQuantity);
 					playerFleet.getCargo().getCredits()
-							.subtract(Float.parseFloat(creditsPerWeapon) * Integer.parseInt(weaponQuantity));
+							.subtract(creditsCost);
 					List<CargoStackAPI> stacks = playerFleet.getCargo().getStacksCopy();
 					for (CargoStackAPI stack : stacks) {
 						Object stackData = stack.getData();
@@ -717,8 +770,8 @@ public class CEO extends PaginatedOptions {
 							stack.subtract(Float.parseFloat(weaponQuantity));
 						}
 					}
-					// int refitDuration = 1 + Math.round(Float.parseFloat(creditsCost) / 1000);
-					int refitDuration = 1;
+					int refitDuration = 1 + Math.round(creditsCost / 1000);
+					// int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(weaponQuantity + " " + Helpers.weaponIdToLabel(weaponToConvert)
 									+ " conversion will be complete in " + refitDuration + " days.");
@@ -727,8 +780,73 @@ public class CEO extends PaginatedOptions {
 					for (SubmarketAPI submarketAPI : submarkets) {
 						if (submarketAPI.getName().equals("Storage")) {
 							CargoAPI storageCargo = submarketAPI.getCargo();
-							Global.getSector().addScript(new ConvertWeapon("pow_" + weaponToConvert, storageCargo,
-									Integer.parseInt(weaponQuantity), refitDuration));
+							HashMap<String, Integer> chosenWeaponList = new HashMap<String, Integer>();
+							chosenWeaponList.put("pow_" + weaponToConvert, Integer.parseInt(weaponQuantity));
+							Global.getSector()
+									.addScript(new ConvertWeapon(chosenWeaponList, storageCargo, refitDuration));
+							break;
+						}
+					}
+
+					visual.fadeVisualOut();
+					optionPanel.clearOptions();
+					optionPanel.addOption("Exit", "CEO_Menu_Exit");
+					optionPanel.setShortcut("CEO_Menu_Exit", org.lwjgl.input.Keyboard.KEY_ESCAPE, false, false, false,
+							false);
+					return true;
+				}
+
+				return false;
+			}
+			case "isConvertAllWeaponOptionConfirmed": {
+				String weaponConvert = memoryMap.get(MemKeys.LOCAL).getString("$option");
+				if (weaponConvert.contains(DialogIdKeys.weaponConfirmed.toString())
+						&& weaponConvert.contains(DialogIdKeys.chosenWeaponList.toString())) {
+					// dialog.getTextPanel().addParagraph(
+					// "JUST KIDDING! F*CK THE LEGAL WAIVER! YOU'RE IN TORGUE LAND NOW SUCKER! JUST
+					// WAIT FOR MY CREW TO FINISH WHILE I PLAY YOU A SICK GUITAIR SOLO!
+					// SQUEEDLYBAMBLYFEEDLYMEEDLYMOWWWWWWWWWOWWWWWWWOWWWWWWWWOWWWWWWNGGGGGGGGG!");
+					HashMap<String, String> dialogDataw = parseDialogOptionId(weaponConvert);
+					String chosenWeaponList = dialogDataw.get(DialogIdKeys.chosenWeaponList.toString());
+					String[] chosenWeapons = chosenWeaponList
+							.substring(chosenWeaponList.indexOf("{") + 1, chosenWeaponList.indexOf("}"))
+							.split(", ");
+					List<CargoStackAPI> stacks = playerFleet.getCargo().getStacksCopy();
+					Float creditsCost = Float.parseFloat(dialogDataw.get(DialogIdKeys.creditsCost.toString()));
+					playerFleet.getCargo().getCredits().subtract(creditsCost);
+					int refitDuration = 1 + Math.round(creditsCost / 1000);
+					// int refitDuration = 1;
+					HashMap<String, Integer> chosenWeaponLista = new HashMap<String, Integer>();
+					String message = "";
+					for (int i = 0; i < chosenWeapons.length; i++) {
+						String[] keyValuePair = chosenWeapons[i].split("=");
+						String weaponToConvert = keyValuePair[0];
+						String weaponQuantity = keyValuePair[1];
+						chosenWeaponLista.put(weaponToConvert, Integer.parseInt(weaponQuantity));
+
+						for (CargoStackAPI stack : stacks) {
+							Object stackData = stack.getData();
+							if (stackData != null && stackData.toString()
+									.equals(weaponToConvert.substring(weaponToConvert.lastIndexOf("_") + 1))) {
+								stack.subtract(Float.parseFloat(weaponQuantity));
+							}
+						}
+
+						message += weaponQuantity + " " + Helpers.weaponIdToLabel(weaponToConvert.replace("pow_", ""))
+								+ ", ";
+					}
+					playerFleet.getCargo().removeEmptyStacks();
+
+					Global.getSector().getCampaignUI()
+							.addMessage(message.substring(0, message.lastIndexOf(","))
+									+ " conversion will be complete in " + refitDuration + " days.");
+
+					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
+					for (SubmarketAPI submarketAPI : submarkets) {
+						if (submarketAPI.getName().equals("Storage")) {
+							CargoAPI storageCargo = submarketAPI.getCargo();
+							Global.getSector()
+									.addScript(new ConvertWeapon(chosenWeaponLista, storageCargo, refitDuration));
 							break;
 						}
 					}
@@ -769,9 +887,9 @@ public class CEO extends PaginatedOptions {
 
 	private String getMake() {
 		if (person != null) {
-			for (int i = 0; i < refitRepresentative.length; i++) {
-				if (person.getName().getFirst().equals(refitRepresentative[i].Name)) {
-					return refitRepresentative[i].Make.toLowerCase();
+			for (int i = 0; i < RefitRepresentative.list.length; i++) {
+				if (person.getName().getFirst().equals(RefitRepresentative.list[i].Name)) {
+					return RefitRepresentative.list[i].Make.toLowerCase();
 				}
 			}
 		}

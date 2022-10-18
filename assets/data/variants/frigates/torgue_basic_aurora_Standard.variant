@@ -1,0 +1,36 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 30,
+  "fluxVents": 25,
+  "goalVariant": true,
+  "hullId": "torgue_basic_aurora",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_aurora_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "locust",
+        "WS0003": "breachpod",
+        "WS0004": "breachpod",
+        "WS0005": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone"
+      }
+    }
+  ],
+  "wings": []
+}

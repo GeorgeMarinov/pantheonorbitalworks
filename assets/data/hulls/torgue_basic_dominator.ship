@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "pow_torgue_refit",
-"armoredweapons",
+    "armoredweapons"
   ],
   "weaponSlots": [
     {
@@ -77,7 +77,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [73, 81]
+      "locations": [72.5, 87]
     },
     {
       "id": "WS0008",
@@ -86,7 +86,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 180,
-      "locations": [-56.5, -78]
+      "locations": [-58, -78]
     },
     {
       "id": "WS0009",
@@ -95,7 +95,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -180,
-      "locations": [-56.5, 72]
+      "locations": [-58, 78]
     }
   ],
   "engineSlots": [

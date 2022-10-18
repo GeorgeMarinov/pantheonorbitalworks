@@ -1,0 +1,35 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 2,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_brawler",
+  "hullMods": [
+    "missleracks"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_brawler_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "harpoonpod",
+        "WS0002": "sabotpod",
+        "WS0003": "breachpod",
+        "WS0004": "breachpod",
+        "WS0005": "lightmg",
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

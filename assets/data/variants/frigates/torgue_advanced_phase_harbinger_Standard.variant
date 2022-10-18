@@ -1,0 +1,30 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 13,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_phase_harbinger",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "adaptive_coils"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_phase_harbinger_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "breachpod",
+        "WS0003": "sabotpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod"
+      }
+    }
+  ],
+  "wings": []
+}

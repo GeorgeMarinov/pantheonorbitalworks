@@ -1,0 +1,25 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 3,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_monitor",
+  "hullMods": [
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_monitor_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "breachpod",
+        "WS0004": "breachpod"
+      }
+    }
+  ],
+  "wings": []
+}

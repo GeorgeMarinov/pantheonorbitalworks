@@ -1,0 +1,53 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 50,
+  "fluxVents": 36,
+  "goalVariant": true,
+  "hullId": "torgue_basic_paragon",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "stabilizedshieldemitter",
+    "advancedshieldemitter",
+    "fluxbreakers"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_paragon_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hurricane",
+        "WS0002": "hurricane",
+        "WS0003": "squall",
+        "WS0004": "squall",
+        "WS0005": "squall",
+        "WS0006": "squall",
+        "WS0007": "pilum",
+        "WS0008": "pilum",
+        "WS0009": "pilum",
+        "WS0010": "pilum",
+        "WS0011": "pilum",
+        "WS0012": "pilum",
+        "WS0013": "lightmg",
+        "WS0014": "swarmer",
+        "WS0015": "swarmer",
+        "WS0016": "swarmer",
+        "WS0017": "swarmer",
+        "WS0018": "swarmer",
+        "WS0019": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

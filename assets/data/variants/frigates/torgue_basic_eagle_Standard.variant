@@ -1,0 +1,38 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 30,
+  "fluxVents": 22,
+  "goalVariant": true,
+  "hullId": "torgue_basic_eagle",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter",
+    "fluxbreakers"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_eagle_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "locust",
+        "WS0003": "lightmg",
+        "WS0004": "swarmer",
+        "WS0006": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

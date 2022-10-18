@@ -1,9 +1,14 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 13,
   "fluxVents": 0,
   "goalVariant": true,
   "hullId": "torgue_expert_phase_harbinger",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "adaptive_coils"
+  ],
   "modules": [
       {"WS0006": "torgue_phase_two_stage_annihilator_tube_Standard"},
       {"WS0007": "torgue_phase_two_stage_annihilator_tube_Standard"},
@@ -17,6 +22,18 @@
   "permaMods": [],
   "quality": 0,
   "variantId": "torgue_expert_phase_harbinger_Standard",
-  "weaponGroups": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "breachpod",
+        "WS0003": "sabotpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod"
+      }
+    }
+  ],
   "wings": []
 }

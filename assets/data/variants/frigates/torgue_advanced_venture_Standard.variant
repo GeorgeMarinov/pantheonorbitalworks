@@ -1,0 +1,39 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_venture",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_venture_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "lightmg",
+        "WS0003": "swarmer",
+        "WS0004": "swarmer",
+        "WS0005": "sabotpod",
+        "WS0006": "breachpod",
+        "WS0007": "locust",
+        "WS0008": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

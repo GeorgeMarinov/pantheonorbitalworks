@@ -1,0 +1,39 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_basic_phase_doom",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "adaptive_coils"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_phase_doom_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "locust",
+        "WS0003": "sabotpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod",
+        "WS0006": "breachpod",
+        "WS0007": "lightmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

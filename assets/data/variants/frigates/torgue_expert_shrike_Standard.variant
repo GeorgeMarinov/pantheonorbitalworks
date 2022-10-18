@@ -1,0 +1,47 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 9,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_shrike",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_shrike_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "breachpod",
+        "WS0002": "breachpod",
+        "WS0003": "sabotpod",
+        "WS0004": "lightmg",
+        "WS0006": "swarmer",
+        "WS0007": "swarmer",
+        "WS0008": "pow_torgue_two_stage_annihilator_blank",
+        "WS0009": "pow_torgue_two_stage_annihilator_blank",
+        "WS0010": "pow_torgue_two_stage_annihilator_blank",
+        "WS0011": "pow_torgue_two_stage_annihilator_blank",
+        "WS0012": "pow_torgue_two_stage_annihilator_blank",
+        "WS0013": "pow_torgue_two_stage_annihilator_blank",
+        "WS0014": "pow_torgue_two_stage_annihilator_blank",
+        "WS0015": "pow_torgue_two_stage_annihilator_blank"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

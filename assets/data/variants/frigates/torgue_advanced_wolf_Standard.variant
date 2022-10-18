@@ -1,0 +1,38 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 10,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_wolf",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_wolf_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "breachpod",
+        "WS0002": "lightmg",
+        "WS0003": "sabot",
+        "WS0004": "swarmer",
+        "WS0005": "swarmer",
+        "WS0006": "swarmer",
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

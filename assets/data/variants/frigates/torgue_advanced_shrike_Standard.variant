@@ -1,0 +1,39 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 19,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_shrike",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_shrike_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "breachpod",
+        "WS0002": "breachpod",
+        "WS0003": "sabotpod",
+        "WS0004": "lightmg",
+        "WS0006": "swarmer",
+        "WS0007": "swarmer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

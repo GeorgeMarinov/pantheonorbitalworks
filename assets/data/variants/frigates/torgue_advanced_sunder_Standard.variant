@@ -1,0 +1,40 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 17,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_sunder",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_sunder_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "locust",
+        "WS0002": "breachpod",
+        "WS0003": "sabotpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod",
+        "WS0006": "lightmg",
+        "WS0008": "swarmer",
+        "WS0009": "swarmer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

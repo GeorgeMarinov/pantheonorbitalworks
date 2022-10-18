@@ -1,0 +1,33 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_mule",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_mule_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sabotpod",
+        "WS0002": "breachpod",
+        "WS0003": "breachpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod",
+        "WS0006": "torgue_annihilator_tube",
+        "WS0007": "torgue_annihilator_tube",
+        "WS0008": "torgue_annihilator_tube",
+        "WS0009": "torgue_annihilator_tube"
+      }
+    }
+  ],
+  "wings": []
+}

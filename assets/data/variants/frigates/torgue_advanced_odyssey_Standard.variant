@@ -1,0 +1,45 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 38,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_odyssey",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_odyssey_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "breachpod",
+        "WS0004": "squall",
+        "WS0005": "breachpod",
+        "WS0006": "pilum",
+        "WS0007": "pilum",
+        "WS0008": "squall",
+        "WS0009": "pilum",
+        "WS0010": "breachpod",
+        "WS0011": "breachpod",
+        "WS0012": "squall",
+        "WS0013": "locust",
+        "WS0014": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "sabotpod"
+      }
+    }
+  ],
+  "wings": []
+}

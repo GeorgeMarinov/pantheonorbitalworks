@@ -1,0 +1,31 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 2,
+  "goalVariant": true,
+  "hullId": "torgue_basic_enforcer",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_enforcer_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "locust",
+        "WS0002": "sabotpod",
+        "WS0003": "breachpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod"
+      }
+    }
+  ],
+  "wings": []
+}

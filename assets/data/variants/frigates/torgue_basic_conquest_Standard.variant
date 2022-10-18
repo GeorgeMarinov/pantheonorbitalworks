@@ -1,0 +1,50 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 50,
+  "fluxVents": 30,
+  "goalVariant": true,
+  "hullId": "torgue_basic_conquest",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_conquest_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "pilum",
+        "WS0004": "pilum",
+        "WS0005": "pilum",
+        "WS0006": "pilum",
+        "WS0007": "pilum",
+        "WS0008": "pilum",
+        "WS0009": "pilum",
+        "WS0010": "pilum",
+        "WS0011": "pilum",
+        "WS0012": "pilum",
+        "WS0013": "pilum",
+        "WS0014": "pilum",
+        "WS0015": "squall",
+        "WS0016": "squall",
+        "WS0017": "squall",
+        "WS0018": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hurricane",
+        "WS0002": "hurricane"
+      }
+    }
+  ],
+  "wings": []
+}

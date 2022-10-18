@@ -1,11 +1,12 @@
 id,trigger,conditions,script,text,options,notes
 #CEO dialog,,,,,,
 CEO_Menu,PopulateOptions,CEO isRefitRepresentative,,,"CEO_Menu_Refit_Ships:Refit ships
-CEO_Menu_Refit_Weapons:Refit weapons",
+CEO_Menu_Refit_Weapons:Convert weapons",
 CEO_Menu_Choose_Hull_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Ships,CEO chooseHullSize,F*CK YEAH LETS PIMP SOME RIDES MOTHERF*CKER!,,
 CEO_Menu_Choose_Weapon_Size,DialogOptionSelected,$option == CEO_Menu_Refit_Weapons,CEO chooseWeaponSize,TORGUE MAKES THINGS EXPLODE! END OF SALES PITCH!,,
 CEO_Menu_Choose_Hull_Type,DialogOptionSelected,CEO chooseHullType,,,,
 CEO_Menu_Choose_Weapon_Type,DialogOptionSelected,CEO chooseWeaponType,,,,
+CEO_Menu_Choose_All_Weapon_Type,DialogOptionSelected,CEO isConvertAllWeaponOptionSelected,,,,
 CEO_Menu_Choose_Refit_Ship,DialogOptionSelected,CEO chooseShipToRefit,,,,
 CEO_Menu_Choose_Refit_Weapon,DialogOptionSelected,CEO chooseWeaponToRefit,,,,
 CEO_Menu_Refit_Option,DialogOptionSelected,CEO isRefitOptionSelected,,,,
@@ -14,5 +15,6 @@ CEO_Menu_Refit_Package_Option,DialogOptionSelected,CEO isRefitPackageOptionSelec
 CEO_Menu_Weapon_Option,DialogOptionSelected,CEO isWeaponOptionSelected,,,,
 CEO_Menu_Refit_Package_Option_Confirm,DialogOptionSelected,CEO isRefitPackageOptionConfirmed,,,,
 CEO_Menu_Convert_Weapon_Option_Confirm,DialogOptionSelected,CEO isWeaponOptionConfirmed,,,,
+CEO_Menu_Convert_All_Weapon_Option_Confirm,DialogOptionSelected,CEO isConvertAllWeaponOptionConfirmed,,,,
 CEO_Menu_Exit,DialogOptionSelected,$option == CEO_Menu_Exit,FireAll PopulateOptions,,,
 #CEO dialog,,,,,,

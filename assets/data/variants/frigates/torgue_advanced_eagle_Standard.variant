@@ -1,0 +1,39 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 30,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_eagle",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_eagle_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "locust",
+        "WS0003": "lightmg",
+        "WS0004": "swarmer",
+        "WS0005": "swarmer",
+        "WS0007": "breachpod",
+        "WS0008": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

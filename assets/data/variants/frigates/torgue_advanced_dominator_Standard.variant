@@ -1,0 +1,48 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 30,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_dominator",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_dominator_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "cyclone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "locust",
+        "WS0002": "locust",
+        "WS0004": "sabotpod",
+        "WS0005": "breachpod",
+        "WS0006": "breachpod",
+        "WS0007": "breachpod",
+        "WS0010": "breachpod",
+        "WS0011": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "pilum",
+        "WS0009": "pilum"
+      }
+    }
+  ],
+  "wings": []
+}

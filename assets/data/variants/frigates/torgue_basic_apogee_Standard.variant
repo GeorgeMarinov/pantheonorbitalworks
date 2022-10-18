@@ -1,0 +1,38 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 24,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_basic_apogee",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_apogee_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "cyclone",
+        "WS0004": "locust",
+        "WS0005": "lightmg",
+        "WS0007": "sabotpod",
+        "WS0008": "breachpod",
+        "WS0009": "breachpod",
+        "WS0010": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

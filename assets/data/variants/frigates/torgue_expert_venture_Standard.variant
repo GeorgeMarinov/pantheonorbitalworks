@@ -1,0 +1,45 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_venture",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_venture_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "lightmg",
+        "WS0003": "swarmer",
+        "WS0004": "swarmer",
+        "WS0005": "sabotpod",
+        "WS0006": "breachpod",
+        "WS0007": "locust",
+        "WS0008": "locust",
+        "WS0009": "torgue_annihilator_tube",
+        "WS0010": "torgue_annihilator_tube",
+        "WS0011": "torgue_annihilator_tube",
+        "WS0012": "torgue_annihilator_tube",
+        "WS0013": "torgue_annihilator_tube",
+        "WS0014": "torgue_annihilator_tube"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

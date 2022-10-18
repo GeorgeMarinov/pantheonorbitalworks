@@ -15,7 +15,7 @@
   "builtInMods": [
     "pow_heavy_weapons_integration",
     "pow_torgue_refit",
-"armoredweapons",
+    "armoredweapons"
   ],
   "builtInWeapons": {
     "WS0021": "pow_torgue_titan_slayer_blank"
@@ -28,7 +28,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [179, 24]
+      "locations": [179.5, 20]
     },
     {
       "id": "WS0002",
@@ -37,7 +37,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [179, -16]
+      "locations": [179.5, -20]
     },
     {
       "id": "WS0003",
@@ -46,7 +46,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [224, 47]
+      "locations": [224.5, 43]
     },
     {
       "id": "WS0004",
@@ -55,7 +55,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [224, -39]
+      "locations": [224.5, -43]
     },
     {
       "id": "WS0005",
@@ -64,7 +64,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [144, 83]
+      "locations": [144.5, 79]
     },
     {
       "id": "WS0006",
@@ -73,7 +73,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [144, -75]
+      "locations": [144.5, -79]
     },
     {
       "id": "WS0007",
@@ -82,7 +82,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [90, 78]
+      "locations": [90.5, 74]
     },
     {
       "id": "WS0008",
@@ -91,7 +91,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [90, -70]
+      "locations": [90.5, -74]
     },
     {
       "id": "WS0009",
@@ -100,7 +100,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [29, 82]
+      "locations": [29.5, 78]
     },
     {
       "id": "WS0010",
@@ -109,7 +109,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [29, -74]
+      "locations": [29.5, -78]
     },
     {
       "id": "WS0011",
@@ -118,7 +118,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [10, 81]
+      "locations": [10.5, 77]
     },
     {
       "id": "WS0012",
@@ -127,7 +127,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [10, -73]
+      "locations": [10.5, -77]
     },
     {
       "id": "WS0013",
@@ -136,7 +136,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [-46, 68]
+      "locations": [-45.5, 64]
     },
     {
       "id": "WS0014",
@@ -145,7 +145,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [-46, -60]
+      "locations": [-45.5, -64]
     },
     {
       "id": "WS0015",
@@ -154,7 +154,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [118, 77]
+      "locations": [118.5, 73]
     },
     {
       "id": "WS0016",
@@ -163,7 +163,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [118, -69]
+      "locations": [118.5, -73]
     },
     {
       "id": "WS0017",
@@ -172,7 +172,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 90,
-      "locations": [62, 80]
+      "locations": [62.5, 76]
     },
     {
       "id": "WS0018",
@@ -181,7 +181,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -90,
-      "locations": [62, -72]
+      "locations": [62.5, -76]
     },
     {
       "id": "WS0019",
@@ -190,7 +190,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [-66, -123]
+      "locations": [-65.5, -127]
     },
     {
       "id": "WS0020",
@@ -199,7 +199,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [-66, 123]
+      "locations": [-65.5, 119]
     },
     {
       "id": "WS0021",
@@ -208,7 +208,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [31, -0]
+      "locations": [30, -0]
     }
   ],
   "engineSlots": [

@@ -1,0 +1,30 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 20,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_mule",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "expanded_cargo_holds"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_mule_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pilum",
+        "WS0002": "pilum",
+        "WS0003": "pilum",
+        "WS0004": "pilum",
+        "WS0005": "pilum"
+      }
+    }
+  ],
+  "wings": []
+}

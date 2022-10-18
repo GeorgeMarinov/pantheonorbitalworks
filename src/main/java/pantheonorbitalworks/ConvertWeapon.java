@@ -1,20 +1,20 @@
 package pantheonorbitalworks;
 
+import java.util.HashMap;
+
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 
 public class ConvertWeapon implements EveryFrameScript {
-    private final String _weaponId;
+    private final HashMap<String, Integer> _weaponList;
     private final CargoAPI _storageCargo;
-    private final int _quantity;
     private final int _refitDuration;
     private float elapsedTime = 0;
 
-    public ConvertWeapon(String weaponId, CargoAPI storageCargo, int quantity, int refitDuration) {
-        _weaponId = weaponId;
+    public ConvertWeapon(HashMap<String, Integer> weaponList, CargoAPI storageCargo, int refitDuration) {
+        _weaponList = weaponList;
         _storageCargo = storageCargo;
-        _quantity = quantity;
         _refitDuration = refitDuration;
     }
 
@@ -33,15 +33,22 @@ public class ConvertWeapon implements EveryFrameScript {
         if (elapsedTime < _refitDuration) {
             elapsedTime += Global.getSector().getClock().convertToDays(amount);
             if (elapsedTime >= _refitDuration) {
-                _storageCargo.addWeapons(_weaponId, _quantity);
+                String message = "";
+                Integer totalQuantity = 0;
+                for (String weaponId : _weaponList.keySet()) {
+                    Integer quantity = _weaponList.get(weaponId);
+                    totalQuantity += quantity;
+                    _storageCargo.addWeapons(weaponId, quantity);
+                    message += quantity + " " + Helpers.weaponIdToLabel(weaponId.replace("pow_", "")) + ", ";
+                }
 
-                if (_quantity > 1) {
+                if (totalQuantity > 1) {
                     Global.getSector().getCampaignUI()
-                            .addMessage(Helpers.weaponIdToLabel(_weaponId.replace("pow_", ""))
+                            .addMessage(message.substring(0, message.lastIndexOf(","))
                                     + " conversion complete, they are waiting inside Storage");
                 } else {
                     Global.getSector().getCampaignUI()
-                            .addMessage(Helpers.weaponIdToLabel(_weaponId.replace("pow_", ""))
+                            .addMessage(message.substring(0, message.lastIndexOf(","))
                                     + " conversion complete, it is waiting inside Storage");
                 }
             }

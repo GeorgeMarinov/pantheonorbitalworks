@@ -100,7 +100,14 @@ public class TorgueRefit extends BaseHullMod {
 			String shipId = fleetMember.getId();
 			int modIdsIndex = shipId.indexOf("modIds=");
 			if (modIdsIndex != -1) {
-				String[] mods = shipId.substring(modIdsIndex + 7).split(",");
+				String modString = "";
+				int wildModsIndex = shipId.indexOf("wildMods=");
+				if (wildModsIndex == -1) {
+					modString = shipId.substring(modIdsIndex + 7);
+				} else {
+					modString = shipId.substring(modIdsIndex + 9, wildModsIndex - 1);
+				}
+				String[] mods = modString.split(",");
 				for (int i = 0; i < mods.length; i++) {
 					if (mods[i].contains("extra_weapons")) {
 						for (int y = 0; y < 20; y++) {
@@ -149,6 +156,13 @@ public class TorgueRefit extends BaseHullMod {
 						ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -Supplies);
 						ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -Supplies);
 					}
+				}
+			}
+
+			int wildModsIndex = shipId.indexOf("wildMods=");
+			if (wildModsIndex != -1) {
+				for (String mod : shipId.substring(wildModsIndex + 9).split(",")) {
+					ship.getVariant().addPermaMod(mod, true);
 				}
 			}
 		}

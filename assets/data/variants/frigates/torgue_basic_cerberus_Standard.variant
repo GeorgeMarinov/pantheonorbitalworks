@@ -1,0 +1,28 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 10,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_basic_cerberus",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontshield",
+    "expanded_cargo_holds"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_cerberus_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "breachpod",
+        "WS0002": "breachpod"
+      }
+    }
+  ],
+  "wings": []
+}

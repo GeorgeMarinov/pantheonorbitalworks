@@ -1,0 +1,50 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 15,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_basic_legion",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_basic_legion_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "cyclone",
+        "WS0003": "breachpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod",
+        "WS0006": "sabotpod",
+        "WS0007": "swarmer",
+        "WS0008": "swarmer",
+        "WS0009": "swarmer",
+        "WS0010": "swarmer",
+        "WS0011": "swarmer",
+        "WS0012": "swarmer",
+        "WS0013": "locust",
+        "WS0014": "locust",
+        "WS0015": "locust",
+        "WS0016": "locust",
+        "WS0017": "pilum",
+        "WS0018": "pilum",
+        "WS0019": "lightmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

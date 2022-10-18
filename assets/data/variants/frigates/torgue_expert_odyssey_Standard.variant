@@ -1,0 +1,54 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 32,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_odyssey",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_odyssey_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "breachpod",
+        "WS0004": "squall",
+        "WS0005": "breachpod",
+        "WS0006": "pilum",
+        "WS0007": "pilum",
+        "WS0008": "squall",
+        "WS0009": "pilum",
+        "WS0010": "breachpod",
+        "WS0011": "breachpod",
+        "WS0012": "squall",
+        "WS0013": "locust",
+        "WS0014": "locust",
+        "WS0015": "pow_torgue_two_stage_annihilator_blank",
+        "WS0016": "pow_torgue_two_stage_annihilator_blank",
+        "WS0017": "pow_torgue_two_stage_annihilator_blank",
+        "WS0018": "pow_torgue_two_stage_annihilator_blank",
+        "WS0019": "pow_torgue_two_stage_annihilator_blank",
+        "WS0020": "pow_torgue_two_stage_annihilator_blank",
+        "WS0021": "pow_torgue_two_stage_annihilator_blank",
+        "WS0022": "pow_torgue_two_stage_annihilator_blank",
+        "WS0023": "pow_torgue_two_stage_annihilator_blank"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "sabotpod"
+      }
+    }
+  ],
+  "wings": []
+}

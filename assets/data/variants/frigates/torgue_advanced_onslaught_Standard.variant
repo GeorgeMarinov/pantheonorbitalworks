@@ -1,0 +1,55 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 50,
+  "fluxVents": 42,
+  "goalVariant": true,
+  "hullId": "torgue_advanced_onslaught",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter",
+    "fluxbreakers",
+    "fluxdistributor",
+    "fluxcoil"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_advanced_onslaught_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "locust",
+        "WS0002": "locust",
+        "WS0003": "cyclone",
+        "WS0004": "swarmer",
+        "WS0005": "swarmer",
+        "WS0006": "locust",
+        "WS0007": "locust",
+        "WS0008": "sabotpod",
+        "WS0009": "sabotpod",
+        "WS0010": "breachpod",
+        "WS0011": "breachpod",
+        "WS0012": "breachpod",
+        "WS0013": "breachpod",
+        "WS0015": "lightmg",
+        "WS0016": "swarmer",
+        "WS0017": "swarmer",
+        "WS0018": "locust",
+        "WS0019": "locust",
+        "WS0020": "breachpod",
+        "WS0021": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

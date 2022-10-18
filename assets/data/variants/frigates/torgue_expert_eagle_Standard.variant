@@ -1,0 +1,45 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 30,
+  "fluxVents": 27,
+  "goalVariant": true,
+  "hullId": "torgue_expert_eagle",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "extendedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_eagle_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "locust",
+        "WS0007": "breachpod",
+        "WS0008": "breachpod",
+        "WS0003": "torgue_annihilator_tube",
+        "WS0004": "torgue_annihilator_tube",
+        "WS0005": "torgue_annihilator_tube",
+        "WS0006": "torgue_annihilator_tube",
+        "WS0009": "torgue_annihilator_tube",
+        "WS0010": "torgue_annihilator_tube",
+        "WS0011": "torgue_annihilator_tube",
+        "WS0012": "torgue_annihilator_tube",
+        "WS0013": "torgue_annihilator_tube",
+        "WS0014": "torgue_annihilator_tube",
+        "WS0015": "torgue_annihilator_tube",
+        "WS0016": "torgue_annihilator_tube",
+        "WS0017": "torgue_annihilator_tube",
+        "WS0018": "torgue_annihilator_tube",
+        "WS0019": "torgue_annihilator_tube",
+        "WS0020": "torgue_annihilator_tube"
+      }
+    }
+  ],
+  "wings": []
+}

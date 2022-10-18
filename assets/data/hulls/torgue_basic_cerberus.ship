@@ -18,7 +18,7 @@
   ],
   "weaponSlots": [
     {
-      "id": "WS0003",
+      "id": "WS0001",
       "size": "MEDIUM",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",
@@ -27,7 +27,7 @@
       "locations": [47, 19]
     },
     {
-      "id": "WS0004",
+      "id": "WS0002",
       "size": "MEDIUM",
       "type": "COMPOSITE",
       "mount": "HARDPOINT",

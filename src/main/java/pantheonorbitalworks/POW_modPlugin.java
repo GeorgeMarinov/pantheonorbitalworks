@@ -8,6 +8,7 @@ import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import java.util.List;
 import pantheonorbitalworks.world.POW_Gen;
+import pantheonorbitalworks.world.SpawnWorldRefits;
 
 public class POW_modPlugin extends BaseModPlugin {
 
@@ -47,5 +48,12 @@ public class POW_modPlugin extends BaseModPlugin {
                 }
             }
         }
+    }
+
+    @Override
+    public void onGameLoad(boolean newGame) {
+        SpawnWorldRefits fleetSpawns = new SpawnWorldRefits();
+        Global.getSector().addTransientListener(fleetSpawns);
+        Global.getSector().getListenerManager().addListener(fleetSpawns, true);
     }
 }

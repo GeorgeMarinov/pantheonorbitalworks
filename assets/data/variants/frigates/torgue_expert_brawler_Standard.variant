@@ -1,0 +1,41 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "torgue_expert_brawler",
+  "hullMods": [],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_brawler_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "harpoonpod",
+        "WS0002": "sabotpod",
+        "WS0003": "breachpod",
+        "WS0004": "pilum",
+        "WS0005": "lightmg",
+        "WS0007": "pow_torgue_two_stage_annihilator_blank",
+        "WS0008": "pow_torgue_two_stage_annihilator_blank",
+        "WS0009": "pow_torgue_two_stage_annihilator_blank",
+        "WS0010": "pow_torgue_two_stage_annihilator_blank",
+        "WS0011": "pow_torgue_two_stage_annihilator_blank",
+        "WS0012": "pow_torgue_two_stage_annihilator_blank",
+        "WS0013": "pow_torgue_two_stage_annihilator_blank",
+        "WS0014": "pow_torgue_two_stage_annihilator_blank"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

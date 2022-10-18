@@ -1,15 +1,43 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 22,
   "fluxVents": 0,
   "goalVariant": true,
   "hullId": "torgue_expert_phase_doom",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "adaptive_coils"
+  ],
   "modules": [
       {"WS0011": "torgue_expert_phase_doom_minelayer_Standard"},
   ],
   "permaMods": [],
   "quality": 0,
   "variantId": "torgue_expert_phase_doom_Standard",
-  "weaponGroups": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "locust",
+        "WS0003": "sabotpod",
+        "WS0004": "breachpod",
+        "WS0005": "breachpod",
+        "WS0006": "breachpod",
+        "WS0007": "lightmg",
+        "WS0009": "swarmer",
+        "WS0010": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "swarmer"
+      }
+    }
+  ],
   "wings": []
 }

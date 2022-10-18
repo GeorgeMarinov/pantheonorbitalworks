@@ -1,0 +1,31 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 10,
+  "fluxVents": 2,
+  "goalVariant": true,
+  "hullId": "torgue_expert_cerberus",
+  "hullMods": [
+    "missleracks",
+    "unstable_injector",
+    "frontshield"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "torgue_expert_cerberus_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sabotpod",
+        "WS0002": "harpoonpod",
+        "WS0003": "breach",
+        "WS0004": "lightmg",
+        "WS0005": "torgue_annihilator_tube",
+        "WS0006": "torgue_annihilator_tube"
+      }
+    }
+  ],
+  "wings": []
+}

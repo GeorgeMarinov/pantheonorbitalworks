@@ -138,7 +138,7 @@ public class SpawnWorldRefits implements CampaignEventListener {
                             }
 
                             List<String> modList = new ArrayList<String>(Arrays.asList(hullMods));
-                            while (random.nextInt(101) < baseChance) {
+                            while (random.nextInt(101) < baseChance && !modList.isEmpty()) {
                                 ShipVariantAPI variant = newShip.getVariant();
                                 Collection<String> shipMods = variant.getNonBuiltInHullmods();
                                 for (String mod : shipMods) {

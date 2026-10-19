@@ -2,6 +2,7 @@ package pantheonorbitalworks.hullmods;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
@@ -69,7 +70,7 @@ public class TorgueRefit extends BaseHullMod {
 						stats.getPeakCRDuration().modifyPercent(id, -(PeakCR * PackageMultiplier));
 						stats.getSuppliesPerMonth().modifyPercent(id, (Supplies * PackageMultiplier));
 						stats.getSuppliesToRecover().modifyPercent(id, (Supplies * PackageMultiplier));
-						stats.getDynamic().getMod("deployment_points_mod").modifyMult(id,
+						stats.getDynamic().getMod("deployment_points_mod").modifyPercent(id,
 								(Supplies * PackageMultiplier));
 						stats.getTimeMult().modifyMult(id,
 								(((ShipSpeed * PackageMultiplier) * QualityMultiplier) / 100) + 1);

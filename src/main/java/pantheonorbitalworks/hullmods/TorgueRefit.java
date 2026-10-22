@@ -29,6 +29,15 @@ public class TorgueRefit extends BaseHullMod {
 	public static final float MissileTurn = 20;
 	public static final float MissileRangeReduction = 25;
 
+	// Ship id looks like "<id>modIds=<mod>,<mod>" with an optional "wildMods=<mod>,<mod>" appended
+	// directly after (no separator), so the refit mods end where "wildMods=" starts.
+	private static String[] getRefitMods(String shipId, int modIdsIndex) {
+		int start = modIdsIndex + "modIds=".length();
+		int wildModsIndex = shipId.indexOf("wildMods=", start);
+		int end = wildModsIndex == -1 ? shipId.length() : wildModsIndex;
+		return shipId.substring(start, end).split(",");
+	}
+
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		FleetMemberAPI fleetMember = stats.getFleetMember();
@@ -38,7 +47,7 @@ public class TorgueRefit extends BaseHullMod {
 			String shipId = fleetMember.getId();
 			int modIdsIndex = shipId.indexOf("modIds=");
 			if (modIdsIndex != -1) {
-				String[] mods = shipId.substring(modIdsIndex + 7).split(",");
+				String[] mods = getRefitMods(shipId, modIdsIndex);
 				for (int i = 0; i < mods.length; i++) {
 					if (mods[i].contains("superb")) {
 						QualityMultiplier = 1.1f;
@@ -103,14 +112,7 @@ public class TorgueRefit extends BaseHullMod {
 			String shipId = fleetMember.getId();
 			int modIdsIndex = shipId.indexOf("modIds=");
 			if (modIdsIndex != -1) {
-				String modString = "";
-				int wildModsIndex = shipId.indexOf("wildMods=");
-				if (wildModsIndex == -1) {
-					modString = shipId.substring(modIdsIndex + 7);
-				} else {
-					modString = shipId.substring(modIdsIndex + 9, wildModsIndex - 1);
-				}
-				String[] mods = modString.split(",");
+				String[] mods = getRefitMods(shipId, modIdsIndex);
 				for (int i = 0; i < mods.length; i++) {
 					if (mods[i].contains("extra_weapons")) {
 						for (int y = 0; y < 20; y++) {

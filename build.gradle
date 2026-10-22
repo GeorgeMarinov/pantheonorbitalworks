@@ -3,6 +3,18 @@ plugins {
     id 'eclipse'
 }
 
+// The Starsector API is not published anywhere - it ships with the game.
+// Point `starsectorDir` (in gradle.properties, or -PstarsectorDir=...) at your game install
+// and the build compiles against whatever version of the game you have installed.
+def starsectorDir = file(findProperty('starsectorDir') ?: 'C:/Program Files (x86)/Fractal Softworks/Starsector')
+def starsectorCore = new File(starsectorDir, 'starsector-core')
+def starsectorApi = new File(starsectorCore, 'starfarer.api.jar')
+
+if (!starsectorApi.exists()) {
+    throw new GradleException("Starsector API not found at ${starsectorApi}. " +
+            "Set starsectorDir in gradle.properties to your Starsector install folder.")
+}
+
 repositories {
     mavenCentral()
 }
@@ -13,16 +25,20 @@ eclipse {
         file {
             whenMerged {
                 def lib = entries.find { it.path.contains 'starfarer.api.jar' }
-                lib.javadocPath = fileReference(file('libs/starfarer.api.zip'))
-                lib.sourcePath = fileReference(file('libs/starfarer.api.zip'))
+                if (lib != null) {
+                    lib.javadocPath = fileReference(new File(starsectorCore, 'starfarer.api.zip'))
+                    lib.sourcePath = fileReference(new File(starsectorCore, 'starfarer.api.zip'))
+                }
             }
         }
     }
 }
 
-// project level config
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+// Starsector 0.98a runs on Java 17
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
 
 // build everything and make a jar
 build {
@@ -34,30 +50,30 @@ build {
     }
 }
 
-// compile time dependencies
+// compile time dependencies - the game provides all of these at runtime
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.10'
-    implementation group: 'org.lwjgl.lwjgl', name: 'lwjgl', version: '2.9.3'
-    implementation group: 'org.lwjgl.lwjgl', name: 'lwjgl_util', version: '2.9.3'
-    implementation group: 'log4j', name: 'log4j', version: '1.2.9'
-    implementation group: 'org.json', name: 'json', version: '20090211'
-    implementation group: 'net.java.jinput', name: 'jinput', version: '2.0.7'
-    implementation group: 'org.codehaus.janino', name: 'janino', version: '3.0.7'
+    compileOnly fileTree(dir: starsectorCore, include: ['*.jar'])
 
     // test only
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 // create a release zip
-task release(type: Zip) {
+tasks.register('release', Zip) {
     def jsonFile = file('assets/mod_info.json')
-    def slurper = new groovy.json.JsonSlurper()
-    def parsedJson = slurper.parse(jsonFile)
+    def parsedJson = new groovy.json.JsonSlurper().parse(jsonFile)
     dependsOn build
     archiveFileName = "${project.name}-${parsedJson.version}.zip"
     destinationDirectory = file(rootDir)
     from 'assets'
     from jar
     into project.name
+}
+
+// copy the mod straight into the game's mods folder
+tasks.register('installMod', Copy) {
+    dependsOn build
+    from 'assets'
+    from jar
+    into new File(starsectorDir, "mods/${project.name}")
 }

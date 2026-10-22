@@ -1,0 +1,2 @@
+// jar and release zip are named after this, and mod_info.json expects pantheonorbitalworks.jar
+rootProject.name = 'pantheonorbitalworks'

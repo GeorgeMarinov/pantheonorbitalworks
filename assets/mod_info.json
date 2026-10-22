@@ -2,9 +2,9 @@
     "id":"pantheonorbitalworks",
     "name":"Pantheon Orbital Works",
     "author":"Some Loser",	
-    "version":"1.00",
+    "version":"1.01",
     "description":"Adds Pantheon Orbital Works",
-    "gameVersion": "0.95.1a-RC4",
+    "gameVersion": "0.98a-RC8",
     "jars":["pantheonorbitalworks.jar"],
     "modPlugin":"pantheonorbitalworks.POW_modPlugin"
 }

@@ -20,6 +20,22 @@
         ["grounddefenses"],
         ["patrolhq"]
       ]
+    },
+    {
+      "entities": ["pow_dahl_platform"],
+      "faction": "independent",
+      "size": 3,
+      "startingConditions": [
+        "population_3",
+        "ore_rich",
+        "rare_ore_moderate"
+      ],
+      "industries": [
+        ["population"],
+        ["spaceport"],
+        ["mining"],
+        ["grounddefenses"]
+      ]
     }
   ]
 }

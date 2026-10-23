@@ -14,9 +14,9 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.fleet.FleetMemberType;
 import pantheonorbitalworks.RefitRepresentative;
 import pantheonorbitalworks.RefitableShips;
+import pantheonorbitalworks.convoy.POW_RefitFactory;
 
 public class SpawnWorldRefits implements CampaignEventListener {
     public static final String[] hullMods = new String[] {
@@ -93,7 +93,6 @@ public class SpawnWorldRefits implements CampaignEventListener {
                                     .nextInt(RefitRepresentative.list.length))];
                             String manufacturer = refitRepresentative.Make.toLowerCase();
                             String chosenPackage = "basic";
-                            String hullMod = "";
                             if (random.nextInt(101) < upgradeHullChance) {
                                 chosenPackage = "advanced";
                                 if (random.nextInt(101) < upgradeHullChance) {
@@ -101,32 +100,27 @@ public class SpawnWorldRefits implements CampaignEventListener {
                                 }
                             }
 
+                            String quality;
                             int qualityChance = random.nextInt(101);
                             if (qualityChance < 50) {
-                                hullMod = "normal_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "normal";
                             } else if (qualityChance < 70) {
-                                hullMod = "superb_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "superb";
                             } else if (qualityChance < 80) {
-                                hullMod = "legendary_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "legendary";
                             } else if (qualityChance < 90) {
-                                hullMod = "masterwork_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "masterwork";
                             } else if (qualityChance < 98) {
-                                hullMod = "miracle_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "miracle";
                             } else {
-                                hullMod = "normal_" + manufacturer + "_" + chosenPackage + "_refit";
+                                quality = "normal";
                             }
 
                             float currentCR = fleetMember.getRepairTracker().getCR();
                             PersonAPI pilot = fleetMember.getCaptain();
                             fleetData.removeFleetMember(fleetMember);
-                            FleetMemberAPI newShip = Global.getFactory().createFleetMember(FleetMemberType.SHIP,
-                                    fleetMember.isPhaseShip()
-                                            ? manufacturer + "_" + chosenPackage + "_phase_" + fleetMember.getHullId()
-                                                    + "_Standard"
-                                            : manufacturer + "_" + chosenPackage + "_" + fleetMember.getHullId()
-                                                    + "_Standard");
-
-                            newShip.setId(newShip.getId() + "modIds=" + hullMod);
+                            FleetMemberAPI newShip = POW_RefitFactory.createRefitMember(fleetMember.getHullId(),
+                                    fleetMember.isPhaseShip(), manufacturer, chosenPackage, quality);
                             fleetData.addFleetMember(newShip);
                             newShip.getRepairTracker().setCR(currentCR);
                             newShip.setCaptain(pilot);

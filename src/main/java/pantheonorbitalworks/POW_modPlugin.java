@@ -7,6 +7,7 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import java.util.List;
+import pantheonorbitalworks.convoy.POW_ConvoyManager;
 import pantheonorbitalworks.world.POW_Gen;
 import pantheonorbitalworks.world.SpawnWorldRefits;
 
@@ -55,5 +56,10 @@ public class POW_modPlugin extends BaseModPlugin {
         SpawnWorldRefits fleetSpawns = new SpawnWorldRefits();
         Global.getSector().addTransientListener(fleetSpawns);
         Global.getSector().getListenerManager().addListener(fleetSpawns, true);
+
+        // saved with the game once added, so this only runs for new games and older saves
+        if (!Global.getSector().hasScript(POW_ConvoyManager.class)) {
+            Global.getSector().addScript(new POW_ConvoyManager());
+        }
     }
 }

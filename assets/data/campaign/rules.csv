@@ -18,3 +18,20 @@ CEO_Menu_Convert_Weapon_Option_Confirm,DialogOptionSelected,CEO isWeaponOptionCo
 CEO_Menu_Convert_All_Weapon_Option_Confirm,DialogOptionSelected,CEO isConvertAllWeaponOptionConfirmed,,,,
 CEO_Menu_Exit,DialogOptionSelected,$option == CEO_Menu_Exit,FireAll PopulateOptions,,,
 #CEO dialog,,,,,,
+#Torgue delivery convoys,,,,,,
+pow_convoyDefeated,POWConvoyDefeated,,POW_Convoy defeated,,,
+pow_convoyHail,BeginFleetEncounter,$pow_convoyDefenseless score:1000,"$pow_convoyConv = true 0
+AddText ""You're being hailed by the drifting haulers of the $faction convoy."" $faction.baseColor
+$hailing = true 0",,,
+pow_convoyHailOptions,OpenCommLink,$entity.pow_convoyConv score:1000,$entity.ignorePlayerCommRequests = true 1,"A rattled hauler captain appears on the comm screen. ""Our escorts are gone, the cargo is mothballed and we have nothing to fight with. What do you want?""","pow_convoyBoard:Board the haulers and take the Torgue ships
+pow_convoyScuttle:Scuttle the haulers and their cargo
+cutCommLink:Cut the comm link",
+pow_convoyBoard,DialogOptionSelected,$option == pow_convoyBoard,POW_Convoy capture,,pow_convoyLeave:Leave,
+pow_convoyScuttle,DialogOptionSelected,$option == pow_convoyScuttle,POW_Convoy scuttle,,pow_convoyLeave:Leave,
+pow_convoyLeave,DialogOptionSelected,$option == pow_convoyLeave,EndConversation,,,
+pow_convoyDeliverOption,PopulateOptions,"$hasMarket
+$menuState == main
+POW_Convoy canDeliver",,,5:pow_convoyDeliver:Hand over the captured Torgue ships,
+pow_convoyDeliver,DialogOptionSelected,$option == pow_convoyDeliver,"POW_Convoy deliver
+FireAll PopulateOptions",,,
+#Torgue delivery convoys,,,,,,

@@ -12,8 +12,8 @@ public class POW_ConvoyConfig {
     public static final int MIN_BUYER_MARKET_SIZE = 4;
 
     // cargo
-    public static final int MIN_CARGO_SHIPS = 2;
-    public static final int MAX_CARGO_SHIPS = 4;
+    public static final int MIN_CARGO_SHIPS = 1;
+    public static final int MAX_CARGO_SHIPS = 6;
     public static final float EXPERT_PACKAGE_CHANCE = 0.4f; // otherwise advanced
     // superb, legendary, masterwork, miracle
     public static final String[] CARGO_QUALITIES = { "superb", "legendary", "masterwork", "miracle" };
@@ -33,14 +33,14 @@ public class POW_ConvoyConfig {
     // pirate ambush, rolled once per trip when the convoy first reaches hyperspace
     public static final float AMBUSH_CHANCE = 0.4f;
     public static final float AMBUSH_MIN_STRENGTH_MULT = 0.8f;
-    public static final float AMBUSH_MAX_STRENGTH_MULT = 1.2f;
+    public static final float AMBUSH_MAX_STRENGTH_MULT = 2f;
     public static final float AMBUSH_SPAWN_DISTANCE = 1500f;
     public static final float AMBUSH_INTERCEPT_DAYS = 15f;
 
     // bounty
     public static final float BOUNTY_CHANCE = 0.6f;
     public static final int MIN_POSTER_MARKET_SIZE = 4;
-    public static final float DESTROY_REWARD_PER_ESCORT_POINT = 300f;
+    public static final float DESTROY_REWARD_PER_ESCORT_POINT = 1000f;
     public static final float DELIVERY_VALUE_MULT = 2.5f;
     public static final float DELIVERY_DEADLINE_DAYS = 60f;
     public static final float DELIVERY_REP_GAIN = 0.05f;

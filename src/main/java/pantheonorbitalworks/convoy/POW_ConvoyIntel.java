@@ -91,7 +91,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         this.poster = poster;
     }
 
-    // --- lifecycle -------------------------------------------------------------------------------------------
+    // --- lifecycle
+    // -------------------------------------------------------------------------------------------
 
     public boolean start() {
         createCargo();
@@ -100,10 +101,11 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
             cargoValue += member.getBaseValue();
         }
         escortPoints = cargoValue / 10000f * POW_ConvoyConfig.ESCORT_POINTS_PER_10K_CARGO;
-        escortPoints = Math.max(POW_ConvoyConfig.MIN_ESCORT_POINTS, Math.min(POW_ConvoyConfig.MAX_ESCORT_POINTS, escortPoints));
+        escortPoints = Math.max(POW_ConvoyConfig.MIN_ESCORT_POINTS,
+                Math.min(POW_ConvoyConfig.MAX_ESCORT_POINTS, escortPoints));
         float maxFp = buyer.getFaction().getApproximateMaxFPPerFleet(ShipPickMode.PRIORITY_THEN_ALL);
         if (maxFp > 0 && escortPoints > maxFp) {
-            escortPoints = maxFp;
+            escortPoints = maxFp + (maxFp * 0.10f);
         }
         destroyReward = Math.round(escortPoints * POW_ConvoyConfig.DESTROY_REWARD_PER_ESCORT_POINT / 1000f) * 1000;
 
@@ -131,7 +133,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
             FleetMemberAPI member = POW_RefitFactory.createRefitMember(hullId, POW_RefitFactory.isPhase(hullId),
                     POW_ConvoyConfig.MANUFACTURER, chosenPackage, qualities.pick());
 
-            // own copy of the variant, and keep the faction autofit from replacing the Torgue loadout
+            // own copy of the variant, and keep the faction autofit from replacing the
+            // Torgue loadout
             ShipVariantAPI variant = member.getVariant().clone();
             variant.setSource(VariantSource.REFIT);
             variant.addTag(Tags.TAG_NO_AUTOFIT_UNLESS_PLAYER);
@@ -212,7 +215,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
                 break;
             case CAPTURED:
                 if (stageDays > POW_ConvoyConfig.DELIVERY_DEADLINE_DAYS) {
-                    // any captured ship that wasn't handed over counts as kept, whether or not it was sold since
+                    // any captured ship that wasn't handed over counts as kept, whether or not it
+                    // was sold since
                     List<FleetMemberAPI> undelivered = new ArrayList<FleetMemberAPI>(cargo);
                     undelivered.removeAll(delivered);
                     new POW_HunterIntel(poster.getFaction(), "to recover the Torgue ships you took from "
@@ -227,21 +231,24 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
 
     // called by POW_ConvoyLoadedScript
     public void reportLoaded() {
-        if (stage != Stage.LOADING) return;
+        if (stage != Stage.LOADING)
+            return;
         setStage(Stage.TRAVELLING);
         sendUpdateIfPlayerHasIntel(UPDATE_DEPARTED, true);
     }
 
     // called by POW_ConvoyArrivedScript
     public void reportArrived() {
-        if (stage != Stage.TRAVELLING || fleet == null) return;
+        if (stage != Stage.TRAVELLING || fleet == null)
+            return;
         if (fleet.getContainingLocation() != buyer.getPrimaryEntity().getContainingLocation()) {
             removeFleet();
             finish(Outcome.TIMED_OUT);
             return;
         }
         setStage(Stage.UNLOADING);
-        // the buyer takes the ships; the escort heads home and despawns via its last assignment
+        // the buyer takes the ships; the escort heads home and despawns via its last
+        // assignment
         for (FleetMemberAPI member : cargo) {
             if (fleet.getFleetData().getMembersListCopy().contains(member)) {
                 fleet.getFleetData().removeFleetMember(member);
@@ -256,7 +263,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
     }
 
     protected void finish(Outcome outcome) {
-        if (this.outcome != null) return;
+        if (this.outcome != null)
+            return;
         this.outcome = outcome;
         setStage(Stage.DONE);
         if (fleet != null) {
@@ -277,10 +285,12 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         }
     }
 
-    // --- pirates ---------------------------------------------------------------------------------------------
+    // --- pirates
+    // ---------------------------------------------------------------------------------------------
 
     protected void spawnPirates() {
-        if (!buyer.getFaction().isHostileTo(Factions.PIRATES)) return;
+        if (!buyer.getFaction().isHostileTo(Factions.PIRATES))
+            return;
 
         float mult = POW_ConvoyConfig.AMBUSH_MIN_STRENGTH_MULT + random.nextFloat()
                 * (POW_ConvoyConfig.AMBUSH_MAX_STRENGTH_MULT - POW_ConvoyConfig.AMBUSH_MIN_STRENGTH_MULT);
@@ -288,7 +298,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
                 FleetTypes.PATROL_MEDIUM, getEscortPoints() * mult, 0f, 0f, 0f, 0f, 0f, 0f);
         params.ignoreMarketFleetSizeMult = true;
         CampaignFleetAPI pirates = FleetFactoryV3.createFleet(params);
-        if (pirates == null || pirates.isEmpty()) return;
+        if (pirates == null || pirates.isEmpty())
+            return;
 
         pirates.setName("Convoy Raiders");
         pirates.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PIRATE, true);
@@ -310,7 +321,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
 
     protected float getEscortPoints() {
         float points = 0f;
-        if (fleet == null) return escortPoints;
+        if (fleet == null)
+            return escortPoints;
         for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
             if (!member.isMothballed()) {
                 points += member.getFleetPointCost();
@@ -319,18 +331,24 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         return points;
     }
 
-    // --- battles ---------------------------------------------------------------------------------------------
+    // --- battles
+    // ---------------------------------------------------------------------------------------------
 
     public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {
-        if (fleet != this.fleet || outcome != null) return;
-        if (stage == Stage.CAPTURED) return;
-        if (reason == FleetDespawnReason.DESTROYED_BY_BATTLE) return; // handled in reportBattleOccurred
+        if (fleet != this.fleet || outcome != null)
+            return;
+        if (stage == Stage.CAPTURED)
+            return;
+        if (reason == FleetDespawnReason.DESTROYED_BY_BATTLE)
+            return; // handled in reportBattleOccurred
         finish(Outcome.LOST_OTHER);
     }
 
     public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
-        if (fleet != this.fleet || outcome != null) return;
-        if (stage == Stage.CAPTURED || !battle.isInvolved(fleet)) return;
+        if (fleet != this.fleet || outcome != null)
+            return;
+        if (stage == Stage.CAPTURED || !battle.isInvolved(fleet))
+            return;
 
         boolean playerWon = battle.isPlayerInvolved() && !battle.onPlayerSide(fleet);
         boolean gone = !fleet.isAlive() || fleet.isEmpty();
@@ -361,14 +379,17 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         }
     }
 
-    // called from rules.csv via the POWConvoyDefeated defeat trigger, right after the player wins a fight
+    // called from rules.csv via the POWConvoyDefeated defeat trigger, right after
+    // the player wins a fight
     public void reportPlayerVictory(TextPanelAPI text) {
-        if (outcome != null || fleet == null) return;
+        if (outcome != null || fleet == null)
+            return;
 
         if (getEscortPoints() > 0f) {
             // the trigger is removed once fired, so re-arm it for the next fight
             Misc.addDefeatTrigger(fleet, DEFEAT_TRIGGER);
-            text.addPara("The surviving escorts close ranks around the haulers. The convoy is battered, but still under guard.");
+            text.addPara(
+                    "The surviving escorts close ranks around the haulers. The convoy is battered, but still under guard.");
             return;
         }
 
@@ -398,7 +419,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
     }
 
     protected void payDestroyReward(TextPanelAPI text) {
-        if (poster == null || destroyRewardPaid) return;
+        if (poster == null || destroyRewardPaid)
+            return;
         destroyRewardPaid = true;
         Global.getSector().getPlayerFleet().getCargo().getCredits().add(destroyReward);
         if (text != null) {
@@ -408,7 +430,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
 
     protected List<FleetMemberAPI> getCargoInFleet() {
         List<FleetMemberAPI> result = new ArrayList<FleetMemberAPI>();
-        if (fleet == null) return result;
+        if (fleet == null)
+            return result;
         List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
         for (FleetMemberAPI member : cargo) {
             if (members.contains(member)) {
@@ -418,18 +441,21 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         return result;
     }
 
-    // --- capture, scuttle, deliver (rules.csv via POW_Convoy) ------------------------------------------------
+    // --- capture, scuttle, deliver (rules.csv via POW_Convoy)
+    // ------------------------------------------------
 
     public boolean isDefenseless() {
         return stage == Stage.DEFENSELESS && outcome == null;
     }
 
     public void capture(TextPanelAPI text) {
-        if (!isDefenseless()) return;
+        if (!isDefenseless())
+            return;
         CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
         for (FleetMemberAPI member : getCargoInFleet()) {
             fleet.getFleetData().removeFleetMember(member);
-            // same member object, so the "modIds=" id and with it the full refit stats come along
+            // same member object, so the "modIds=" id and with it the full refit stats come
+            // along
             playerFleet.getFleetData().addFleetMember(member);
             member.getRepairTracker().setMothballed(true);
             AddRemoveCommodity.addFleetMemberGainText(member, text);
@@ -451,7 +477,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
     }
 
     public void scuttle(TextPanelAPI text) {
-        if (!isDefenseless()) return;
+        if (!isDefenseless())
+            return;
         for (FleetMemberAPI member : getCargoInFleet()) {
             fleet.getFleetData().removeFleetMember(member);
         }
@@ -460,7 +487,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
                 + Misc.ucFirst(buyer.getFaction().getDisplayNameWithArticle())
                 + " paid good money for those ships, and will want someone to answer for it.");
         new POW_HunterIntel(buyer.getFaction(), "for destroying the Torgue ships "
-                + buyer.getFaction().getDisplayNameWithArticle() + " paid for", new ArrayList<FleetMemberAPI>()).start();
+                + buyer.getFaction().getDisplayNameWithArticle() + " paid for", new ArrayList<FleetMemberAPI>())
+                .start();
         finish(Outcome.SCUTTLED);
     }
 
@@ -470,7 +498,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
     }
 
     public void deliver(TextPanelAPI text) {
-        if (stage != Stage.CAPTURED || outcome != null) return;
+        if (stage != Stage.CAPTURED || outcome != null)
+            return;
         CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
         int payment = 0;
         for (FleetMemberAPI member : getCargoInPlayerFleet()) {
@@ -479,7 +508,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
             AddRemoveCommodity.addFleetMemberLossText(member, text);
             delivered.add(member);
         }
-        if (payment <= 0) return;
+        if (payment <= 0)
+            return;
 
         playerFleet.getCargo().getCredits().add(payment);
         deliveredCredits += payment;
@@ -516,7 +546,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
         return outcome == null && !isEnding() && !isEnded();
     }
 
-    // --- intel UI --------------------------------------------------------------------------------------------
+    // --- intel UI
+    // --------------------------------------------------------------------------------------------
 
     @Override
     protected String getName() {
@@ -577,7 +608,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
 
     @Override
     public List<ArrowData> getArrowData(SectorMapAPI map) {
-        if (outcome != null || stage == Stage.CAPTURED) return null;
+        if (outcome != null || stage == Stage.CAPTURED)
+            return null;
         List<ArrowData> result = new ArrayList<ArrowData>();
         ArrowData arrow = new ArrowData(origin.getPrimaryEntity(), buyer.getPrimaryEntity());
         arrow.color = buyer.getFaction().getBaseUIColor();
@@ -686,7 +718,8 @@ public class POW_ConvoyIntel extends BaseIntelPlugin implements FleetEventListen
             }
             info.addPara("Capturing the refits and delivering them to %s pays %s per ship, "
                     + "up to %s for the whole shipment. Leave the haulers intact: wrecked ships can't be delivered.",
-                    opad, h, poster.getName(), Math.round(POW_ConvoyConfig.DELIVERY_VALUE_MULT * 100f) + "% of its value",
+                    opad, h, poster.getName(),
+                    Math.round(POW_ConvoyConfig.DELIVERY_VALUE_MULT * 100f) + "% of its value",
                     Misc.getDGSCredits(total));
             info.addPara("Captured ships must be delivered within %s days, or "
                     + posterFaction.getDisplayNameWithArticle() + " will send hunters to take them back.", opad, h,

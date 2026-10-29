@@ -16,6 +16,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -66,6 +67,8 @@ public class CEO extends PaginatedOptions {
 	public enum WeaponType {
 		ballistic, energy, missile
 	}
+
+	private static final float UPGRADE_COST_MULT = 0.8f;
 
 	protected CampaignFleetAPI playerFleet;
 	protected FleetDataAPI fleetData;
@@ -391,6 +394,10 @@ public class CEO extends PaginatedOptions {
 										? "phase_" + chosenHullId
 										: chosenHullId,
 								refitPackage);
+						// stepping up from a Torgue tier is cheaper than saving for the top tier straight away
+						if (Boolean.parseBoolean(dialogData.get(DialogIdKeys.isUpgrade.toString()))) {
+							creditsCost = Math.round(creditsCost * UPGRADE_COST_MULT);
+						}
 						String optionName = capitalize(chosenHullId) + " " + refitPackage + " package - " + creditsCost
 								+ " credits";
 						String optionId = selectedOption + DialogIdKeys.creditsCost + ":" + creditsCost + ";"
@@ -680,63 +687,70 @@ public class CEO extends PaginatedOptions {
 					String creditsCost = dialogDataf.get(DialogIdKeys.creditsCost.toString());
 					playerFleet.getCargo().getCredits().subtract(Float.parseFloat(creditsCost));
 					String originalHullId = dialogDataf.get(DialogIdKeys.originalHullId.toString());
+					boolean isUpgrade = Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.isUpgrade.toString()));
+					CargoAPI storageCargo = null;
+					for (SubmarketAPI submarketAPI : market.getSubmarketsCopy()) {
+						if (submarketAPI.getName().equals("Storage")) {
+							storageCargo = submarketAPI.getCargo();
+							break;
+						}
+					}
+
+					List<String> carriedSMods = new ArrayList<>();
+					int oldQualityRank = 0;
 					for (FleetMemberAPI fleetShip : fleetList) {
 						if (fleetShip.getShipName().equals(shipName)
 								&& fleetShip.getHullId().equals(originalHullId.toLowerCase())) {
+							// the old hull is scrapped, so hand back what was fitted on it
+							CargoAPI returnCargo = storageCargo != null ? storageCargo : playerFleet.getCargo();
+							ShipVariantAPI oldVariant = fleetShip.getVariant();
+							for (String slotId : oldVariant.getNonBuiltInWeaponSlots()) {
+								String weaponId = oldVariant.getWeaponId(slotId);
+								if (weaponId != null) {
+									returnCargo.addWeapons(weaponId, 1);
+								}
+							}
+							for (String wingId : oldVariant.getNonBuiltInWings()) {
+								if (wingId != null) {
+									returnCargo.addFighters(wingId, 1);
+								}
+							}
+							if (isUpgrade) {
+								carriedSMods.addAll(oldVariant.getSMods());
+								oldQualityRank = getQualityRank(fleetShip.getId());
+							}
 							fleetData.scuttle(fleetShip);
 							break;
 						}
 					}
-					int refitDuration = 2 + Math.round(Float.parseFloat(creditsCost) / 5000);
+					int refitDuration = 2 + Math.min(58, Math.round(Float.parseFloat(creditsCost) / 7500));
 					// int refitDuration = 1;
 					Global.getSector().getCampaignUI()
 							.addMessage(shipName + " " + capitalize(originalHullId.replaceAll("_", " "))
 									+ " refiting will be complete in " + refitDuration + " days.");
 
-					String newHullMods = "";
-
-					List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 					String manufacturer = getMake();
-					for (SubmarketAPI submarketAPI : submarkets) {
-						if (submarketAPI.getName().equals("Storage")) {
-							Random randomNumberGenerator = new Random();
-							int random = randomNumberGenerator.nextInt(101);
-							if (random < 50) {
-								newHullMods = newHullMods + ("normal_" + manufacturer + "_" + chosenPackage + "_refit");
-							} else if (random < 70) {
-								newHullMods = newHullMods + ("superb_" + manufacturer + "_" + chosenPackage + "_refit");
-							} else if (random < 80) {
-								newHullMods = newHullMods
-										+ ("legendary_" + manufacturer + "_" + chosenPackage + "_refit");
-							} else if (random < 90) {
-								newHullMods = newHullMods
-										+ ("masterwork_" + manufacturer + "_" + chosenPackage + "_refit");
-							} else if (random < 98) {
-								newHullMods = newHullMods
-										+ ("miracle_" + manufacturer + "_" + chosenPackage + "_refit");
-							} else {
-								newHullMods = newHullMods + ("normal_" + manufacturer + "_" + chosenPackage + "_refit");
-							}
+					if (storageCargo != null) {
+						// an upgrade never rolls a worse quality than the ship already had
+						int qualityRank = Math.max(rollQualityRank(new Random()), oldQualityRank);
+						String newHullMods = QUALITIES[qualityRank] + "_" + manufacturer + "_" + chosenPackage + "_refit";
 
-							if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
-								newHullMods = newHullMods
-										+ (",phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
-							}
-							if (confirmation.contains(DialogIdKeys.newShield.toString())) {
-								newHullMods = newHullMods
-										+ (",pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
-							}
-
-							CargoAPI storageCargo = submarketAPI.getCargo();
-							String newHull = manufacturer + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
-							if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.isPhase.toString()))
-									&& !confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
-								newHull = manufacturer + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
-							}
-							Global.getSector().addScript(new RefitShip(newHullMods, storageCargo, newHull, shipName,
-									capitalize(originalHullId.replaceAll("_", " ")), refitDuration));
-							break;
+						if (confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
+							newHullMods = newHullMods
+									+ (",phase_" + dialogDataf.get(DialogIdKeys.replacePhaseCoils.toString()));
 						}
+						if (confirmation.contains(DialogIdKeys.newShield.toString())) {
+							newHullMods = newHullMods
+									+ (",pow_" + dialogDataf.get(DialogIdKeys.newShield.toString()));
+						}
+
+						String newHull = manufacturer + "_" + chosenPackage + "_" + chosenHullId + "_Hull";
+						if (Boolean.parseBoolean(dialogDataf.get(DialogIdKeys.isPhase.toString()))
+								&& !confirmation.contains(DialogIdKeys.replacePhaseCoils.toString())) {
+							newHull = manufacturer + "_" + chosenPackage + "_phase_" + chosenHullId + "_Hull";
+						}
+						Global.getSector().addScript(new RefitShip(newHullMods, storageCargo, newHull, shipName,
+								capitalize(originalHullId.replaceAll("_", " ")), refitDuration, carriedSMods));
 					}
 
 					visual.fadeVisualOut();
@@ -872,6 +886,40 @@ public class CEO extends PaginatedOptions {
 		}
 
 		return str.substring(0, 1).toUpperCase() + str.substring(1);
+	}
+
+	// rollQualityRank odds: normal 50%, superb 20%, legendary 10%, masterwork 10%, miracle 8%, normal 2%
+	private static final String[] QUALITIES = { "normal", "superb", "legendary", "masterwork", "miracle" };
+
+	private int rollQualityRank(Random random) {
+		int roll = random.nextInt(101);
+		if (roll < 50) {
+			return 0;
+		} else if (roll < 70) {
+			return 1;
+		} else if (roll < 80) {
+			return 2;
+		} else if (roll < 90) {
+			return 3;
+		} else if (roll < 98) {
+			return 4;
+		}
+		return 0;
+	}
+
+	// fleet member id looks like "<id>modIds=<quality>_<make>_<package>_refit,..."
+	private int getQualityRank(String fleetMemberId) {
+		int modIdsIndex = fleetMemberId.indexOf("modIds=");
+		if (modIdsIndex == -1) {
+			return 0;
+		}
+		String refitMods = fleetMemberId.substring(modIdsIndex);
+		for (int i = QUALITIES.length - 1; i > 0; i--) {
+			if (refitMods.contains(QUALITIES[i] + "_")) {
+				return i;
+			}
+		}
+		return 0;
 	}
 
 	private int getCreditsCost(String originalHullId, String chosenHull, RefitPackage refitPackage) {

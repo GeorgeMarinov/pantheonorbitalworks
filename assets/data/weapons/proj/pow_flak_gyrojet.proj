@@ -44,6 +44,20 @@
 		"width":6.5,
 		"angle":180.0
 		}],
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":40,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":90,
+									 "coreRadius":40, # full damage within core radius - also equal to proximity fuse range
+									 "collisionClass":PROJECTILE_NO_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":50,
+									 "particleColor":[255,50,50,255],
+									 "sound":"explosion_flak"},
+					},
 	"explosionSpec":{
 		"duration":1.12f,
 		"radius":90,

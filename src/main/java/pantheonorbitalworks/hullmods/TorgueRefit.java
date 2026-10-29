@@ -42,7 +42,9 @@ public class TorgueRefit extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		FleetMemberAPI fleetMember = stats.getFleetMember();
 		if (fleetMember != null) {
+			// bonuses scale with the package, penalties start lighter so lower tiers are the efficient pick
 			float PackageMultiplier = 1.0f;
+			float PenaltyMultiplier = 0.5f;
 			float QualityMultiplier = 1.0f;
 			String shipId = fleetMember.getId();
 			int modIdsIndex = shipId.indexOf("modIds=");
@@ -63,35 +65,36 @@ public class TorgueRefit extends BaseHullMod {
 					}
 					if (mods[i].contains("advanced")) {
 						PackageMultiplier = 2f;
+						PenaltyMultiplier = 1.5f;
 					}
 					if (mods[i].contains("expert")) {
 						PackageMultiplier = 2.5f;
+						PenaltyMultiplier = 2.5f;
 					}
 					if (mods[i].contains("_refit")) {
 						stats.getHullBonus().modifyPercent(id, (Hull * PackageMultiplier) * QualityMultiplier);
 						stats.getArmorBonus().modifyPercent(id, (Armor * PackageMultiplier) * QualityMultiplier);
-						stats.getMaxSpeed().modifyPercent(id, -(MaxSpeed * PackageMultiplier));
-						stats.getAcceleration().modifyPercent(id, -(Acceleration * PackageMultiplier));
-						stats.getDeceleration().modifyPercent(id, -(Deceleration * PackageMultiplier));
-						stats.getMaxTurnRate().modifyPercent(id, -(TurnRate * PackageMultiplier));
-						stats.getTurnAcceleration().modifyPercent(id, -(TurnAcceleration * PackageMultiplier));
-						stats.getMinCrewMod().modifyPercent(id, (MinCrew * PackageMultiplier));
-						stats.getPeakCRDuration().modifyPercent(id, -(PeakCR * PackageMultiplier));
-						stats.getSuppliesPerMonth().modifyPercent(id, (Supplies * PackageMultiplier));
-						stats.getSuppliesToRecover().modifyPercent(id, (Supplies * PackageMultiplier));
+						stats.getMaxSpeed().modifyPercent(id, -(MaxSpeed * PenaltyMultiplier));
+						stats.getAcceleration().modifyPercent(id, -(Acceleration * PenaltyMultiplier));
+						stats.getDeceleration().modifyPercent(id, -(Deceleration * PenaltyMultiplier));
+						stats.getMaxTurnRate().modifyPercent(id, -(TurnRate * PenaltyMultiplier));
+						stats.getTurnAcceleration().modifyPercent(id, -(TurnAcceleration * PenaltyMultiplier));
+						stats.getMinCrewMod().modifyPercent(id, (MinCrew * PenaltyMultiplier));
+						stats.getPeakCRDuration().modifyPercent(id, -(PeakCR * PenaltyMultiplier));
+						stats.getSuppliesPerMonth().modifyPercent(id, (Supplies * PenaltyMultiplier));
+						stats.getSuppliesToRecover().modifyPercent(id, (Supplies * PenaltyMultiplier));
 						stats.getDynamic().getMod("deployment_points_mod").modifyPercent(id,
-								(Supplies * PackageMultiplier));
-						stats.getTimeMult().modifyMult(id,
-								(((ShipSpeed * PackageMultiplier) * QualityMultiplier) / 100) + 1);
+								(Supplies * PenaltyMultiplier));
+						stats.getTimeMult().modifyMult(id, ((ShipSpeed * PackageMultiplier) / 100) + 1);
 						stats.getMissileMaxSpeedBonus().modifyPercent(id,
 								(MissileSpeed * PackageMultiplier) * QualityMultiplier);
 						stats.getMissileAccelerationBonus().modifyPercent(id,
 								(MissileSpeed * PackageMultiplier) * QualityMultiplier);
-						stats.getMissileMaxTurnRateBonus().modifyPercent(id, -(MissileTurn * PackageMultiplier));
+						stats.getMissileMaxTurnRateBonus().modifyPercent(id, -(MissileTurn * PenaltyMultiplier));
 						stats.getMissileTurnAccelerationBonus().modifyPercent(id,
-								-(MissileTurn * PackageMultiplier));
+								-(MissileTurn * PenaltyMultiplier));
 						stats.getMissileWeaponRangeBonus().modifyPercent(id,
-								-(MissileRangeReduction * PackageMultiplier));
+								-(MissileRangeReduction * PenaltyMultiplier));
 					}
 					if (mods[i].contains("extra_cargo")) {
 						stats.getCargoMod().modifyPercent(id, 150);
@@ -99,6 +102,12 @@ public class TorgueRefit extends BaseHullMod {
 					if (mods[i].contains("extra_flux_capacity_and_dissipation")) {
 						stats.getFluxCapacity().modifyPercent(id, 30);
 						stats.getFluxDissipation().modifyPercent(id, 30);
+					}
+					// campaign supply costs only see changes made before ship creation
+					if (mods[i].contains("pow_low_tech_shield") || mods[i].contains("pow_mid_tech_shield")
+							|| mods[i].contains("pow_high_tech_shield")) {
+						stats.getSuppliesPerMonth().modifyPercent(id + "_shield", -Supplies);
+						stats.getSuppliesToRecover().modifyPercent(id + "_shield", -Supplies);
 					}
 				}
 			}
@@ -146,20 +155,14 @@ public class TorgueRefit extends BaseHullMod {
 					if (mods[i].contains("pow_low_tech_shield")) {
 						ship.setShield(ShieldType.FRONT, ((ship.getHullSize().ordinal() - 1) * 65)
 								/ ship.getMutableStats().getFluxDissipation().base, 1.1f, 120f);
-						ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -10);
-						ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -10);
 					}
 					if (mods[i].contains("pow_mid_tech_shield")) {
 						ship.setShield(ShieldType.FRONT, ((ship.getHullSize().ordinal() - 1) * 65)
 								/ ship.getMutableStats().getFluxDissipation().base, 1f, 210f);
-						ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -Supplies);
-						ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -Supplies);
 					}
 					if (mods[i].contains("pow_high_tech_shield")) {
 						ship.setShield(ShieldType.OMNI, ((ship.getHullSize().ordinal() - 1) * 100)
 								/ ship.getMutableStats().getFluxDissipation().base, 0.9f, 180f);
-						ship.getMutableStats().getSuppliesPerMonth().modifyPercent(id, -Supplies);
-						ship.getMutableStats().getSuppliesToRecover().modifyPercent(id, -Supplies);
 					}
 				}
 			}
@@ -190,6 +193,7 @@ public class TorgueRefit extends BaseHullMod {
 		if (fleetMember != null) {
 			String shipId = fleetMember.getId();
 			float PackageMultiplier = 1.0f;
+			float PenaltyMultiplier = 0.5f;
 			float QualityMultiplier = 1.0f;
 			String quality = "normal";
 			if (shipId.contains("superb")) {
@@ -210,9 +214,11 @@ public class TorgueRefit extends BaseHullMod {
 			}
 			if (shipId.contains("advanced")) {
 				PackageMultiplier = 2f;
+				PenaltyMultiplier = 1.5f;
 			}
 			if (shipId.contains("expert")) {
 				PackageMultiplier = 2.5f;
+				PenaltyMultiplier = 2.5f;
 			}
 			if (index == 0)
 				return quality;
@@ -221,19 +227,19 @@ public class TorgueRefit extends BaseHullMod {
 			if (index == 2)
 				return (Armor * PackageMultiplier) * QualityMultiplier + "%";
 			if (index == 3)
-				return (Acceleration * PackageMultiplier) + "%";
+				return (Acceleration * PenaltyMultiplier) + "%";
 			if (index == 4)
-				return (MinCrew * PackageMultiplier) + "%";
+				return (MinCrew * PenaltyMultiplier) + "%";
 			if (index == 5)
-				return (PeakCR * PackageMultiplier) + "%";
+				return (PeakCR * PenaltyMultiplier) + "%";
 			if (index == 6)
-				return (Supplies * PackageMultiplier) + "%";
+				return (Supplies * PenaltyMultiplier) + "%";
 			if (index == 7)
-				return (ShipSpeed * PackageMultiplier) * QualityMultiplier + "%";
+				return (ShipSpeed * PackageMultiplier) + "%";
 			if (index == 8)
 				return (MissileSpeed * PackageMultiplier) * QualityMultiplier + "%";
 			if (index == 9)
-				return (MissileTurn * PackageMultiplier) + "%";
+				return (MissileTurn * PenaltyMultiplier) + "%";
 		}
 
 		return null;

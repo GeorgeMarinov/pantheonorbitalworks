@@ -15,7 +15,7 @@
 	"pixelsPerTexel":5.0,
 	"sprite":"graphics/POW/missiles/torgue_titan_slayer.png",
 	"explosionColor":[255,150,0,150],
-	"explosionRadius":375, # purely visual
+	"explosionRadius":250, # purely visual
 	"renderTargetIndicator":false, # no target diamond in combat view, not targeted by flares
 	#"flameoutTime":1,
 	"noEngineGlowTime":0.5,
@@ -45,8 +45,8 @@
 				    "angle":180.0}],
 	"explosionSpec":{
 		"duration":0.12f,
-		"radius":550,
-		"coreRadius":300,
+		"radius":350,
+		"coreRadius":200,
 		"collisionClass":HITS_SHIPS_AND_ASTEROIDS,
 		"collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
 		"particleSizeMin":7.0,

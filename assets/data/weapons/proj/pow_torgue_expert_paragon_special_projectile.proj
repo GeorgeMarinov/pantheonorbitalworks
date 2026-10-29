@@ -27,12 +27,12 @@
 	"behaviorSpec":
 	{
 		"behavior":"PROXIMITY_FUSE",
-		"range":2000,
+		"range":500,
 		"explosionSpec":
 		{
 			"duration":0.2f,
-			"radius":2000,
-			"coreRadius":1500,
+			"radius":500,
+			"coreRadius":250,
 			"collisionClass":PROJECTILE_NO_FF,
 			"collisionClassByFighter":PROJECTILE_FIGHTER,
 			"particleSizeMin":3.0,

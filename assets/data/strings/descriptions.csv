@@ -611,16 +611,30 @@ pow_patheon_planet,CUSTOM,"A rich and majestic terrestrial planet Pantheon is ho
 The god, known as Pantheon Orbital Works can be described as a colossal shipyard with a singular purpose: crafting legendary space vessels. Skilled vulcan smiths and relentless automatons are the blood that flows through this god's veins powering state of the art dockyards.
 
 Pantheon Orbital Works does not turn down contracts. While its prices are high the station produces ships of both quality and quantity for the Sector. The most distinct feature are the three docks Jupiter, Juno and Neptune capable of building titan class ships, while currently silent it is rumored that each dock has produced exactly a single titan class...",,,,
-pow_gehenna,CUSTOM,"A scorched rock that hugs the star so closely its surface never stops glowing. Early Vulcan surveys found only thin ore seams, nowhere near worth the cooling bill.
+pow_gehenna,CUSTOM,"A scorched rock that hugs the star so closely its surface never stops glowing. Early Vulcan surveys called it worthless, nowhere near worth the cooling bill. Hyperion called it free heat, bought the whole planet for one credit and has been reminding everyone about it ever since.
 
-Torgue engineers occasionally ask for permission to use it as a target. Permission has so far been denied.",,,,
-pow_dahl_platform,CUSTOM,"A Dahl-pattern excavation platform anchored inside The Dust. Crews in hardsuits ride ore haulers between the rocks, cracking open metal-rich asteroids and shipping the yield straight to the Pantheon shipyards.
+The Hyperion Smelting Complex sprawls across the lava plains. Dahl ore haulers dive sunward from The Dust, Helios mirrors pour focused starlight into the crucibles, and Loader bots pull out ingots of refined metal and transplutonics bound for the docks of Pantheon Orbital Works. Hyperion would like you to know that you're welcome.
+
+Torgue engineers occasionally ask for permission to use it as a target. Permission has so far been denied, in writing, by a very smug account manager.",,,,
+pow_helios_mirror,CUSTOM,"A Hyperion-built mirror segment the size of a small city, angled to catch the star's light and pour it onto the smelters of Gehenna. Together the Helios mirrors keep the crucibles below hot enough to melt anything that wanders into the beam.
+
+A warning beacon broadcasts on loop: ""Hyperion is not liable for vessels, crew or egos lost within the focal path. Have a productive day!""",,,,
+pow_dahl_platform,CUSTOM,"A Dahl-pattern excavation platform anchored inside The Dust. Crews in hardsuits ride ore haulers between the rocks, cracking open metal-rich asteroids and shipping the yield straight to the Pantheon shipyards and the smelters of Gehenna.
+
+A Dahl mercenary wing keeps its gunships berthed on the lower decks. Officially they guard the ore. Unofficially they are for hire to anyone with enough credits, and business is good.
 
 The platform answers to no flag. Anyone who pays the docking fee is welcome, and anyone who starts trouble is introduced to the business end of a mining laser.",,,,
-pow_athenas,CUSTOM,"A banded gas giant on the edge of the inhabited system. Its upper atmosphere holds modest volatile reserves, and its gravity well has gathered two small moons and a pair of trojan asteroid clouds.
+pow_athenas,CUSTOM,"A banded gas giant on the edge of the inhabited system. Its storm belts are thick with volatiles, and its gravity well has gathered two small moons and a pair of trojan asteroid clouds.
 
-Vulcan sky-skimmers once harvested its clouds, before cheaper fuel started arriving through the jump points.",,,,
-pow_promethea,CUSTOM,"An icy moon of Athenas. Frost geysers vent traces of volatiles into a thin, frigid atmosphere.",,,,
+Vulcan sky-skimmers once harvested its clouds, until cheaper fuel started arriving through the jump points. Then Vladof arrived with bigger skimmers, cheaper crews and a lot of posters. Today whole fleets of armored scoop-ships dive into the upper atmosphere every shift, singing work songs about freedom, comrades and fuel quotas.
+
+What the skimmers don't send down to Promethea gets cracked into fuel right on the siphon array, and a Vladof garrison makes sure nobody tries to collect it for free.",,,,
+pow_vladof_siphon,CUSTOM,"A Vladof siphon array hanging low over the clouds of Athenas. Skimmers dock along its spine, dump their haul into compression tanks the size of frigates, and dive back down before the tanks have stopped rattling.
+
+Banners on every bulkhead read ""MORE GAS, MORE FREEDOM"". Nobody on board has ever asked what that means.",,,,
+pow_promethea,CUSTOM,"An icy moon of Athenas. Frost geysers vent volatiles into a thin, frigid atmosphere, and the whole southern hemisphere glows with the lights of Lectra City.
+
+Built in the old Atlas company-town style, Lectra City is one long row of cracking towers, tank farms and crew barracks. Volatiles from the Vladof siphons come down the gravity well, get cracked into starship fuel and go back up to the waystation, where every hauler in the system tops off its tanks. The locals say Promethea runs on fuel, coffee and spite, in that order.",,,,
 pow_nekrotafeyo,CUSTOM,"A dead, cratered moon of Athenas with barely enough gravity to keep a landing craft on the ground. Local legend says something old sleeps under the surface. Local legend says that about most moons.",,,,
 pow_torgue_arena,CUSTOM,"WELCOME TO THE TORGUE ARENA! THIS IS WHERE TORGUE TESTS EVERY UPGRADE BY BLOWING THINGS UP UNTIL THEY STOP BEING THINGS!
 

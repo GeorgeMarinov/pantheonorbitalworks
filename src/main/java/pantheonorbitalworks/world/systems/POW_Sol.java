@@ -36,6 +36,7 @@ public class POW_Sol implements SectorGeneratorPlugin {
 
     // orbit radii around the star (star radius 550, corona 800)
     private static final float GEHENNA_ORBIT = 1800f;
+    private static final float GEHENNA_DAYS = 60f;
     private static final float PANTHEON_ORBIT = 3000f;
     private static final float PANTHEON_DAYS = 250f;
     private static final float THE_DUST_ORBIT = 5200f;
@@ -63,7 +64,7 @@ public class POW_Sol implements SectorGeneratorPlugin {
         jumpPoint.setStandardWormholeToHyperspaceVisual();
         system.addEntity(jumpPoint);
 
-        addInnerPlanet(system, solStar);
+        addGehennaFoundry(system, solStar);
         addPantheonObjectives(system, solStar);
         addTheDust(system, solStar);
         addAthenas(system, solStar);
@@ -79,11 +80,23 @@ public class POW_Sol implements SectorGeneratorPlugin {
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius, 0, 360f, 0.25f);
     }
 
-    // scorched rock close to the star, flavor only
-    private void addInnerPlanet(StarSystemAPI system, PlanetAPI star) {
-        PlanetAPI gehenna = system.addPlanet("pow_gehenna", star, "Gehenna", "lava_minor", 40, 70, GEHENNA_ORBIT, 60);
+    // Hyperion smelting complex on the lava world (market in POW_Sol.json), Helios mirrors focus sunlight onto it
+    private void addGehennaFoundry(StarSystemAPI system, PlanetAPI star) {
+        float angle = 40;
+        PlanetAPI gehenna = system.addPlanet("pow_gehenna", star, "Gehenna", "lava", angle, 110, GEHENNA_ORBIT, GEHENNA_DAYS);
         gehenna.setCustomDescriptionId("pow_gehenna");
-        addConditions(gehenna, Conditions.VERY_HOT, Conditions.NO_ATMOSPHERE, Conditions.ORE_SPARSE);
+
+        // same period as Gehenna's orbit keeps the mirrors locked on its sunward side
+        float sunward = angle + 180;
+        addMirror(system, gehenna, "pow_helios_mirror_1", "Helios Mirror Alpha", sunward - 30);
+        addMirror(system, gehenna, "pow_helios_mirror_2", "Helios Mirror Beta", sunward);
+        addMirror(system, gehenna, "pow_helios_mirror_3", "Helios Mirror Gamma", sunward + 30);
+    }
+
+    private void addMirror(StarSystemAPI system, PlanetAPI gehenna, String id, String name, float angle) {
+        SectorEntityToken mirror = system.addCustomEntity(id, name, Entities.STELLAR_MIRROR, Factions.INDEPENDENT);
+        mirror.setCustomDescriptionId("pow_helios_mirror");
+        mirror.setCircularOrbitPointingDown(gehenna, angle, 270, GEHENNA_DAYS);
     }
 
     // comm relay at Pantheon's L4, nav buoy at L5
@@ -128,15 +141,20 @@ public class POW_Sol implements SectorGeneratorPlugin {
     }
 
     // gas giant with two moons and asteroid clusters at its L4/L5 points
+    // Vladof skims volatiles from Athenas, Promethea cracks them into fuel (markets in POW_Sol.json)
     private void addAthenas(StarSystemAPI system, PlanetAPI star) {
         float angle = 260;
         PlanetAPI athenas = system.addPlanet("pow_athenas", star, "Athenas", "gas_giant", angle, 300, ATHENAS_ORBIT, ATHENAS_DAYS);
         athenas.setCustomDescriptionId("pow_athenas");
-        addConditions(athenas, Conditions.VOLATILES_DIFFUSE, Conditions.HIGH_GRAVITY, Conditions.DENSE_ATMOSPHERE);
+
+        SectorEntityToken siphon = system.addCustomEntity("pow_vladof_siphon", "Vladof Siphon Array", "station_side06",
+                Factions.INDEPENDENT);
+        siphon.setCustomDescriptionId("pow_vladof_siphon");
+        siphon.setInteractionImage("illustrations", "orbital");
+        siphon.setCircularOrbitPointingDown(athenas, 120, 450, 25);
 
         PlanetAPI promethea = system.addPlanet("pow_promethea", athenas, "Promethea", "frozen", 30, 70, 700, 30);
         promethea.setCustomDescriptionId("pow_promethea");
-        addConditions(promethea, Conditions.COLD, Conditions.THIN_ATMOSPHERE, Conditions.VOLATILES_TRACE);
 
         PlanetAPI nekrotafeyo = system.addPlanet("pow_nekrotafeyo", athenas, "Nekrotafeyo", "barren", 200, 50, 1050, 50);
         nekrotafeyo.setCustomDescriptionId("pow_nekrotafeyo");

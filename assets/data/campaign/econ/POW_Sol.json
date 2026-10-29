@@ -4,10 +4,10 @@
     {
       "entities": ["pow_patheon_planet"],
       "faction": "independent",
-      "size": 6,
+      "size": 7,
       "startingConditions": [
         "habitable",
-        "population_6",
+        "population_7",
         "mild_climate",
         "farmland_bountiful",
         "ore_moderate",
@@ -16,25 +16,99 @@
       ],
       "industries": [
         ["population"],
-        ["spaceport"],
-        ["grounddefenses"],
-        ["patrolhq"]
+        ["megaport"],
+        ["orbitalworks", "pristine_nanoforge"],
+        ["farming"],
+        ["lightindustry"],
+        ["commerce"],
+        ["heavybatteries"],
+        ["patrolhq"],
+        ["starfortress_high"]
       ]
     },
     {
       "entities": ["pow_dahl_platform"],
       "faction": "independent",
-      "size": 3,
+      "size": 5,
       "startingConditions": [
-        "population_3",
+        "population_5",
         "ore_rich",
         "rare_ore_moderate"
       ],
       "industries": [
         ["population"],
         ["spaceport"],
+        ["mining", "mantle_bore"],
+        ["militarybase"],
+        ["commerce"],
+        ["heavybatteries"],
+        ["battlestation_mid"]
+      ]
+    },
+    {
+      "entities": ["pow_gehenna"],
+      "faction": "independent",
+      "size": 6,
+      "startingConditions": [
+        "population_6",
+        "very_hot",
+        "no_atmosphere",
+        "ore_moderate",
+        "rare_ore_moderate"
+      ],
+      "industries": [
+        ["population"],
+        ["spaceport"],
+        ["refining", "catalytic_core"],
         ["mining"],
-        ["grounddefenses"]
+        ["heavyindustry"],
+        ["commerce"],
+        ["heavybatteries"],
+        ["patrolhq"],
+        ["battlestation_high"]
+      ]
+    },
+    {
+      "entities": ["pow_athenas", "pow_vladof_siphon"],
+      "faction": "independent",
+      "size": 6,
+      "startingConditions": [
+        "population_6",
+        "volatiles_abundant",
+        "high_gravity",
+        "dense_atmosphere"
+      ],
+      "industries": [
+        ["population"],
+        ["spaceport"],
+        ["mining", "plasma_dynamo"],
+        ["fuelprod"],
+        ["militarybase"],
+        ["heavybatteries"],
+        ["battlestation"]
+      ]
+    },
+    {
+      "entities": ["pow_promethea"],
+      "faction": "independent",
+      "size": 6,
+      "startingConditions": [
+        "population_6",
+        "cold",
+        "thin_atmosphere",
+        "volatiles_diffuse"
+      ],
+      "industries": [
+        ["population"],
+        ["megaport"],
+        ["fuelprod", "synchrotron"],
+        ["mining"],
+        ["lightindustry"],
+        ["commerce"],
+        ["waystation"],
+        ["heavybatteries"],
+        ["patrolhq"],
+        ["battlestation_mid"]
       ]
     }
   ]
